@@ -3,7 +3,7 @@ Este ejemplo permite conectar  un raspberry pi a la nube de amazon IoT
 */
 
 var Gpio = require('onoff').Gpio;
-var sensor = new Gpio(17,'in','both');
+var sensor = new Gpio(17,'in','both', {debounceTimeout: 10} );
 
 function unexportOnClose() {
   sensor.unexport();
