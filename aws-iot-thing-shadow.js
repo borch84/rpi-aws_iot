@@ -18,7 +18,7 @@ var thing_name = process.argv[2]; /*nombre del directorio representa el nombre d
 var keyPath = `./${thing_name}/private.pem.key`;
 var certPath = `./${thing_name}/certificate.pem.crt`;
 var caPath = `./aws-root-ca.pem`;
-var shadowDeviceId = `${thing_name}-shadow-client`;
+var shadowDeviceId = `${thing_name}`; //el nombre del client tiene que ser el mismo que el thing por la configuracion del policy. 
 
 var thingShadows = awsIot.thingShadow({
    keyPath: keyPath,
