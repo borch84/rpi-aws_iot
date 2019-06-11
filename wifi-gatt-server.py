@@ -14,6 +14,24 @@ import sys
 
 from random import randint
 
+import subprocess
+from tempfile import mkstemp
+from shutil import move
+from os import remove
+
+def file_line_replace(source_file_path, pattern, newline):
+    fh, target_file_path = mkstemp()
+    with open(target_file_path, 'w') as target_file:
+        with open(source_file_path, 'r') as source_file:
+            for line in source_file:
+                if pattern in line:  
+                    target_file.write(line.replace(line, newline))
+                else:
+                    target_file.write(line)
+    remove(source_file_path)
+    move(target_file_path, source_file_path)
+
+
 mainloop = None
 
 BLUEZ_SERVICE_NAME = 'org.bluez'
@@ -279,8 +297,13 @@ class ssid_characteristic(Characteristic):
         return self.value
 
     def WriteValue(self, value, options):
-        print('ssid_characteristic Write: ' + repr(value))
-        self.value = value
+        #print('ssid_characteristic Write: ' + repr(value))
+        self.value = value #value de tipo dbus.Array
+        #TODO escribir psk=value en el archivo /etc/wpa_supplicant/wpa_supplicant.conf
+        ssid = ''.join([chr(byte) for byte in value])
+        print('ssid_characteristic: ' + ssid)
+        file_line_replace('/etc/wpa_supplicant/wpa_supplicant.conf','ssid','ssid="'+ssid+'"\n')
+
 
 class ssidpass_characteristic(Characteristic):
 
@@ -299,9 +322,20 @@ class ssidpass_characteristic(Characteristic):
         return self.value
 
     def WriteValue(self, value, options):
-        print('ssidpass_characteristic Write: ' + repr(value))
+        #print('ssidpass_characteristic Write: ' + repr(value))
         self.value = value
+        ssidpass = ''.join([chr(byte) for byte in value])
+        print('ssidpass_characteristic: ' + ssidpass)
+        file_line_replace('/etc/wpa_supplicant/wpa_supplicant.conf','psk','psk="'+ssidpass+'"\n')
 
+        proc = subprocess.Popen(["wpa_cli", "-i", "wlan0", "reconfigure"],stdout=subprocess.PIPE)
+        (out, err) = proc.communicate()
+        #print(out)
+
+        if out in b'OK\n': #out es un objeto byte
+            print('wpa_cli -i wlan0 reconfigure: OK!')
+        else: 
+            print('wpa_cli -i wlan0 reconfigure: FAIL!')
 
 
 def register_app_cb():
