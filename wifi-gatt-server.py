@@ -18,6 +18,8 @@ import subprocess
 from tempfile import mkstemp
 from shutil import move
 from os import remove
+import urllib
+#import socket
 
 def file_line_replace(source_file_path, pattern, newline):
     fh, target_file_path = mkstemp()
@@ -334,6 +336,10 @@ class ssidpass_characteristic(Characteristic):
 
         if out in b'OK\n': #out es un objeto byte
             print('wpa_cli -i wlan0 reconfigure: OK!')
+            
+            #TODO: En este punto la aplicacion podria conectar el thing shadow, sin saber si existe o no conexion a internet. 
+                        
+                
         else: 
             print('wpa_cli -i wlan0 reconfigure: FAIL!')
 

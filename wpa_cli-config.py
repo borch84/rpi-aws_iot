@@ -2,6 +2,8 @@
 
 import subprocess
 
+
+
 proc = subprocess.Popen(["wpa_cli", "-i", "wlan0", "reconfigure"],stdout=subprocess.PIPE)
 (out, err) = proc.communicate()
 #print(out)
