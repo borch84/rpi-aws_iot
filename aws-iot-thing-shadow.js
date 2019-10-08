@@ -38,10 +38,10 @@ sensor.watch((error,value) => {
     return;
   }
   console.log('Estado GPIO17:',value);
-  if (value == 1) {
+  if (value == 0) {
     var reedswitch = {"state":{"reported":{"reedswitch":true}}};  
   }
-  if (value == 0) {
+  if (value == 1) {
     var reedswitch = {"state":{"reported":{"reedswitch":false}}}; 
   }
   
