@@ -71,6 +71,13 @@ class shadowCallbackContainer:
     def customShadowCallback_Delta(self, payload, responseStatus, token):
         # payload is a JSON string ready to be parsed using json.loads(...)
         # in both Py2.x and Py3.x
+
+	# Cuando se recibe un delta es porque el shadow fue actualizado por un usuario
+	# y el dispositivo tiene que determinar que hacer con el valor del delta.
+	# Por ejemplo, si el delta es un mensaje para ejecutar un comando, el raspberrpi debera
+	# ejecutar un codigo extra en este punto. Si es abrir o cerrar una ventana, 
+	# el rpi tiene que enviar la senal a un pin conectado a un relay. 
+
         print("Received a delta message:")
         payloadDict = json.loads(payload)
         deltaMessage = json.dumps(payloadDict["state"])
