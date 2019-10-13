@@ -14,6 +14,9 @@
  * express or implied. See the License for the specific language governing
  * permissions and limitations under the License.
  */
+
+https://s3.amazonaws.com/aws-iot-device-sdk-python-docs/html/index.html#module-AWSIoTPythonSDK.core.shadow.deviceShadow
+
  '''
 
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTShadowClient
@@ -22,7 +25,49 @@ import time
 import json
 import argparse
 
+import os
+import glob
+import time
+#import sys
+import Adafruit_DHT
+dht22_sensor_type = Adafruit_DHT.DHT22
+dht22_sensor_pin = 19
+
+os.system('modprobe w1-gpio')
+os.system('modprobe w1-therm')
+
+base_dir = '/sys/bus/w1/devices/'
+device_folder = glob.glob(base_dir + '28*')[0]
+device_file = device_folder + '/w1_slave'
+
+old_humidity = 0
+humidity = 0
+
+old_temp = 0
+temp = 0
+
+def read_temp_ds18b20_raw():
+    f = open(device_file, 'r')
+    lines = f.readlines()
+    f.close()
+    return lines
+
+def read_ds18b20():
+    lines = read_temp_ds18b20_raw()
+    while lines[0].strip()[-3:] != 'YES':
+        time.sleep(0.2)
+        lines = read_temp_ds18b20_raw()
+    equals_pos = lines[1].find('t=')
+    if equals_pos != -1:
+        temp_string = lines[1][equals_pos+2:]
+        temp_c = float(temp_string) / 1000.0
+        temp_f = temp_c * 9.0 / 5.0 + 32.0
+        return temp_c, temp_f
+
+
 from gpiozero import DigitalInputDevice
+from gpiozero import OutputDevice
+#from gpiozero import LED
 
 reedswitch_state = False
 old_reedswitch_state = False
@@ -32,12 +77,16 @@ def reedswitch_closed():
     global reedswitch_state
     reedswitch_state = True
 
-def reedswitch_opened(): 
+def reedswitch_opened():
     print("reed switch is opened!")
     global reedswitch_state
     reedswitch_state = False
 
 reedswitch = DigitalInputDevice(17,pull_up=True, bounce_time=1)
+
+#waterpump = DigitalOutputDevice(22,True,False)
+#waterpump = LED(22)
+waterpump =  OutputDevice(22)
 
 reedswitch.when_activated = reedswitch_closed
 
@@ -53,11 +102,9 @@ def customShadowCallback_Update(payload, responseStatus, token):
         payloadDict = json.loads(payload)
         print("~~~~~~~~~~~~~~~~~~~~~~~")
         print("Update request with token: " + token + " accepted!")
-        print("reported reedswitch_state: " + str(payloadDict["state"]["reported"]["reedswitch"]))
+        #print("reported reedswitch state: " + str(payloadDict["state"]["reported"]["reedswitch"]))
+        print("reported state: " + str(payloadDict["state"]["reported"]))
         print("~~~~~~~~~~~~~~~~~~~~~~~\n\n")
-        global reedswitch_state
-        global old_reedswitch_state
-        old_reedswitch_state = reedswitch_state
 
     if responseStatus == "rejected":
         print("Update request " + token + " rejected!")
@@ -82,6 +129,14 @@ class shadowCallbackContainer:
         payloadDict = json.loads(payload)
         deltaMessage = json.dumps(payloadDict["state"])
         print(deltaMessage)
+
+        if payloadDict["state"]["windowOpen"] == True:
+            print("waterpump On")
+            waterpump.on()
+        else:
+            print("waterpump Off")
+            waterpump.off()
+
         print("Request to update the reported state...")
         newPayload = '{"state":{"reported":' + deltaMessage + '}}'
         self.deviceShadowInstance.shadowUpdate(newPayload, None, 5)
@@ -134,6 +189,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 streamHandler.setFormatter(formatter)
 logger.addHandler(streamHandler)
 
+
 # Init AWSIoTMQTTShadowClient
 myAWSIoTMQTTShadowClient = None
 if useWebsocket:
@@ -152,7 +208,9 @@ myAWSIoTMQTTShadowClient.configureMQTTOperationTimeout(5)  # 5 sec
 
 connected = False
 
+
 # Connect to AWS IoT
+
 while not connected:
     try:
         myAWSIoTMQTTShadowClient.connect()
@@ -176,13 +234,30 @@ while not connected:
 
 # Loop forever
 while True:
+    temp,null = read_ds18b20()
+    temp = round(temp,1)
+    if old_temp != temp:
+        print('**** Updating temperature value ****')
+        JSONPayload = '{"state":{"reported":{"temp":'+repr(temp)+'}}}'
+        print(JSONPayload)
+        old_temp = temp
+        deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
+
+    humidity, null = Adafruit_DHT.read_retry(dht22_sensor_type,dht22_sensor_pin)
+    humidity = round(humidity,1)
+    if old_humidity != humidity:
+        print('**** Updating humidity value ****')
+        JSONPayload = '{"state":{"reported":{"humidity":'+repr(humidity)+'}}}'
+        print(JSONPayload)
+        old_humidity = humidity
+        deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
+
     if reedswitch_state != old_reedswitch_state:
         print('**** Updating reedswith reported stated ****')
         if reedswitch_state:
-            JSONPayload = '{"state":{"reported":{"reedswitch":true}}}'    
+            JSONPayload = '{"state":{"reported":{"reedswitch":true}}}'
         else:
-            JSONPayload = '{"state":{"reported":{"reedswitch":false}}}'    
-
+            JSONPayload = '{"state":{"reported":{"reedswitch":false}}}'
+        old_reedswitch_state = reedswitch_state
         deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
-        time.sleep(3)
-
+    time.sleep(10)
