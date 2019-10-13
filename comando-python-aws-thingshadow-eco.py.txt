@@ -1,1 +1,0 @@
-python3 python-aws-thingshadow-eco.py -e a3s9lktlbmjbgn-ats.iot.us-east-1.amazonaws.com -r aws-root-ca.pem -c yUp3qLUftKGGY01XdcL5/certificate.pem.crt -k yUp3qLUftKGGY01XdcL5/private.pem.key -n yUp3qLUftKGGY01XdcL5 -id yUp3qLUftKGGY01XdcL5
