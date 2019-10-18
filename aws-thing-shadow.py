@@ -237,6 +237,7 @@ while True:
     temp,null = read_ds18b20()
     temp = round(temp,1)
     if old_temp != temp:
+    #if (abs(old_temp - temp) > 1 ): 
         print('**** Updating temperature value ****')
         JSONPayload = '{"state":{"reported":{"temp":'+repr(temp)+'}}}'
         print(JSONPayload)
@@ -246,6 +247,7 @@ while True:
     humidity, null = Adafruit_DHT.read_retry(dht22_sensor_type,dht22_sensor_pin)
     humidity = round(humidity,1)
     if old_humidity != humidity:
+    #if (abs(old_humidity - humidity) > 1):
         print('**** Updating humidity value ****')
         JSONPayload = '{"state":{"reported":{"humidity":'+repr(humidity)+'}}}'
         print(JSONPayload)
