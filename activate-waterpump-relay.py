@@ -2,7 +2,7 @@
 
 import time
 import argparse
-from gpiozero import OutputDevice
+from gpiozero import DigitalOutputDevice
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-p", "--pin",action="store", required=True, dest="pin", help="Pin Relay Number")
@@ -16,7 +16,7 @@ seconds = args.seconds
 #    parser.error("Missing PIN number and SECONDS")
 #    exit(2)
 
-waterpump =  OutputDevice(pin)
+waterpump =  DigitalOutputDevice(pin,False,False)
 waterpump.on()
 time.sleep(int(seconds))
 waterpump.off()

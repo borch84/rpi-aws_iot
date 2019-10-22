@@ -66,8 +66,7 @@ def read_ds18b20():
 
 
 from gpiozero import DigitalInputDevice
-from gpiozero import OutputDevice
-#from gpiozero import LED
+from gpiozero import DigitalOutputDevice
 
 reedswitch_state = False
 old_reedswitch_state = False
@@ -84,9 +83,7 @@ def reedswitch_opened():
 
 reedswitch = DigitalInputDevice(17,pull_up=True, bounce_time=1)
 
-#waterpump = DigitalOutputDevice(22,True,False)
-#waterpump = LED(22)
-waterpump =  OutputDevice(22)
+waterpump = DigitalOutputDevice(22,False,False)
 
 reedswitch.when_activated = reedswitch_closed
 
@@ -262,4 +259,4 @@ while True:
             JSONPayload = '{"state":{"reported":{"reedswitch":false}}}'
         old_reedswitch_state = reedswitch_state
         deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
-    time.sleep(10)
+    time.sleep(60)
