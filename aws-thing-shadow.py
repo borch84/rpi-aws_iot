@@ -83,8 +83,6 @@ def reedswitch_opened():
 
 reedswitch = DigitalInputDevice(17,pull_up=True, bounce_time=1)
 
-waterpump = DigitalOutputDevice(22,False,False)
-
 reedswitch.when_activated = reedswitch_closed
 
 reedswitch.when_deactivated = reedswitch_opened
@@ -127,7 +125,7 @@ class shadowCallbackContainer:
         deltaMessage = json.dumps(payloadDict["state"])
         print(deltaMessage)
 
-        if payloadDict["state"]["windowOpen"] == True:
+        if payloadDict["state"]["waterpump"] == True:
             print("waterpump On")
             waterpump.on()
         else:
@@ -143,15 +141,18 @@ class shadowCallbackContainer:
 # Read in command-line parameters
 parser = argparse.ArgumentParser()
 parser.add_argument("-e", "--endpoint", action="store", required=True, dest="host", help="Your AWS IoT custom endpoint")
-parser.add_argument("-r", "--rootCA", action="store", required=True, dest="rootCAPath", help="Root CA file path")
-parser.add_argument("-c", "--cert", action="store", dest="certificatePath", help="Certificate file path")
-parser.add_argument("-k", "--key", action="store", dest="privateKeyPath", help="Private key file path")
+parser.add_argument("-r", "--rootCA", action="store",  dest="rootCAPath", help="Root CA file path", required=True)
+parser.add_argument("-c", "--cert", action="store", dest="certificatePath", help="Certificate file path",required=True)
+parser.add_argument("-k", "--key", action="store", dest="privateKeyPath", help="Private key file path", required=True)
 parser.add_argument("-p", "--port", action="store", dest="port", type=int, help="Port number override")
 parser.add_argument("-w", "--websocket", action="store_true", dest="useWebsocket", default=False,
                     help="Use MQTT over WebSocket")
-parser.add_argument("-n", "--thingName", action="store", dest="thingName", default="Bot", help="Targeted thing name")
+parser.add_argument("-n", "--thingName", action="store", dest="thingName", default="Bot", help="Targeted thing name", required=True)
 parser.add_argument("-id", "--clientId", action="store", dest="clientId", default="ThingShadowEcho",
-                    help="Targeted client id")
+                    help="Targeted client id", required=True)
+parser.add_argument("-wp", "--waterpump", action="store", dest="waterpumprelaypin", required=True, help="Waterpump relay GPIO pin")
+parser.add_argument("-ri", "--refreshInterval", action="store", dest="refreshinterval", required=True, help="Refresh interval in Seconds")
+
 
 args = parser.parse_args()
 host = args.host
@@ -162,6 +163,9 @@ port = args.port
 useWebsocket = args.useWebsocket
 thingName = args.thingName
 clientId = args.clientId
+waterpumprelaypin = args.waterpumprelaypin
+waterpump = DigitalOutputDevice(waterpumprelaypin,False,False)
+refreshinterval = args.refreshinterval
 
 if args.useWebsocket and args.certificatePath and args.privateKeyPath:
     parser.error("X.509 cert authentication and WebSocket are mutual exclusive. Please pick one.")
@@ -259,4 +263,4 @@ while True:
             JSONPayload = '{"state":{"reported":{"reedswitch":false}}}'
         old_reedswitch_state = reedswitch_state
         deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
-    time.sleep(60)
+    time.sleep(int(refreshinterval))
