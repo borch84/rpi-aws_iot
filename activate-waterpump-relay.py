@@ -2,23 +2,21 @@
 
 import time
 import argparse
-from gpiozero import DigitalOutputDevice
+import RPi.GPIO as GPIO
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-p", "--pin",action="store", required=True, dest="pin", help="Pin Relay Number")
 parser.add_argument("-s", "--seconds", action="store", required=True, dest="seconds", help="Number of seconds the pin should be On")
 
 args = parser.parse_args()
-pin = args.pin
+pin = int(args.pin)
 seconds = args.seconds
 
-#if not args.pin and not args.second:
-#    parser.error("Missing PIN number and SECONDS")
-#    exit(2)
-
-waterpump =  DigitalOutputDevice(pin,False,False)
-waterpump.on()
+GPIO.setup(pin,GPIO.OUT)
+GPIO.output(pin,0) #0 activa el pin Normally open
 time.sleep(int(seconds))
-waterpump.off()
-
+GPIO.output(pin,1)
 

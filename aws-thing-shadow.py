@@ -66,7 +66,12 @@ def read_ds18b20():
 
 
 from gpiozero import DigitalInputDevice
-from gpiozero import DigitalOutputDevice
+
+#RPi.GPIO
+#Para la activacion de los relays, se va a implementar la libreria RPi.GPIO porque permite el acceso concurrent a un pin, esto porque la aplicacion del usuario puede activar un relay pero tambien el raspberry pi puede activar un relay en cualquier otro momento del dia. Se va a seguir la enumeracion BOARD porque esta empieza con el numero de pin P1 de la cabecera de pines del RPI. La enumeracion BCM GPIO22 es el pin 15. Se han desactivado los warnings para que no haya mensajes de error cuando el programa accesa a un pin relay que ya fue activado.  
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
 
 reedswitch_state = False
 old_reedswitch_state = False
@@ -127,10 +132,10 @@ class shadowCallbackContainer:
 
         if payloadDict["state"]["waterpump"] == True:
             print("waterpump On")
-            waterpump.on()
+            GPIO.output(15,0) #GPIO22 = 15 BOARD
         else:
             print("waterpump Off")
-            waterpump.off()
+            GPIO.output(15,1) #0=activar el pin / 1=desactiva el pin
 
         print("Request to update the reported state...")
         newPayload = '{"state":{"reported":' + deltaMessage + '}}'
@@ -150,7 +155,6 @@ parser.add_argument("-w", "--websocket", action="store_true", dest="useWebsocket
 parser.add_argument("-n", "--thingName", action="store", dest="thingName", default="Bot", help="Targeted thing name", required=True)
 parser.add_argument("-id", "--clientId", action="store", dest="clientId", default="ThingShadowEcho",
                     help="Targeted client id", required=True)
-parser.add_argument("-wp", "--waterpump", action="store", dest="waterpumprelaypin", required=True, help="Waterpump relay GPIO pin")
 parser.add_argument("-ri", "--refreshInterval", action="store", dest="refreshinterval", required=True, help="Refresh interval in Seconds")
 
 
@@ -163,8 +167,11 @@ port = args.port
 useWebsocket = args.useWebsocket
 thingName = args.thingName
 clientId = args.clientId
-waterpumprelaypin = args.waterpumprelaypin
-waterpump = DigitalOutputDevice(waterpumprelaypin,False,False)
+
+#RPi.GPIO la bomba esta conectado al pin 15 = GPIO22
+GPIO.setup(15, GPIO.OUT)
+
+
 refreshinterval = args.refreshinterval
 
 if args.useWebsocket and args.certificatePath and args.privateKeyPath:
