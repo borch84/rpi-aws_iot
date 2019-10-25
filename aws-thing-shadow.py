@@ -170,7 +170,7 @@ clientId = args.clientId
 
 #RPi.GPIO la bomba esta conectado al pin 15 = GPIO22
 GPIO.setup(15, GPIO.OUT)
-
+GPIO.output(15,1) #1=apaga la bomba
 
 refreshinterval = args.refreshinterval
 
