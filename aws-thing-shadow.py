@@ -207,6 +207,8 @@ myAWSIoTMQTTShadowClient.configureAutoReconnectBackoffTime(1, 32, 20)
 myAWSIoTMQTTShadowClient.configureConnectDisconnectTimeout(10)  # 10 sec
 myAWSIoTMQTTShadowClient.configureMQTTOperationTimeout(5)  # 5 sec
 
+
+
 connected = False
 
 
@@ -238,12 +240,17 @@ while True:
     temp,null = read_ds18b20()
     temp = round(temp,1)
     if old_temp != temp:
-    #if (abs(old_temp - temp) > 1 ): 
+    #if (abs(old_temp - temp) > 1 ): #En caso de que deseo actualizar cuando haya una diferencia de mas de 1 grado
         print('**** Updating temperature value ****')
         JSONPayload = '{"state":{"reported":{"temp":'+repr(temp)+'}}}'
         print(JSONPayload)
         old_temp = temp
-        deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
+        try:
+            deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
+        except Exception as e:
+            #Puede arrojar: AWSIoTPythonSDK.exception.AWSIoTExceptions.publishQueueDisabledException
+            print("**** Error: "+repr(e))
+            continue
 
     humidity, null = Adafruit_DHT.read_retry(dht22_sensor_type,dht22_sensor_pin)
     humidity = round(humidity,1)
@@ -253,7 +260,13 @@ while True:
         JSONPayload = '{"state":{"reported":{"humidity":'+repr(humidity)+'}}}'
         print(JSONPayload)
         old_humidity = humidity
-        deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
+        try:
+            deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
+        except Exception as e:
+            #Puede arrojar: AWSIoTPythonSDK.exception.AWSIoTExceptions.publishQueueDisabledException
+            print("**** Error: "+repr(e))
+            continue
+
 
     if reedswitch_state != old_reedswitch_state:
         print('**** Updating reedswith reported stated ****')
@@ -262,5 +275,11 @@ while True:
         else:
             JSONPayload = '{"state":{"reported":{"reedswitch":false}}}'
         old_reedswitch_state = reedswitch_state
-        deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
+        try:
+            deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
+        except Exception as e:
+            #Puede arrojar: AWSIoTPythonSDK.exception.AWSIoTExceptions.publishQueueDisabledException
+            print("**** Error: "+repr(e))
+            continue
+
     time.sleep(int(refreshinterval))
