@@ -15,6 +15,10 @@ args = parser.parse_args()
 pin = int(args.pin)
 seconds = args.seconds
 
+//El numero de pin corresponde al pin del board, por ejemplo:
+//pin15 = gpio22
+//pin16 = gpio23
+//En este caso se usa el numero de pin 15 para activar la bomba
 GPIO.setup(pin,GPIO.OUT)
 GPIO.output(pin,0) #0 activa el pin Normally open
 time.sleep(int(seconds))
