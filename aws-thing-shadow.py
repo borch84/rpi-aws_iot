@@ -246,8 +246,9 @@ while not connected:
 while True:
     temp,null = read_ds18b20()
     temp = round(temp,1)
-    if old_temp != temp:
+    #if old_temp != temp:
     #if (abs(old_temp - temp) > 1 ): #En caso de que deseo actualizar cuando haya una diferencia de mas de 1 grado
+    if temp >= 1: #al parecer voy a tener que generar data cada cierto tiempo independientemente de que si el valor de old_temp es diferente del valor de temp porque es para que se genere el grafico con informacion mas completa
         print('**** Updating temperature value ****')
         JSONPayload = '{"state":{"reported":{"temp":'+repr(temp)+'}}}'
         print(JSONPayload)
@@ -261,8 +262,9 @@ while True:
 
     humidity, null = Adafruit_DHT.read_retry(dht22_sensor_type,dht22_sensor_pin)
     humidity = round(humidity,1)
-    if old_humidity != humidity:
+    #if old_humidity != humidity:
     #if (abs(old_humidity - humidity) > 1):
+    if humidity >= 1:
         print('**** Updating humidity value ****')
         JSONPayload = '{"state":{"reported":{"humidity":'+repr(humidity)+'}}}'
         print(JSONPayload)
