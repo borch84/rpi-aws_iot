@@ -30,13 +30,13 @@ import glob
 import time
 #import sys
 
-#Pronto voy a eliminar el DHT22 para usar solo Sensirion SHT31D
+##Pronto voy a eliminar el DHT22 para usar solo Sensirion SHT31D
 import Adafruit_DHT
 dht22_sensor_type = Adafruit_DHT.DHT22
 dht22_sensor_pin = 19
 
-#RPi.GPIO
-#Para la activacion de los relays, se va a implementar la libreria RPi.GPIO porque permite el acceso concurrent $
+##RPi.GPIO
+##Para la activacion de los relays, se va a implementar la libreria RPi.GPIO porque permite el acceso concurrent $
 import RPi.GPIO as GPIO
 #GPIO.setmode(GPIO.BOARD)
 GPIO.setmode(GPIO.BCM)
@@ -46,7 +46,7 @@ GPIO.setup(22, GPIO.OUT)
 GPIO.output(22,1) #1=apaga la bomba
 
 
-#Sensirion SHT31D
+##Sensirion SHT31D
 import board
 import busio #https://circuitpython.readthedocs.io/en/latest/shared-bindings/busio/__init__.html#module-busio
 import adafruit_sht31d
@@ -54,7 +54,7 @@ i2c = busio.I2C(board.SCL, board.SDA)
 sht31d = adafruit_sht31d.SHT31D(i2c)
 
 
-#reedswitch
+##reedswitch
 from gpiozero import DigitalInputDevice
 reedswitch_state = False
 old_reedswitch_state = False
@@ -71,13 +71,12 @@ reedswitch.when_activated = reedswitch_closed
 reedswitch.when_deactivated = reedswitch_opened
 
 
-#ds18b20
+##ds18b20
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
 base_dir = '/sys/bus/w1/devices/'
 ds18b20_folder = glob.glob(base_dir + '28*')[0]
 ds18b20_file = ds18b20_folder + '/w1_slave'
-
 def read_temp_ds18b20_raw():
     f = open(ds18b20_file, 'r')
     lines = f.readlines()
@@ -96,7 +95,8 @@ def read_ds18b20():
         temp_f = temp_c * 9.0 / 5.0 + 32.0
         return temp_c, temp_f
 
-#AWS IoT Callbacks
+
+##AWS IoT Callbacks
 def customShadowCallback_Update(payload, responseStatus, token):
     # payload is a JSON string ready to be parsed using json.loads(...)
     # in both Py2.x and Py3.x
@@ -148,98 +148,93 @@ class shadowCallbackContainer:
         print("Sent.")
 
 
-# Read in command-line parameters
-#parser = argparse.ArgumentParser()
-#parser.add_argument("-e", "--endpoint", action="store", required=True, dest="host", help="Your AWS IoT custom endpoint")
-#parser.add_argument("-r", "--rootCA", action="store",  dest="rootCAPath", help="Root CA file path", required=True)
-#parser.add_argument("-c", "--cert", action="store", dest="certificatePath", help="Certificate file path",required=True)
-#parser.add_argument("-k", "--key", action="store", dest="privateKeyPath", help="Private key file path", required=True)
-#parser.add_argument("-p", "--port", action="store", dest="port", type=int, help="Port number override")
-#parser.add_argument("-w", "--websocket", action="store_true", dest="useWebsocket", default=False,help="Use MQTT over WebSocket")
-#parser.add_argument("-n", "--thingName", action="store", dest="thingName", default="Bot", help="Targeted thing name", required=True)
-#parser.add_argument("-id", "--clientId", action="store", dest="clientId", default="ThingShadowEcho",help="Targeted client id", required=True)
-#parser.add_argument("-ri", "--refreshInterval", action="store", dest="refreshinterval", required=True, help="Refresh interval in Seconds")
+## Read in command-line parameters
+parser = argparse.ArgumentParser()
+parser.add_argument("-e", "--endpoint", action="store", required=True, dest="host", help="Your AWS IoT custom endpoint")
+parser.add_argument("-r", "--rootCA", action="store",  dest="rootCAPath", help="Root CA file path", required=True)
+parser.add_argument("-c", "--cert", action="store", dest="certificatePath", help="Certificate file path",required=True)
+parser.add_argument("-k", "--key", action="store", dest="privateKeyPath", help="Private key file path", required=True)
+parser.add_argument("-p", "--port", action="store", dest="port", type=int, help="Port number override")
+parser.add_argument("-w", "--websocket", action="store_true", dest="useWebsocket", default=False,help="Use MQTT over WebSocket")
+parser.add_argument("-n", "--thingName", action="store", dest="thingName", default="Bot", help="Targeted thing name", required=True)
+parser.add_argument("-id", "--clientId", action="store", dest="clientId", default="ThingShadowEcho",help="Targeted client id", required=True)
+parser.add_argument("-ri", "--refreshInterval", action="store", dest="refreshinterval", required=True, help="Refresh interval in Seconds")
 
+args = parser.parse_args()
+host = args.host
+rootCAPath = args.rootCAPath
+certificatePath = args.certificatePath
+privateKeyPath = args.privateKeyPath
+port = args.port
+useWebsocket = args.useWebsocket
+thingName = args.thingName
+clientId = args.clientId
+refreshinterval = args.refreshinterval
 
-#args = parser.parse_args()
-#host = args.host
-#rootCAPath = args.rootCAPath
-#certificatePath = args.certificatePath
-#privateKeyPath = args.privateKeyPath
-#port = args.port
-#useWebsocket = args.useWebsocket
-#thingName = args.thingName
-#clientId = args.clientId
+if args.useWebsocket and args.certificatePath and args.privateKeyPath:
+    parser.error("X.509 cert authentication and WebSocket are mutual exclusive. Please pick one.")
+    exit(2)
 
+if not args.useWebsocket and (not args.certificatePath or not args.privateKeyPath):
+    parser.error("Missing credentials for authentication.")
+    exit(2)
 
-
-#refreshinterval = args.refreshinterval
-
-#if args.useWebsocket and args.certificatePath and args.privateKeyPath:
-#    parser.error("X.509 cert authentication and WebSocket are mutual exclusive. Please pick one.")
-#    exit(2)
-
-#if not args.useWebsocket and (not args.certificatePath or not args.privateKeyPath):
-#    parser.error("Missing credentials for authentication.")
-#    exit(2)
-
-# Port defaults
-#if args.useWebsocket and not args.port:  # When no port override for WebSocket, default to 443
-#    port = 443
-#if not args.useWebsocket and not args.port:  # When no port override for non-WebSocket, default to 8883
-#    port = 8883
+## Port defaults
+if args.useWebsocket and not args.port:  # When no port override for WebSocket, default to 443
+    port = 443
+if not args.useWebsocket and not args.port:  # When no port override for non-WebSocket, default to 8883
+    port = 8883
 
 ## Configure logging
-#logger = logging.getLogger("AWSIoTPythonSDK.core")
-#logger.setLevel(logging.INFO)
-##logger.setLevel(logging.DEBUG)
-#streamHandler = logging.StreamHandler()
-#formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-#streamHandler.setFormatter(formatter)
-#logger.addHandler(streamHandler)
+logger = logging.getLogger("AWSIoTPythonSDK.core")
+logger.setLevel(logging.INFO)
+#logger.setLevel(logging.DEBUG)
+streamHandler = logging.StreamHandler()
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+streamHandler.setFormatter(formatter)
+logger.addHandler(streamHandler)
 
 
 ## Init AWSIoTMQTTShadowClient
-#myAWSIoTMQTTShadowClient = None
-#if useWebsocket:
-#    myAWSIoTMQTTShadowClient = AWSIoTMQTTShadowClient(clientId, useWebsocket=True)
-#    myAWSIoTMQTTShadowClient.configureEndpoint(host, port)
-#    myAWSIoTMQTTShadowClient.configureCredentials(rootCAPath)
-#else:
-#    myAWSIoTMQTTShadowClient = AWSIoTMQTTShadowClient(clientId)
-#    myAWSIoTMQTTShadowClient.configureEndpoint(host, port)
-#    myAWSIoTMQTTShadowClient.configureCredentials(rootCAPath, privateKeyPath, certificatePath)
+myAWSIoTMQTTShadowClient = None
+if useWebsocket:
+    myAWSIoTMQTTShadowClient = AWSIoTMQTTShadowClient(clientId, useWebsocket=True)
+    myAWSIoTMQTTShadowClient.configureEndpoint(host, port)
+    myAWSIoTMQTTShadowClient.configureCredentials(rootCAPath)
+else:
+    myAWSIoTMQTTShadowClient = AWSIoTMQTTShadowClient(clientId)
+    myAWSIoTMQTTShadowClient.configureEndpoint(host, port)
+    myAWSIoTMQTTShadowClient.configureCredentials(rootCAPath, privateKeyPath, certificatePath)
 
-# AWSIoTMQTTShadowClient configuration
-#myAWSIoTMQTTShadowClient.configureAutoReconnectBackoffTime(1, 32, 20)
-#myAWSIoTMQTTShadowClient.configureConnectDisconnectTimeout(10)  # 10 sec
-#myAWSIoTMQTTShadowClient.configureMQTTOperationTimeout(5)  # 5 sec
+## AWSIoTMQTTShadowClient configuration
+myAWSIoTMQTTShadowClient.configureAutoReconnectBackoffTime(1, 32, 20)
+myAWSIoTMQTTShadowClient.configureConnectDisconnectTimeout(10)  # 10 sec
+myAWSIoTMQTTShadowClient.configureMQTTOperationTimeout(5)  # 5 sec
 
 
 ##AWS IoT
-#connected = False
+connected = False
 
 
-# Connect to AWS IoT
+## Connect to AWS IoT
+while not connected:
+    try:
+        myAWSIoTMQTTShadowClient.connect()
 
-#while not connected:
-#    try:
-#        myAWSIoTMQTTShadowClient.connect()
-#
-#       # Create a deviceShadow with persistent subscription
-#        deviceShadowHandler = myAWSIoTMQTTShadowClient.createShadowHandlerWithName(thingName, True)
-#        shadowCallbackContainer_Bot = shadowCallbackContainer(deviceShadowHandler)
-#
-#       # Listen on deltas
-#       deviceShadowHandler.shadowRegisterDeltaCallback(shadowCallbackContainer_Bot.customShadowCallback_Delta)
-#
-#        connected = True
-#        break
-#    except Exception as e:
-        #TODO: Mejorar el manejo de excepciones.
-#        print("**** Error: "+repr(e))
-#        time.sleep(5)
-#        continue
+       # Create a deviceShadow with persistent subscription
+        deviceShadowHandler = myAWSIoTMQTTShadowClient.createShadowHandlerWithName(thingName, True)
+        shadowCallbackContainer_Bot = shadowCallbackContainer(deviceShadowHandler)
+
+       # Listen on deltas
+        deviceShadowHandler.shadowRegisterDeltaCallback(shadowCallbackContainer_Bot.customShadowCallback_Delta)
+
+        connected = True
+        break
+    except Exception as e:
+       #TODO: Mejorar el manejo de excepciones.
+        print("**** Error: "+repr(e))
+        time.sleep(5)
+        continue
 
 
 
@@ -248,27 +243,16 @@ while True:
     ds18b20TemperatureC,null = read_ds18b20()
     ds18b20TemperatureC = round(ds18b20TemperatureC,1)
 
-    #if old_temp != temp:
-    #if (abs(old_temp - temp) > 1 ): #En caso de que deseo actualizar cuando haya una diferencia de mas de 1 grado
-    #if temp >= 1: #al parecer voy a tener que generar data cada cierto tiempo independientemente de que si el valor de old_temp es diferente del valor de temp porque es para que se genere el grafico con informacion mas completa
-    #    print('**** Updating temperature value ****')
-    #    JSONPayload = '{"state":{"reported":{"temp":'+repr(temp)+'}}}'
-    #    print(JSONPayload)
-    #    old_temp = temp
-    #    try:
-    #        deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
-    #    except Exception as e:
-            #Puede arrojar: AWSIoTPythonSDK.exception.AWSIoTExceptions.publishQueueDisabledException
-    #        print("**** Error: "+repr(e))
-    #        continue
-
-    dht22H, dht22T = Adafruit_DHT.read_retry(dht22_sensor_type,dht22_sensor_pin)
-    dht22H = round(dht22H,1)
-    dht22T = round(dht22T,1)
+    try:
+       dht22H, dht22T = Adafruit_DHT.read_retry(dht22_sensor_type,dht22_sensor_pin)
+       dht22H = round(dht22H,1)
+       dht22T = round(dht22T,1)
+    except:
+       print("*** No se puede leer DHT22! ***")
 
     JSONPayload = ('{\"state\": {')
 
-    #Abrimos el archivo para leer la informacion del SPS30
+    #Abrir el archivo para leer la informacion del SPS30
     with open('Sensirion/sps30-uart-3.0.0/sps30.json', 'r') as f:
         try:
              sps30_json = json.load(f)
@@ -294,7 +278,8 @@ while True:
                                         '\"nc2.5\":'+ repr(sps30_json['nc2.5'])+','
                                         '\"pm4.0\":'+ repr(sps30_json['pm4.0'])+','
                                         '\"nc0.5\":'+ repr(sps30_json['nc0.5'])+','
-                                        '\"pm1.0\":'+ repr(sps30_json['pm1.0'])+
+                                        '\"pm1.0\":'+ repr(sps30_json['pm1.0'])+','
+                                        '\"error\":\"none\"'
                                 '},')
 
 
@@ -327,21 +312,14 @@ while True:
 
     print(JSONPayload)
 
-    #if old_humidity != humidity:
-    #if (abs(old_humidity - humidity) > 1):
-    #if humidity >= 1:
-    #    print('**** Updating humidity value ****')
-    #    JSONPayload = '{"state":{"reported":{"humidity":'+repr(humidity)+'}}}'
-    #    print(JSONPayload)
-    #    old_humidity = humidity
-    #    try:
-    #        deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
-    #    except Exception as e:
-            #Puede arrojar: AWSIoTPythonSDK.exception.AWSIoTExceptions.publishQueueDisabledException
-    #        print("**** Error: "+repr(e))
-    #        continue
+    try:
+       deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
+    except Exception as e:
+        #Puede arrojar: AWSIoTPythonSDK.exception.AWSIoTExceptions.publishQueueDisabledException
+        print("**** Error: "+repr(e))
+        continue
 
-
+    #No estamos enviado la informacion del reedswitch
     #if reedswitch_state != old_reedswitch_state:
     #    print('**** Updating reedswith reported stated ****')
     #    if reedswitch_state:
@@ -357,4 +335,5 @@ while True:
     #        continue
 
     #time.sleep(int(refreshinterval))
+
     time.sleep(10)

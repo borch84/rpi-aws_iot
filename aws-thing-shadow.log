@@ -1971,3 +1971,294 @@ reported state: {'humidity': 45.8}
 2019-11-23 12:57:14,336 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
 2019-11-23 12:59:15,357 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
 2019-11-23 12:59:15,889 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-23 13:01:16,877 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-23 13:01:17,413 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-23 13:03:18,397 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-23 13:03:18,929 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-23 13:05:19,917 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 653f1114-b65b-42b9-9e34-903149075088 accepted!
+reported state: {'temp': 24.5}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: fbee7ad9-237f-4779-b6eb-e17203832f31 accepted!
+reported state: {'humidity': 48.0}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":24.1}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":42.3}}}
+Update request e32f2060-94bd-45a3-8349-4b30e1000736 time out!
+Update request 2d871394-3d6c-4871-b4fc-a2ab142c4a1e time out!
+**** Updating temperature value ****
+{"state":{"reported":{"temp":23.3}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":39.2}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 7e0b9879-0337-4421-9c9a-cbf141f3c6f6 accepted!
+reported state: {'temp': 23.3}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 69577137-5847-4d03-a6b1-548bc1e8b1a9 accepted!
+reported state: {'humidity': 39.2}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":22.7}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":37.7}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: abc89569-f0ac-47ed-b478-7725af0ea6d1 accepted!
+reported state: {'temp': 22.7}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 6245a264-c149-4565-804b-1f0842f9fe8d accepted!
+reported state: {'humidity': 37.7}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":23.0}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":42.6}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: f9ddfc33-9016-47ae-8730-0707168d8bfb accepted!
+reported state: {'temp': 23.0}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: cd045ed5-a38c-4def-9354-72bdc5815c88 accepted!
+reported state: {'humidity': 42.6}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":23.9}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":46.6}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: f4ff0055-aa21-4814-93da-9b3ebe52f58f accepted!
+reported state: {'temp': 23.9}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 31f21877-39f5-42d0-9268-9b713a9bed6d accepted!
+reported state: {'humidity': 46.6}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":24.6}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":46.7}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: bc189ced-0d19-4f61-a9db-172f7a3d7945 accepted!
+reported state: {'temp': 24.6}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: ab393ebd-5362-4380-b02b-91885306721b accepted!
+reported state: {'humidity': 46.7}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":23.9}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":41.5}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 4d3a8b62-ac78-4344-aac2-2f7240994696 accepted!
+reported state: {'temp': 23.9}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 0ac10256-d0de-47af-ba6a-b5b6da9bf5d0 accepted!
+reported state: {'humidity': 41.5}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":23.1}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":38.7}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: ea5956a2-3fb5-4acb-ab8d-d1516c9a65f6 accepted!
+reported state: {'temp': 23.1}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 8e74f6d7-a105-4648-99e4-73a29754e518 accepted!
+reported state: {'humidity': 38.7}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":22.5}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 1f4dcd47-a314-44b2-beb8-a3e32e6c980b accepted!
+reported state: {'temp': 22.5}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":37.7}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 73eb9b38-48c5-4422-84e6-578c45b97c90 accepted!
+reported state: {'humidity': 37.7}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":23.2}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: a2bcb470-8689-4f90-8ca8-a63fb130b31e accepted!
+reported state: {'temp': 23.2}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":44.3}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 6a4ef564-35bb-4004-a514-b6f3ec6645f6 accepted!
+reported state: {'humidity': 44.3}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":24.2}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":47.3}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 2897553e-6b9e-4b38-9c78-dae3ae667dc3 accepted!
+reported state: {'temp': 24.2}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: d31124d5-e9c7-4a41-8424-247135d1a9c5 accepted!
+reported state: {'humidity': 47.3}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":24.3}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":44.0}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 9a81e57d-f684-41e0-9aed-dbb69f440aa5 accepted!
+reported state: {'temp': 24.3}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 139fe7ba-9533-4f12-9aa9-c268b5f2ee0c accepted!
+reported state: {'humidity': 44.0}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":23.6}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":40.2}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 3dfffc29-0a97-4b12-94be-f44b4750773b accepted!
+reported state: {'temp': 23.6}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 9cf99d25-4e90-4658-bbdc-241dd8fe1ad0 accepted!
+reported state: {'humidity': 40.2}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":22.9}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: a03cde67-d0f4-4dcc-9313-47c1c658cf37 accepted!
+reported state: {'temp': 22.9}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":38.0}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 3429945a-ecbc-465b-8103-8539aa2b6733 accepted!
+reported state: {'humidity': 38.0}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":22.8}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":40.5}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: ca55df82-1760-4ad7-b518-815d36f19f1a accepted!
+reported state: {'temp': 22.8}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 1154fd07-8266-4b29-a258-a46a6e007d69 accepted!
+reported state: {'humidity': 40.5}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":23.7}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":46.1}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 583a157f-8015-4b41-a762-16deef0506a3 accepted!
+reported state: {'temp': 23.7}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 05bc72cd-8ef7-4cf0-b147-392147eac11e accepted!
+reported state: {'humidity': 46.1}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":24.6}}}
+**** Updating humidity value ****
+{"state":{"reported":{"humidity":48.2}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: d99f2784-bec4-42ef-9c11-c8f224f3f329 accepted!
+reported state: {'temp': 24.6}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 9450c6b8-e9a3-4927-a23d-1d5eff2e1be3 accepted!
+reported state: {'humidity': 48.2}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+**** Updating temperature value ****
+{"state":{"reported":{"temp":24.2}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: b4032e6b-80cc-4869-ba5e-5e11ac414e05 accepted!
+reported state: {'temp': 24.2}2019-11-23 13:05:22,977 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-23 13:07:23,997 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-23 13:07:29,586 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-23 13:09:30,557 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-23 13:09:36,149 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-23 13:11:37,117 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-23 13:11:37,651 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
