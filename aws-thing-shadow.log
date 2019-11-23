@@ -4,2733 +4,365 @@
   'Falling back from %s: %s' % (name, str(e))))
 /usr/lib/python3/dist-packages/gpiozero/devices.py:279: PinFactoryFallback: Falling back from pigpio: No module named 'pigpio'
   'Falling back from %s: %s' % (name, str(e))))
-2019-11-05 00:15:34,820 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - MqttCore initialized
-2019-11-05 00:15:34,821 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Client id: yUp3qLUftKGGY01XdcL5
-2019-11-05 00:15:34,822 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Protocol version: MQTTv3.1.1
-2019-11-05 00:15:34,824 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Authentication type: TLSv1.2 certificate based Mutual Auth.
-2019-11-05 00:15:34,824 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring offline requests queueing: max queue size: 0
-2019-11-05 00:15:34,829 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring offline requests queue draining interval: 0.100000 sec
-2019-11-05 00:15:34,832 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring endpoint...
-2019-11-05 00:15:34,833 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring certificates...
-2019-11-05 00:15:34,835 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring reconnect back off timing...
-2019-11-05 00:15:34,836 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Base quiet time: 1.000000 sec
-2019-11-05 00:15:34,837 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Max quiet time: 32.000000 sec
-2019-11-05 00:15:34,839 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Stable connection time: 20.000000 sec
-2019-11-05 00:15:34,840 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring connect/disconnect time out: 10.000000 sec
-2019-11-05 00:15:34,841 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring MQTT operation time out: 5.000000 sec
-2019-11-05 00:15:34,842 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync connect...
-2019-11-05 00:15:34,844 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing async connect...
-2019-11-05 00:15:34,845 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Keep-alive: 600.000000 sec
-2019-11-05 00:15:35,485 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
-2019-11-05 00:15:37,592 - AWSIoTPythonSDK.core.shadow.deviceShadow - INFO - Subscribed to delta topic for deviceShadow: yUp3qLUftKGGY01XdcL5
-2019-11-05 00:15:38,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
-2019-11-05 00:15:38,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:15:38,529 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:15:39,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
-2019-11-05 00:15:39,509 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
-2019-11-05 00:15:41,614 - AWSIoTPythonSDK.core.shadow.deviceShadow - INFO - Subscribed to update accepted/rejected topics for deviceShadow: yUp3qLUftKGGY01XdcL5
-2019-11-05 00:15:41,615 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:15:41,616 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline requ2019-11-05 00:16:08,198 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:17:42,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:17:42,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:17:42,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:19:37,198 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:19:44,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:19:44,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:19:44,289 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:21:46,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-202019-11-05 00:21:54,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:21:54,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02019-11-05 00:23:07,744 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:23:47,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:23:47,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:23:47,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:27:50,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:27:50,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:27:50,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:29:52,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:29:52,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:29:52,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:31:54,367 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:31:54,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:31:54,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:33:56,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:33:56,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:33:56,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:33:57,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:33:57,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:33:57,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:33:58,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:33:58,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:33:58,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:36:00,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:36:00,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:36:00,609 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:40:03,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:40:03,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:40:03,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:54:10,927 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:54:10,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:54:10,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:54:11,807 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:54:11,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:54:11,809 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 00:56:13,647 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 00:56:13,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 00:56:13,649 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 01:04:18,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 01:04:18,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 01:04:18,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 01:04:19,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 01:04:19,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 01:04:19,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 01:06:21,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 01:06:21,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 01:06:21,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 01:28:32,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 01:28:32,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 01:28:32,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 01:30:34,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 01:30:34,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 01:30:34,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 01:32:36,047 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 01:32:36,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 01:32:36,049 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 01:32:36,927 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 01:32:36,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 01:32:36,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 01:34:38,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 01:34:38,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 01:34:38,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 01:36:40,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 01:36:40,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 01:36:40,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 01:40:43,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 01:40:43,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 01:40:43,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:00:53,647 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:00:53,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:00:53,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:00:54,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:00:54,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:00:54,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:11:00,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:11:00,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:11:00,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:11:01,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:11:01,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:11:01,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:13:02,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:13:02,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:13:02,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:17:05,647 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:17:05,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:17:05,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:17:06,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:17:06,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:17:06,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:21:09,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:23:10,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:23:10,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:23:10,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:25:12,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:25:12,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:25:12,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:29:14,927 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:29:14,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:29:14,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:33:17,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:33:17,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:33:17,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:49:26,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:49:26,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:49:26,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 02:51:27,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:59:31,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 02:59:31,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 02:59:31,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:01:33,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:01:33,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:01:33,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:13:40,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:13:40,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:13:40,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:13:41,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:13:41,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:13:41,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:13:41,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:13:41,969 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:13:41,970 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:15:43,807 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:15:43,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:15:43,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:27:50,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:27:50,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:27:50,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:27:51,327 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:27:51,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:27:51,329 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:29:53,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:29:53,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:29:53,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:29:53,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:35:56,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:35:56,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:35:56,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:37:58,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:37:58,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:37:58,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:44:02,367 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:44:02,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:44:02,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:44:03,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:44:03,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:44:03,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:46:05,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:46:05,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:46:05,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
+2019-11-22 20:06:16,109 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - MqttCore initialized
+2019-11-22 20:06:16,124 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Client id: yUp3qLUftKGGY01XdcL5
+2019-11-22 20:06:16,125 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Protocol version: MQTTv3.1.1
+2019-11-22 20:06:16,126 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Authentication type: TLSv1.2 certificate based Mutual Auth.
+2019-11-22 20:06:16,126 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring offline requests queueing: max queue size: 0
+2019-11-22 20:06:16,130 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring offline requests queue draining interval: 0.100000 sec
+2019-11-22 20:06:16,132 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring endpoint...
+2019-11-22 20:06:16,133 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring certificates...
+2019-11-22 20:06:16,172 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring reconnect back off timing...
+2019-11-22 20:06:16,173 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Base quiet time: 1.000000 sec
+2019-11-22 20:06:16,174 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Max quiet time: 32.000000 sec
+2019-11-22 20:06:16,175 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Stable connection time: 20.000000 sec
+2019-11-22 20:06:16,177 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring connect/disconnect time out: 10.000000 sec
+2019-11-22 20:06:16,177 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring MQTT operation time out: 5.000000 sec
+2019-11-22 20:06:16,178 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync connect...
+2019-11-22 20:06:16,179 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing async connect...
+2019-11-22 20:06:16,179 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Keep-alive: 600.000000 sec
+2019-11-22 20:06:16,877 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
+2019-11-22 20:06:19,018 - AWSIoTPythonSDK.core.shadow.deviceShadow - INFO - Subscribed to delta topic for deviceShadow: yUp3qLUftKGGY01XdcL5
+2019-11-22 20:06:19,932 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
+2019-11-22 20:06:20,240 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
+2019-11-22 20:06:22,342 - AWSIoTPythonSDK.core.shadow.deviceShadow - INFO - Subscribed to update accepted/rejected topics for deviceShadow: yUp3qLUftKGGY01XdcL5
+2019-11-22 20:06:22,343 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:06:28,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:11:10,877 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:11:11,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:13:12,397 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:13:12,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:15:13,837 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:15:14,369 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:17:15,357 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:17:15,889 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:19:16,877 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:19:17,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:21:18,317 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:21:18,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:23:19,837 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:23:20,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:25:21,357 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:25:21,894 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:27:22,797 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:27:23,333 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:29:24,317 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:29:24,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:31:25,837 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:31:28,902 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:33:29,917 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:33:30,450 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:35:31,437 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:35:31,969 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:37:32,957 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:37:33,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:39:34,477 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:39:35,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:41:35,997 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:41:36,532 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:43:37,437 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:43:37,970 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
 **** Updating temperature value ****
-{"state":{"reported":{"temp":26.2}}}
+{"state":{"reported":{"temp":27.8}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: feddf2cf-ea6b-480b-92fd-d1047308f23d accepted!
-reported state: {'temp': 26.2}
+Update request with token: dfafc721-1cfd-4f04-9260-8dc690ae8394 accepted!
+reported state: {'temp': 27.8}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.4}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: e9f166e6-7421-465f-9df5-816d97cf52ff accepted!
-reported state: {'temp': 26.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.3}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 71bac2b2-0aae-4d0c-9833-d20c0bdfc841 accepted!
-reported state: {'temp': 26.3}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.2}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: c42d2385-39df-4514-9c38-740c7700cecc accepted!
-reported state: {'temp': 26.2}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.4}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 32d14c91-6d9c-4218-a910-3cf463f4a829 accepted!
-reported state: {'temp': 26.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-Received a delta message:
-{"waterpump": false}
-waterpump Off
-Request to update the reported state...
-Sent.
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.2}}}
-**** Error: publishQueueDisabledException()
-Received a delta message:
-{"waterpump": false}
-waterpump Off
-Request to update the reported state...
-Sent.
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.5}}}
-**** Error: publishQueueDisabledException()
-Received a delta message:
-{"waterpump": true}
-waterpump On
-Request to update the reported state...
-Sent.
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.5}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.5}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.5}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.3}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.3}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.3}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: be06fe92-2135-4225-8ede-93b47c87c157 accepted!
-reported state: {'temp': 25.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d8920751-33ee-4a9c-a86f-da1379afdf08 accepted!
-reported state: {'temp': 25.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: aec76803-e01b-4fc4-8646-ee6347798d48 accepted!
-reported state: {'temp': 25.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****2019-11-05 03:48:06,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:48:06,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:48:06,849 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:50:08,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:50:08,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:50:08,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:50:09,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:50:09,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:50:09,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 03:52:11,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 03:52:11,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 03:52:11,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 04:14:22,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 04:14:22,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 04:14:22,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 04:16:24,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 04:16:24,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 04:16:24,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 04:28:31,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 04:28:31,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 04:28:31,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 04:30:32,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 04:30:32,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 04:30:32,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 04:40:38,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 04:40:38,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 04:40:38,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 04:40:39,567 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 04:40:39,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 04:40:39,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 04:42:41,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 04:42:41,409 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 04:42:41,410 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 04:46:44,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 04:48:45,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 04:48:45,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 04:48:45,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 04:50:46,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 04:50:46,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 04:50:46,849 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 04:54:49,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 04:54:49,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 04:54:49,489 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:02:54,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:02:54,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:02:54,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:08:57,807 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:08:57,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:08:57,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:17:02,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:17:02,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:17:02,529 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:19:04,367 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:19:04,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:19:04,369 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:21:06,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:21:06,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:21:06,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:21:07,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:21:07,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:21:07,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:21:07,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:39:16,367 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:39:16,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:39:16,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:45:20,047 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:45:20,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:45:20,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:47:21,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:47:21,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:47:21,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:49:23,647 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:49:23,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:49:23,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:49:24,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:49:24,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:49:24,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:51:26,367 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:51:26,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:51:26,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:53:28,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:53:28,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:53:28,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:55:29,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:55:29,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:55:29,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 05:57:31,807 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 05:57:31,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 05:57:31,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:01:34,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:01:34,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:01:34,609 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:03:36,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:03:36,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:03:36,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:05:38,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:05:38,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:05:38,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:11:42,047 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:11:42,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:11:42,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:13:43,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:13:43,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:13:43,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:15:45,647 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:15:45,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:15:45,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:17:47,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:17:47,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:17:47,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:19:49,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:19:49,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:19:49,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:21:51,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:21:51,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:21:51,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:23:52,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:23:52,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:23:52,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:25:54,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:25:54,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:25:54,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:25:55,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:25:55,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:25:55,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:27:57,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:27:57,249 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:27:57,250 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:29:59,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:29:59,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:29:59,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:32:00,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:32:00,849 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:32:00,850 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:34:02,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:34:02,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:34:02,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:34:03,567 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:34:03,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:34:03,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:36:05,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:36:05,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:36:05,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:38:07,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:40:08,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:40:08,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:40:08,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:42:09,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:42:09,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:42:09,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:44:11,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:44:11,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:44:11,729 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:44:12,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:44:12,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:44:12,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:44:13,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:44:13,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:44:13,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:46:15,327 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:46:15,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:46:15,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:48:17,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:48:17,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:48:17,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:48:18,047 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:48:18,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:48:18,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:50:19,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:50:19,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:50:19,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:52:21,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:52:21,729 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:52:21,730 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:54:23,567 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:54:23,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:54:23,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:56:25,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:56:25,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:56:25,409 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:58:27,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:58:27,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:58:27,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 06:58:28,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 06:58:28,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 06:58:28,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:00:29,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:00:29,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:00:29,969 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:02:31,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:02:31,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:02:31,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:04:33,567 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:04:33,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:04:33,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 7574c3e9-8bf9-4b38-9817-4b66f860fd41 accepted!
-reported state: {'temp': 25.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.7}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 6ae420b4-f0ec-4ddb-9d1a-e465e8f7fea7 accepted!
-reported state: {'temp': 25.7}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.3}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.5}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":26.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.1}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 6e5086bd-1701-4cf7-b23f-98e27c4bb05b accepted!
-reported state: {'temp': 23.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.5}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.5}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.4}}}
-**** Error: publishQueueDisabledException()2019-11-05 07:06:35,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:08:36,427 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:08:36,428 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:08:36,428 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:10:38,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:10:38,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:10:38,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:12:40,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:12:40,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:12:40,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:14:41,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:14:41,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:14:41,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:16:43,807 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:16:43,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:16:43,809 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:18:45,647 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:18:45,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:18:45,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:20:47,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:20:47,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:20:47,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:22:49,327 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:22:49,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:22:49,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:24:51,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:24:51,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:24:51,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:26:53,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:26:53,009 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:26:53,010 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:26:53,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:26:53,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:26:53,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:26:54,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:26:54,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:26:54,769 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:28:56,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:28:56,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:28:56,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:30:58,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:32:59,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:32:59,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:32:59,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:35:01,327 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:35:01,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:35:01,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:37:03,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:37:03,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:37:03,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:39:05,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:39:05,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:39:05,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:41:06,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:41:06,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:41:06,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:41:07,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:41:07,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:41:07,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:43:09,567 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:43:09,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:43:09,569 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:45:11,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:45:11,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:45:11,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:47:13,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:47:13,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:47:13,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:49:15,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:49:15,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:49:15,089 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:51:16,927 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:51:16,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:51:16,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:53:18,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:53:18,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:53:18,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:55:20,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:55:20,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:55:20,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:57:22,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:57:22,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:57:22,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:59:24,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:59:24,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:59:24,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 07:59:25,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:59:25,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 07:59:25,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:01:27,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:01:27,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:01:27,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:03:28,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:03:28,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:03:28,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:05:30,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:05:30,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:05:30,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:07:32,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:07:32,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:07:32,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:09:34,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:09:34,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:09:34,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:11:36,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:11:36,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:11:36,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:13:37,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:13:37,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:13:37,968 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:15:39,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:15:39,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:15:39,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:17:41,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:17:41,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:17:41,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:19:43,327 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:19:43,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:19:43,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:21:45,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:21:45,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:21:45,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:23:47,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:23:47,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:23:47,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:25:48,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:25:48,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:25:48,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:27:50,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:27:50,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:27:50,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:29:52,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:29:52,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:29:52,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:29:53,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:29:53,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:29:53,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:29:54,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:29:54,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:29:54,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:29:55,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:29:55,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:29:55,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:31:57,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:31:57,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:31:57,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:33:58,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:33:58,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:33:58,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:36:00,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:36:00,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:36:00,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:38:02,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:38:02,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:38:02,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:40:04,367 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:40:04,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:40:04,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:42:06,206 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:42:06,206 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:42:06,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:44:08,047 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:44:08,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:44:08,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:46:09,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:46:09,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:46:09,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:48:11,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:48:11,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:48:11,729 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:48:12,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:48:12,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:48:12,609 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:50:14,367 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:50:14,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:50:14,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:52:16,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:52:16,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:52:16,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:54:18,047 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:54:18,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:54:18,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:56:19,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:56:19,889 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:56:19,890 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:58:21,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:58:21,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:58:21,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 08:58:22,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:58:22,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 08:58:22,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:00:24,367 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:00:24,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:00:24,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:02:26,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:02:26,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:02:26,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.0}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 107ce25a-dc6d-483e-993d-23b2d1628067 accepted!
-reported state: {'temp': 23.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.5}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.1}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: b0db975c-62b2-4501-9dea-1774068c1788 accepted!
-reported state: {'temp': 24.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.3}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.3}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.2}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.5}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.4}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.5}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.9}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.0}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}2019-11-05 09:04:28,047 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:04:28,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:04:28,049 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:06:29,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:06:29,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:06:29,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:06:30,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:06:30,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:06:30,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:08:32,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:10:33,647 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:10:33,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:10:33,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:12:35,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:12:35,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:12:35,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:14:37,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:14:37,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:14:37,169 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:14:38,047 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:14:38,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:14:38,049 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:16:39,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:16:39,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:16:39,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:18:41,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:18:41,728 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:18:41,729 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:20:43,567 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:20:43,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:20:43,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:22:45,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:22:45,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:22:45,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:24:47,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:24:47,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:24:47,249 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:26:49,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:26:49,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:26:49,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:28:50,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:28:50,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:28:50,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:30:52,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:30:52,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:30:52,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:32:54,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:32:54,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:32:54,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:32:55,327 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:32:55,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:32:55,329 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:32:56,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:32:56,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:32:56,209 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:34:58,047 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:34:58,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:34:58,048 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:36:59,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:36:59,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:36:59,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:39:02,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:39:02,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:39:02,529 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:41:04,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:41:04,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:41:04,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:43:06,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:43:06,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:43:06,128 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:43:07,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:43:07,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:43:07,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:45:08,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:45:08,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:45:08,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:47:10,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:47:10,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:47:10,689 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:49:12,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:49:12,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:49:12,609 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:49:13,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:49:13,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:49:13,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:51:15,327 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:51:15,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:51:15,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:53:17,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:53:17,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:53:17,089 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:55:18,927 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:55:18,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:55:18,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:55:19,807 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:55:19,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:55:19,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:57:21,647 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:57:21,648 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:57:21,649 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:59:23,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:59:23,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:59:23,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:01:25,327 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:01:25,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:01:25,328 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:03:27,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:03:27,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:03:27,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:05:29,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:05:29,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:05:29,008 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:07:30,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:07:30,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:07:30,849 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:09:32,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:09:32,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:09:32,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:11:34,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:11:34,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:11:34,528 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:11:35,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:11:35,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:11:35,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:13:37,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:13:37,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:13:37,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:15:39,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:15:39,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:15:39,088 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:17:40,927 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:17:40,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:17:40,928 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:17:41,807 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:17:41,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:17:41,808 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:19:43,567 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:19:43,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:19:43,568 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:19:44,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:19:44,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:19:44,448 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:21:46,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:21:46,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:21:46,288 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:21:47,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:21:47,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:21:47,168 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 841bed00-e6b5-479c-8fc3-0237a51b447d accepted!
-reported state: {'temp': 24.7}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4aed6953-2776-49d5-9a33-3915fdd94eaa accepted!
-reported state: {'humidity': 54.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.8}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.0}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 5fa896c0-548d-4a81-b5c3-1301c55b666f accepted!
-reported state: {'temp': 23.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: fab91548-672f-478a-afb5-61fc539b84e1 accepted!
-reported state: {'humidity': 53.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.2}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":46.9}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: e7ef76f9-1e9a-4a6e-8665-93437a81c381 accepted!
-reported state: {'temp': 23.2}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: a74506e1-44fd-47d2-975a-e574badc20fb accepted!
-reported state: {'humidity': 46.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.9}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 98d6b2a7-f918-4943-848f-d4acee96627b accepted!2019-11-05 07:45:27,240 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:47:28,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:49:29,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:49:30,258 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:51:31,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:51:31,778 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:53:32,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:53:33,298 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:55:34,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:55:34,820 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:57:35,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:57:36,258 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:59:37,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 07:59:37,779 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:01:38,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:01:39,218 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:03:40,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:03:40,738 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:05:41,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:05:42,258 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:07:43,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:07:43,698 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:09:44,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:09:45,219 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:11:46,127 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:11:46,658 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:13:47,647 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:13:48,178 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:15:49,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:15:49,698 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:17:50,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:17:51,218 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:19:52,207 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:19:52,738 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:21:53,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:21:54,258 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-
-reported state: {'temp': 23.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":55.0}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 31ea40af-9e78-41b5-8516-b2af4616279e accepted!
-reported state: {'humidity': 55.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.7}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 854784fb-e254-4aed-8ccd-a5755e0e54cf accepted!
-reported state: {'temp': 24.7}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.1}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":49.6}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 34d3de0b-3bf0-4e02-87dc-ecc689f1ef08 accepted!
-reported state: {'temp': 23.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 1b1b403a-05e0-426a-938b-e32079aeb2d0 accepted!
-reported state: {'humidity': 49.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.5}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":47.1}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 8268a2bc-8a96-404f-8508-d9c94ab3c8b1 accepted!
-reported state: {'temp': 23.5}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 8913ced7-2a09-4541-90a1-33cff138431e accepted!
-reported state: {'humidity': 47.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":55.4}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d9a601ba-a27a-4ac0-b0f7-222e15c26928 accepted!
-reported state: {'temp': 24.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 88b42832-825b-4001-b62b-1fe9d2c84fa0 accepted!
-reported state: {'humidity': 55.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.9}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":54.2}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4383d761-53c4-4ca1-abcd-e3b9e5303665 accepted!
-reported state: {'temp': 23.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: fe209a4c-8bca-48b3-a6d4-58b0f78019b2 accepted!
-reported state: {'humidity': 54.2}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.3}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":48.3}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: f0e6ddb1-94ee-48c5-9842-67516bc4c4ee accepted!
-reported state: {'temp': 23.3}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4d29a032-8652-4b45-b269-b1d31bc5f536 accepted!
-reported state: {'humidity': 48.3}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.1}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":52.5}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d4e04b7e-288f-4470-853a-5404cca39a5e accepted!
-reported state: {'temp': 24.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 84b805b1-f43a-4d8d-a856-056ffc461e6d accepted!
-reported state: {'humidity': 52.5}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":55.3}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: a1bfda1f-402e-44ce-ae03-7f11675b39d1 accepted!
-reported state: {'temp': 24.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 988489a7-2e8d-4a56-9dcd-cdcdca59f6be accepted!
-reported state: {'humidity': 55.3}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.8}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":50.6}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: dc1a27a2-3079-431f-aaab-fef11f43db91 accepted!
-reported state: {'temp': 22.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 449db4cd-6dd8-431d-b6f1-3b96447a2eaa accepted!
-reported state: {'humidity': 50.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":45.6}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d9543fe8-b789-49f1-aa9e-d8b103a14850 accepted!
-reported state: {'temp': 23.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: ce350cb8-caff-45ea-ab3e-64857634a0e4 accepted!
-reported state: {'humidity': 45.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.6}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.1}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 93acff2c-46d7-4d46-a988-7d442da4c4ec accepted!
-reported state: {'temp': 24.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 9d152883-a5d5-4449-ac0c-a9b2a063b166 accepted!
-reported state: {'humidity': 53.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.4}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.4}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: dd1e2b73-6a80-4598-b7a2-84c9aae42fb0 accepted!
-reported state: {'temp': 24.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: e1cfc1d5-42d1-4605-920c-35eb4991061b accepted!
-reported state: {'humidity': 53.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.0}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":47.4}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: e45200b7-2886-43a2-a5eb-b1534f8502fa accepted!
-reported state: {'temp': 23.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4edc2f2d-9b98-4986-8c46-d8050b62a704 accepted!
-reported state: {'humidity': 47.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.9}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":46.8}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d1f6f8b9-47d9-4e84-a436-09c6d025da0a accepted!
-reported state: {'temp': 23.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: b5e433a2-5d79-4bef-a887-743aedf93beb accepted!
-reported state: {'humidity': 46.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.0}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.4}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 80edb133-e9b4-4938-8f7e-dc08f79e2c5a accepted!
-reported state: {'temp': 25.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 2e378bd0-66a3-465a-8f9f-8b75d2b4922f accepted!
-reported state: {'humidity': 53.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.2}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":52.1}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: e3bda36d-9f66-40db-a671-4ca2530b140b accepted!
-reported state: {'temp': 23.2}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 866ed49d-10ef-4e11-b5a4-8faa4bde6b82 accepted!
-reported state: {'humidity': 52.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":45.6}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 1fadfbe0-674a-4e01-9339-65fe0af3bdb7 accepted!
-reported state: {'temp': 23.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d38845b8-6ba9-4f54-a414-73c550731a1a accepted!
-reported state: {'humidity': 45.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.4}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":51.6}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 1539d720-3386-446d-8481-b6943d9fdc17 accepted!
-reported state: {'temp': 24.4}2019-11-05 08:23:55,773 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:25:56,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:25:57,299 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:27:58,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:27:58,818 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:29:59,807 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:30:00,338 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:32:01,327 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:32:06,917 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:34:07,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:34:08,418 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:36:09,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:36:09,938 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:38:10,927 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:38:11,458 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:40:12,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:40:12,980 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:42:13,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:42:14,498 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:44:15,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:44:16,019 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:46:17,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:46:17,539 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:48:18,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:48:18,983 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:50:19,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:50:20,419 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:52:21,327 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:52:21,858 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:54:22,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:54:23,298 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:56:24,287 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:56:24,822 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:58:25,727 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 08:58:26,258 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 1423fd73-d605-4a3e-875d-2c43a4c213a6 accepted!
-reported state: {'humidity': 51.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.8}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 1db22882-90a6-49d7-b402-c60ee7a43547 accepted!
-reported state: {'humidity': 53.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.8}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":48.5}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 5cc0a428-0d86-4fe1-9461-34235438ac44 accepted!
-reported state: {'temp': 22.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 17637b8e-22c3-4587-abd8-800354d7ac5e accepted!
-reported state: {'humidity': 48.5}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.7}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":45.0}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 517e91ee-2da2-41de-a8e3-07a646b9c57f accepted!
-reported state: {'temp': 23.7}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 98afc9ae-27b1-46b7-b2d6-42140df41291 accepted!
-reported state: {'humidity': 45.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.4}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 65064942-9e62-48c7-9d08-069f6fe8c605 accepted!
-reported state: {'temp': 24.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 2efb0a76-1369-41b2-9244-e25ef5450cf4 accepted!
-reported state: {'humidity': 53.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.8}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: b4087e93-e9e1-4df8-8a9c-5d9e7ebd9264 accepted!
-reported state: {'temp': 23.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":46.8}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: a46d81eb-949e-4728-9529-b58afac30f7b accepted!
-reported state: {'humidity': 46.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.0}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":46.7}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: cebf80ea-3a6a-4e77-b114-478d33e2c2c5 accepted!
-reported state: {'temp': 23.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4dc0be43-23c8-4168-8bf4-836d29cc947a accepted!
-reported state: {'humidity': 46.7}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.0}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":49.0}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 85279409-02ae-4e74-bcbd-6660f0ac8ae1 accepted!
-reported state: {'temp': 24.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: b142ac5d-6a1e-4c5b-8306-69f168d4eaf4 accepted!
-reported state: {'humidity': 49.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.9}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":54.1}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: f2dc1636-41bc-43ba-900f-9818b77ee1bf accepted!
-reported state: {'temp': 24.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4f563d22-3219-414f-8860-8272495ea7aa accepted!
-reported state: {'humidity': 54.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.9}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":50.8}}}
+{"state":{"reported":{"humidity":44.0}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 7f7418a1-83d7-4000-920c-34d9e61e6e64 accepted!
-reported state: {'temp': 22.9}
+Update request with token: bcfcca15-a264-4285-a600-8e5cac645ae8 accepted!
+reported state: {'humidity': 44.0}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 7b71e9b7-c34b-41a6-a0e5-14c228cf125d accepted!
-reported state: {'humidity': 50.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.2}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":45.5}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 7451d093-e164-4c00-8d12-e496aa26b3cc accepted!
-reported state: {'temp': 23.2}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 31e59aa9-a846-469d-94fd-5cc9d7881886 accepted!
-reported state: {'humidity': 45.5}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.3}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":52.4}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 22fbb9a2-abcf-4000-bf78-08b529d5eb49 accepted!
-reported state: {'temp': 24.3}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: b7d990af-2f31-4a7b-9b4b-b8b428ab2a7e accepted!
-reported state: {'humidity': 52.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.4}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.8}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 22863110-335b-499b-9209-601d999bf26d accepted!
-reported state: {'temp': 24.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 5d755b31-55cb-4b37-8662-5f2dddc42727 accepted!
-reported state: {'humidity': 53.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.6}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":48.5}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 9e9fb882-1056-49be-8b0c-9091879beb6a accepted!
-reported state: {'temp': 22.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 1e90cd51-52e9-4bbe-a83a-688d126b58bc accepted!
-reported state: {'humidity': 48.5}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":45.5}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: fc63d8cc-83fc-4802-94e1-572ef8cd8391 accepted!
-reported state: {'temp': 23.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 59cafa50-bded-4d82-abaf-d85f9b33ef1f accepted!
-reported state: {'humidity': 45.5}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.9}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: a4e28e1c-bfda-48d2-863b-3d5c0688602f accepted!
-reported state: {'temp': 24.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: cec53564-23bf-4f9a-b6f1-7e297c88d1c2 accepted!
-reported state: {'humidity': 53.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.5}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.0}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 59482ae0-bd06-4657-8b83-8c5d3d81daa3 accepted!
-reported state: {'temp': 23.5}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 070365fb-ab2e-497a-8a94-af5b5f8dd7bd accepted!
-reported state: {'humidity': 53.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.0}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":46.7}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 07cdaca1-93ae-46e7-ad9e-0364dce3dc46 accepted!
-reported state: {'temp': 23.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: b3fa4b85-e123-4eae-a224-c48e4656acb9 accepted!
-reported state: {'humidity': 46.7}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.0}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":50.1}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d99788de-d755-47de-8b26-50593a25212e accepted!
-reported state: {'temp': 24.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d83cc0c5-7e76-413b-aaf2-b9cd59ebacd0 accepted!2019-11-05 09:00:27,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:00:30,314 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:00:30,315 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:00:30,316 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:00:31,247 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:00:31,778 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:02:32,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:02:35,826 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:04:36,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:04:42,439 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:06:43,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:06:43,938 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:08:44,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:08:47,909 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:10:48,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:10:49,499 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:10:53,971 - AWSIoTPythonSDK.core.shadow.deviceShadow - INFO - Shadow request with token: 5123a90a-dc11-4293-b260-3d319f5e14c4 has timed out.
-2019-11-05 09:10:54,503 - AWSIoTPythonSDK.core.shadow.deviceShadow - INFO - Shadow request with token: e3fc168d-cfa8-43bf-be54-e5bf4c785847 has timed out.
-2019-11-05 09:12:50,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:12:51,058 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:14:51,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:14:51,970 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:14:51,970 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:14:52,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:14:53,377 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:16:54,367 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:16:54,898 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:18:55,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:18:55,888 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:18:55,889 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:18:59,823 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:21:00,847 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:21:01,382 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:23:02,893 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:25:03,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:25:04,418 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:27:05,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:27:05,938 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:29:06,927 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:29:07,458 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:31:08,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:31:08,978 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:33:09,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:33:10,498 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:35:11,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:35:12,018 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-
-reported state: {'humidity': 50.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.0}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4460dc9a-5874-4c05-be2a-cda56a09022b accepted!
-reported state: {'temp': 25.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":50.7}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.9}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":50.6}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: fd8fae6b-099d-403e-9dfa-4b89e3f89198 accepted!
-reported state: {'temp': 24.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 5b4681c3-e117-4b76-af30-9963f4aee164 accepted!
-reported state: {'humidity': 50.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.9}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: a4f3959c-6973-4025-8ea6-8d2e2ec89cf4 accepted!
-reported state: {'temp': 22.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":45.2}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d077d1b6-3f75-4328-8b0f-8380e2a63045 accepted!
-reported state: {'humidity': 45.2}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 38c292c4-e3de-4d04-a644-d7870f932bf6 accepted!
-reported state: {'temp': 23.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.0}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d39833c2-cb1a-481f-a6b2-8d18e9e040af accepted!
-reported state: {'humidity': 53.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.6}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.2}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 631e9d00-07fa-4073-898c-6d5924ad97ef accepted!
-reported state: {'temp': 24.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 578d83b4-2889-452d-b534-bc5d048b3167 accepted!
-reported state: {'humidity': 53.2}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.9}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: f9c2ef96-9152-4d4f-9455-b95887bb680f accepted!
-reported state: {'temp': 23.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":47.3}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 19f42a2a-0cdd-4c61-85ab-93b5c75e5766 accepted!
-reported state: {'humidity': 47.3}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.9}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":47.2}}}
-Update request 5123a90a-dc11-4293-b260-3d319f5e14c4 time out!
-Update request e3fc168d-cfa8-43bf-be54-e5bf4c785847 time out!
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.9}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":48.6}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 7828c296-5944-4d9b-aed2-a71a1c04d922 accepted!
-reported state: {'temp': 23.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 5636bf72-a433-421b-a345-9a2bb0bc37ff accepted!
-reported state: {'humidity': 48.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":25.0}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":54.2}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: a4c95e16-1ead-472e-b3a1-6ae8c66c3327 accepted!
-reported state: {'temp': 25.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 3cfc6d55-d123-4a56-8323-127b18b7c142 accepted!
-reported state: {'humidity': 54.2}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.0}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":51.4}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 02377204-813d-4b69-88ea-0b163cf6d5f6 accepted!
-reported state: {'temp': 23.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 9206d9eb-df44-4f23-afbc-ac1b4bd6de1e accepted!
-reported state: {'humidity': 51.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.3}}}
-**** Error: publishQueueDisabledException()
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":52.2}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 0ab57dd2-b10a-44a8-878d-bda31ca17059 accepted!
-reported state: {'humidity': 52.2}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.4}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":52.4}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 534f3d66-8262-4320-beaf-76cf4d5d2912 accepted!
-reported state: {'temp': 24.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 18cec818-2a47-44e1-8193-1eeeb87d0541 accepted!
-reported state: {'humidity': 52.4}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":54.1}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 09af6124-85bd-40e3-8b96-22bb0cafee0a accepted!
-reported state: {'humidity': 54.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.6}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":49.0}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 6a9d2583-5884-40b2-8e86-35a460b8d69b accepted!
-reported state: {'temp': 22.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 9e41aa09-95ef-4404-a472-78a89574687e accepted!
-reported state: {'humidity': 49.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":46.2}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4205d1a7-7bee-46af-b4a8-4c06b56393a6 accepted!
-reported state: {'temp': 23.6}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 6175fe9f-d6ee-439c-89e4-26fb35cb2272 accepted!
-reported state: {'humidity': 46.2}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
 **** Updating temperature value ****
-{"state":{"reported":{"temp":24.8}}}
+{"state":{"reported":{"temp":27.8}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":54.6}}}
+{"state":{"reported":{"humidity":44.6}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 229d646e-46e6-453b-9277-c8bbf81de99e accepted!
-reported state: {'temp': 24.8}
+Update request with token: bdcea9c3-f315-40a9-b099-3ade4f7ab1d1 accepted!
+reported state: {'temp': 27.8}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 9861c21d-25f2-44e9-aedf-091cb78ece1e accepted!
-reported state: {'humidity': 54.6}
+Update request with token: 90ec29bf-576e-452d-a3d8-871f816bded9 accepted!
+reported state: {'humidity': 44.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
+{"state":{"reported":{"temp":27.8}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":53.6}}}
+{"state":{"reported":{"humidity":44.6}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 2f16e17f-1252-4efb-93cd-d5563e426bc4 accepted!
-reported state: {'temp': 23.6}
+Update request with token: 850e6016-3be5-4158-82c4-e28a8131f449 accepted!
+reported state: {'temp': 27.8}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: c9afd68c-aa1b-4bc7-9851-d46a28f326a6 accepted!
-reported state: {'humidity': 53.6}
+Update request with token: 35d79a5f-39b2-4d4b-b22a-ed384483c681 accepted!
+reported state: {'humidity': 44.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":23.0}}}
+{"state":{"reported":{"temp":27.6}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":47.2}}}
+{"state":{"reported":{"humidity":44.6}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: fd2db23c-24a1-4d0e-81e1-5b9b259fc157 accepted!
-reported state: {'temp': 23.0}
+Update request with token: 43b762f1-869d-4ff0-b757-8a3a155ef3b6 accepted!
+reported state: {'temp': 27.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: a6327102-477f-4344-ad11-6c08b6e79b2f accepted!
-reported state: {'humidity': 47.2}
+Update request with token: 8b510aa3-0c1b-4db1-b6e3-05c596ebd635 accepted!
+reported state: {'humidity': 44.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":24.0}}}
+{"state":{"reported":{"temp":27.6}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":49.8}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 6634eafe-75a9-4c9f-978a-ff1695fb100f accepted!
-reported state: {'temp': 24.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~2019-11-05 09:37:13,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:37:16,067 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:39:17,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:39:17,538 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:41:18,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:41:19,058 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:43:19,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:43:20,497 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:45:21,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:45:22,018 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:47:23,007 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:47:23,539 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:49:24,527 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:49:25,058 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:51:26,047 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:51:26,578 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:53:27,567 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:53:28,098 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:53:33,103 - AWSIoTPythonSDK.core.shadow.deviceShadow - INFO - Shadow request with token: ce6784f1-d6e7-48cc-b2c1-430a83d6d437 has timed out.
-2019-11-05 09:55:29,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:55:29,618 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:57:30,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:57:30,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:57:30,608 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:57:31,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:57:31,488 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 09:57:31,489 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 09:57:32,894 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:59:33,887 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 09:59:34,418 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:01:35,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:01:38,466 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:03:39,407 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:05:40,927 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:05:41,460 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:07:42,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:07:42,978 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:09:43,967 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:09:44,498 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:11:45,487 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:11:46,018 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-
-Update request with token: 65ab3bce-df04-4cc7-829b-4af9d5475564 accepted!
-reported state: {'humidity': 49.8}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.9}}}
+{"state":{"reported":{"humidity":44.5}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d80ad9ce-39df-4285-bb0a-b45acce0d316 accepted!
-reported state: {'temp': 24.9}
+Update request with token: f922fdb3-8172-4322-aac2-72ada231886f accepted!
+reported state: {'temp': 27.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":51.1}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: c20e5e21-0518-4ce4-a81a-d508748d2166 accepted!
-reported state: {'humidity': 51.1}
+Update request with token: 75e0fc5e-26db-4e87-adcd-833d89b18d73 accepted!
+reported state: {'humidity': 44.5}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":23.0}}}
+{"state":{"reported":{"temp":27.6}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":51.0}}}
+{"state":{"reported":{"humidity":44.3}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: f37ac2ce-5ce4-4210-8e41-ff0a257dda1d accepted!
-reported state: {'temp': 23.0}
+Update request with token: bfc042e1-ae14-490f-af8a-f9ae88935d7c accepted!
+reported state: {'temp': 27.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 67000bd6-7f80-44e5-8885-b89cc5388c99 accepted!
-reported state: {'humidity': 51.0}
+Update request with token: fca9fc4f-c8e5-48d6-8054-0ed643073a9f accepted!
+reported state: {'humidity': 44.3}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}
+{"state":{"reported":{"temp":27.6}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":45.7}}}
+{"state":{"reported":{"humidity":44.2}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: b00ea5d9-662d-4572-86c6-00c938dfcc88 accepted!
-reported state: {'temp': 23.4}
+Update request with token: 3daf162b-4c5e-4f92-a6a6-7cbc4062d45e accepted!
+reported state: {'temp': 27.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 05ac49ab-3cdb-4459-b8f7-7bce53870ff1 accepted!
-reported state: {'humidity': 45.7}
+Update request with token: 2281b24b-2786-48ac-a852-caaf57608124 accepted!
+reported state: {'humidity': 44.2}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":24.5}}}
+{"state":{"reported":{"temp":27.6}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":53.1}}}
+{"state":{"reported":{"humidity":44.1}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 362a6b9b-bbf7-4f89-a620-76e64bb1f2a4 accepted!
-reported state: {'temp': 24.5}
+Update request with token: b683c278-30c0-4424-9c0e-70930609af85 accepted!
+reported state: {'temp': 27.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 54739a77-4e29-4613-82d0-d1ec7104b40e accepted!
-reported state: {'humidity': 53.1}
+Update request with token: 1a0d1b83-1772-40b8-ad8e-0cc9bd489ea4 accepted!
+reported state: {'humidity': 44.1}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":24.0}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":54.2}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 20ba01f8-b221-4e21-a0f1-e7c3fb16a317 accepted!
-reported state: {'temp': 24.0}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
+{"state":{"reported":{"temp":27.6}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 5a3d65a4-191f-44dc-9ad6-a7e573570649 accepted!
-reported state: {'humidity': 54.2}
+Update request with token: bb7a971f-8bdd-4d59-b379-77d30b98565e accepted!
+reported state: {'temp': 27.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-**** Updating temperature value ****
-{"state":{"reported":{"temp":22.9}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":48.5}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: c9d7dc77-4119-4197-a88a-22866b9e7170 accepted!
-reported state: {'temp': 22.9}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
+{"state":{"reported":{"humidity":43.9}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 90491299-4fb4-4563-99f8-10d5b5f4d5ff accepted!
-reported state: {'humidity': 48.5}
+Update request with token: 7e713ba6-9e5d-4004-824d-2397ab1623b8 accepted!
+reported state: {'humidity': 43.9}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":23.8}}}
+{"state":{"reported":{"temp":27.6}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":47.8}}}
+{"state":{"reported":{"humidity":43.8}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: f260f0ab-ad80-4680-bff1-0bac52fc4a41 accepted!
-reported state: {'temp': 23.8}
+Update request with token: 726e0ccc-8699-4a45-9d8a-9cd7ab148a4f accepted!
+reported state: {'temp': 27.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: b11bf2e4-42e8-479b-b43e-291e7b56064b accepted!
-reported state: {'humidity': 47.8}
+Update request with token: c9e96395-35b2-4261-8131-70f8b41c45b6 accepted!
+reported state: {'humidity': 43.8}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":25.1}}}
+{"state":{"reported":{"temp":27.6}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":54.8}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: ed781b6b-52d9-4410-8ba8-513426129d5b accepted!
-reported state: {'temp': 25.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
+{"state":{"reported":{"humidity":43.7}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d2ef8e98-2b0b-45b3-99db-baaddd7ff66c accepted!
-reported state: {'humidity': 54.8}
+Update request with token: 555fe560-d965-480a-8097-f38dff84a434 accepted!
+reported state: {'temp': 27.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.2}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":53.2}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: f8c42ce8-2dc9-4250-8447-442f7d059876 accepted!
-reported state: {'temp': 23.2}
+Update request with token: e0d50197-b6ce-48ed-b359-0e27ba7024a3 accepted!
+reported state: {'humidity': 43.7}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Update request ce6784f1-d6e7-48cc-b2c1-430a83d6d437 time out!
 **** Updating temperature value ****
-{"state":{"reported":{"temp":23.1}}}
-**** Updating humidity value ****
-{"state":{"reported":{"humidity":46.8}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 8d3c6d5a-7162-45b7-a9ed-b63325b0dcd3 accepted!
-reported state: {'temp': 23.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
+{"state":{"reported":{"temp":27.6}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 944f56ca-3840-4ee2-b973-02e22b391fd2 accepted!
-reported state: {'humidity': 46.8}
+Update request with token: c1118337-18a7-4604-ae37-813386a86dee accepted!
+reported state: {'temp': 27.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.1}}}
-**** Error: publishQueueDisabledException()
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.2}}}
-**** Error: publishQueueDisabledException()
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":52.0}}}
+{"state":{"reported":{"humidity":43.4}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: edb32ee9-734c-40ef-a67d-100a0f3c9585 accepted!
-reported state: {'humidity': 52.0}
+Update request with token: 34e854fa-0031-466b-9a11-f872bbd15cdd accepted!
+reported state: {'humidity': 43.4}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":24.4}}}
+{"state":{"reported":{"temp":27.6}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":54.8}}}
+{"state":{"reported":{"humidity":43.4}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: fc34609c-13ee-4844-9588-a6c4d5c0c5d2 accepted!
-reported state: {'temp': 24.4}
+Update request with token: 7d8169b5-e67d-46f0-831a-0c5ab55aa266 accepted!
+reported state: {'temp': 27.6}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 646175ad-9906-4b3b-b18d-b81273ba0751 accepted!
-reported state: {'humidity': 54.8}
+Update request with token: 0d65757f-55e9-4b94-91c0-a55906777941 accepted!
+reported state: {'humidity': 43.4}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":22.2}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 673f447b-9a6a-41b1-a328-24496e28c30d accepted!
-reported state: {'temp': 22.2}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
+{"state":{"reported":{"temp":27.5}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":46.2}}}
+{"state":{"reported":{"humidity":43.3}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 48abb4d0-2323-457c-896d-d4e5e7f2a127 accepted!
-reported state: {'humidity': 46.2}
+Update request with token: ca9ed044-c7bc-48ec-a9f1-60b401120d7e accepted!
+reported state: {'temp': 27.5}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-**** Updating temperature value ****
-{"state":{"reported":{"temp":23.4}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: e61801c0-0790-4b55-bed1-463d57f6470d accepted!
-reported state: {'temp': 23.4}
+Update request with token: 9c9dde22-d6a2-4f4b-8e1f-0bb08eb44559 accepted!
+reported state: {'humidity': 43.3}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":24.6}}}
+{"state":{"reported":{"temp":27.5}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":54.4}}}
+{"state":{"reported":{"humidity":43.3}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 56821939-5ed4-482e-8a70-163b3c1a751b accepted!
-reported state: {'temp': 24.6}
+Update request with token: a8418d49-ad55-4f2a-88b8-00b8055d5446 accepted!
+reported state: {'temp': 27.5}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 507addab-5d81-4d91-ac79-6e4314b8c092 accepted!
-reported state: {'humidity': 54.4}
+Update request with token: dd04c055-b367-4aea-abf5-28181e36556c accepted!
+reported state: {'humidity': 43.3}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":23.6}}}
+{"state":{"reported":{"temp":27.5}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":54.2}}}
+{"state":{"reported":{"humidity":43.2}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: bfa325e4-8fab-44df-813e-a9f7f04f4c25 accepted!
-reported state: {'temp': 23.6}
+Update request with token: b385c952-2ea9-48db-aec1-98104cfc23e5 accepted!
+reported state: {'temp': 27.5}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 31d74d11-5a77-49a6-87af-4a986c8c8866 accepted!
-reported state: {'humidity': 54.2}
+Update request with token: 640392d7-3f80-4ce4-bff0-0afa09f0a987 accepted!
+reported state: {'humidity': 43.2}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":22.8}}}
+{"state":{"reported":{"temp":27.4}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":48.2}}}
+{"state":{"reported":{"humidity":43.1}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 37c78900-63a8-4698-8af2-9e6adfa2e969 accepted!
-reported state: {'temp': 22.8}
+Update request with token: e5c6d739-74a6-46a4-8cec-9a53b2e00217 accepted!
+reported state: {'temp': 27.4}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: e1a51ba9-2416-48cd-9000-bd3e2e34ed99 accepted!
-reported state: {'humidity': 48.2}
+Update request with token: 88de5ce7-5ab7-4654-a74c-d9414f74d17e accepted!
+reported state: {'humidity': 43.1}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **** Updating temperature value ****
-{"state":{"reported":{"temp":23.8}}}
+{"state":{"reported":{"temp":27.5}}}
 **** Updating humidity value ****
-{"state":{"reported":{"humidity":49.1}}}
+{"state":{"reported":{"humidity":43.7}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 7d8ab687-827f-4535-af4a-f584c364efba accepted!
-reported state: {'temp': 23.8}
+Update request with token: 0b910379-a12a-471c-9abe-cf0a59863f5a accepted!
+reported state: {'temp': 27.5}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 68959575-5531-46e7-8812-ac89668aa040 accepted!
-reported state: {'humidity': 49.1}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-**** Updating temperature value ****
-{"state":{"reported":{"temp":24.9}}}2019-11-05 10:13:47,010 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:13:50,070 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:15:51,087 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:15:54,150 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:17:55,167 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:19:56,687 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:19:56,688 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:19:56,689 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:19:58,094 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:19:58,095 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Offline request detected!
-2019-11-05 10:19:58,096 - AWSIoTPythonSDK.core.protocol.mqtt_core - ERROR - Offline request queue has been disabled
-2019-11-05 10:19:59,533 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:22:00,447 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-11-05 10:22:03,511 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+~~~~~~~~~~~~~~~~~~~~~~~2019-11-22 20:45:38,877 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:45:39,408 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:47:40,317 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:47:40,848 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:49:41,837 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:49:42,368 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:51:43,277 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:51:43,809 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:53:44,717 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:53:45,252 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:55:46,237 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:55:49,298 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:57:50,237 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:57:50,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:59:51,677 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 20:59:52,208 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 21:01:53,197 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 21:01:53,729 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 21:03:54,717 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 21:03:55,248 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 21:05:56,237 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-11-22 21:05:56,768 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
