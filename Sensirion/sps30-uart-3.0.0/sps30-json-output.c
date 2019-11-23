@@ -56,7 +56,7 @@ int main(void) {
 
     while (sensirion_uart_open() != 0) {
         printf("UART init failed\n");
-        fprintf(fp,"{\"lastState\":\"UART_INIT_FAILED\"}");
+        fprintf(fp,"{\"error\":\"UART_INIT_FAILED\"}");
         sensirion_sleep_usec(1000000); /* sleep for 1s */
     }
     fp=freopen(NULL,"w",fp);
@@ -66,7 +66,7 @@ int main(void) {
      */
     while (sps30_probe() != 0) {
         printf("SPS30 sensor probing failed\n");
-        fprintf(fp,"{\"lastState\":\"PROBING_FAILED\"}");
+        fprintf(fp,"{\"error\":\"PROBING_FAILED\"}");
         sensirion_sleep_usec(1000000); /* sleep for 1s */
         fp=freopen(NULL,"w",fp);
     }
@@ -75,7 +75,7 @@ int main(void) {
     ret = sps30_get_serial(serial);
     if (ret) {
         printf("error %d reading serial\n", ret);
-        fprintf(fp,"{\"lastState\":\"error %d reading serial\"}",ret);
+        fprintf(fp,"{\"error\":\"error %d reading serial\"}",ret);
         fclose(fp);
         exit(1);
     } else {
@@ -85,14 +85,14 @@ int main(void) {
     ret = sps30_set_fan_auto_cleaning_interval_days(AUTO_CLEAN_DAYS);
     if (ret) {
         printf("error %d setting the auto-clean interval\n", ret);
-        fprintf(fp,"{\"lastState\":\"error %d reading serial\"}",ret);
+        fprintf(fp,"{\"error\":\"error %d setting the auto-clean interval\"}",ret);
         fclose(fp);
         exit(1);
     }
     ret = sps30_start_measurement();
     if (ret < 0) {
         printf("error starting measurement\n");
-        fprintf(fp,"{\"lastState\":\"error starting measurement\"}");
+        fprintf(fp,"{\"error\":\"error starting measurement\"}");
         fclose(fp);
         exit(1);
     }
@@ -111,14 +111,14 @@ int main(void) {
         ret = sps30_read_measurement(&m);
         if (ret < 0) {
             printf("error reading measurement\n");
-            fprintf(fp,"{\"lastState\":\"error reading measurement\"}");
+            fprintf(fp,"{\"error\":\"error reading measurement\"}");
         } else {
 	    fprintf(fp,"{");
             int16_t chipState = SPS30_IS_ERR_STATE(ret);
 	    if (chipState) {
                 //printf("Chip state: %u - measurements may not be accurate\n",SPS30_GET_ERR_STATE(ret));
                 printf("Chip state: %u - measurements may not be accurate\n",chipState);
-		fprintf(fp,"\"lastState\":\"CHPST%u\",",chipState);
+		fprintf(fp,"\"error\":\"CHPST%u\",",chipState);
             }
 
             printf("serial: %s\n"
@@ -148,7 +148,7 @@ int main(void) {
                        "\"nc2.5\":%0.2f,"
                        "\"nc4.5\":%0.2f,"
                        "\"nc10.0\":%0.2f,"
-                       "\"tpz\":%0.2f}",
+                       "\"tps\":%0.2f}",
 		       serial, AUTO_CLEAN_DAYS, m.mc_1p0, m.mc_2p5, m.mc_4p0, m.mc_10p0, m.nc_0p5, m.nc_1p0,
                        m.nc_2p5, m.nc_4p0, m.nc_10p0, m.typical_particle_size); 
 	}
