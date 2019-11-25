@@ -239,6 +239,8 @@ while not connected:
 
 
 # Loop forever
+sps30Serial = '4FBFC0FBE824FFEA'
+
 while True:
     ds18b20TemperatureC,null = read_ds18b20()
     ds18b20TemperatureC = round(ds18b20TemperatureC,1)
@@ -247,7 +249,7 @@ while True:
        dht22H, dht22T = Adafruit_DHT.read_retry(dht22_sensor_type,dht22_sensor_pin)
        dht22H = round(dht22H,1)
        dht22T = round(dht22T,1)
-    except:
+    except TypeError:
        print("*** No se puede leer DHT22! ***")
 
     JSONPayload = ('{\"state\": {')
@@ -262,15 +264,17 @@ while True:
                  print("SPS30 Error: ", sps30_json['error'])
                  JSONPayload = (JSONPayload + '\"reported\": {'
                                 '\"sps30\": {'
-                                        '\"error\":\"'+sps30_json['error']+'\"'
+                                        '\"error\":\"'+sps30_json['error']+'\",'
+                                        '\"serial\":\"'+sps30Serial+'\"'
                                 '},')
              else:
                  JSONPayload = (JSONPayload + '\"reported\": {'
                                 '\"sps30\": {'
                                         '\"auto_clean_interval_days\":'+repr(sps30_json['auto_clean_interval_days'])+','
                                         '\"tps\":'+repr(sps30_json['tps'])+','
-                                        '\"serial\":\"'+sps30_json['serial']+'\",'
-                                        '\"pm10.0\":'+ repr(sps30_json['pm10.0']) +','
+                                        #'\"serial\":\"'+sps30_json['serial']+'\",'
+                                        '\"serial\":\"'+sps30Serial+'\",'
+					'\"pm10.0\":'+ repr(sps30_json['pm10.0']) +','
                                         '\"nc10.0\":'+ repr(sps30_json['nc10.0'])+','
                                         '\"nc4.5\":'+ repr(sps30_json['nc4.5'])+','
                                         '\"pm2.5\":'+ repr(sps30_json['pm2.5'])+','
@@ -288,7 +292,8 @@ while True:
              #json no definido
              JSONPayload = (JSONPayload + '\"reported\": {'
                                 '\"sps30\": {'
-                                        '\"error\":\"file not read\"'
+                                        '\"error\":\"file not read\",'
+                                        '\"serial\":\"'+sps30Serial+'\"'
                                 '},')
         f.close()
 

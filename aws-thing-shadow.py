@@ -260,8 +260,12 @@ while True:
             print("**** Error: "+repr(e))
             continue
 
-    humidity, null = Adafruit_DHT.read_retry(dht22_sensor_type,dht22_sensor_pin)
-    humidity = round(humidity,1)
+    try: 
+        humidity, null = Adafruit_DHT.read_retry(dht22_sensor_type,dht22_sensor_pin)
+        humidity = round(humidity,1)
+    except TypeError:
+        print("*** No se puede leer DHT22! ***")
+        humidity = old_humidity
     #if old_humidity != humidity:
     #if (abs(old_humidity - humidity) > 1):
     if humidity >= 1:
