@@ -31,9 +31,10 @@ import time
 #import sys
 
 ##Pronto voy a eliminar el DHT22 para usar solo Sensirion SHT31D
-import Adafruit_DHT
-dht22_sensor_type = Adafruit_DHT.DHT22
-dht22_sensor_pin = 19
+## https://github.com/adafruit/Adafruit_CircuitPython_DHT
+import adafruit_dht
+dht22 = adafruit_dht.DHT22(19)
+
 
 ##RPi.GPIO
 ##Para la activacion de los relays, se va a implementar la libreria RPi.GPIO porque permite el acceso concurrent $
@@ -51,6 +52,7 @@ import board
 import busio #https://circuitpython.readthedocs.io/en/latest/shared-bindings/busio/__init__.html#module-busio
 import adafruit_sht31d
 i2c = busio.I2C(board.SCL, board.SDA)
+#https://learn.adafruit.com/adafruit-sht31-d-temperature-and-humidity-sensor-breakout/python-circuitpython
 sht31d = adafruit_sht31d.SHT31D(i2c)
 
 
@@ -246,10 +248,14 @@ while True:
     ds18b20TemperatureC = round(ds18b20TemperatureC,1)
 
     try:
-       dht22H, dht22T = Adafruit_DHT.read_retry(dht22_sensor_type,dht22_sensor_pin)
-       dht22H = round(dht22H,1)
-       dht22T = round(dht22T,1)
-    except TypeError:
+       dht22H = dht22.humidity
+       time.sleep(1)
+       dht22H = dht22.humidity ## Se lee dos veces la temp y humedad para permitir q la lectura del sensor se nivele
+       time.sleep(1)
+       dht22T = dht22.temperature
+       time.sleep(1)
+       dht22T = dht22.temperature
+    except RuntimeError:
        print("*** No se puede leer DHT22! ***")
 
     JSONPayload = ('{\"state\": {')
