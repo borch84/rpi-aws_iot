@@ -265,7 +265,8 @@ while True:
                  JSONPayload = (JSONPayload + '\"reported\": {'
                                 '\"sps30\": {'
                                         '\"error\":\"'+sps30_json['error']+'\",'
-                                        '\"serial\":\"'+sps30Serial+'\"'
+                                        '\"serial\":\"'+sps30Serial+'\"' #En cada actualizacion es necesario incluir
+#el numero de serie del sensor sps30, porque la coleccion /thingCollection/yUp3qLUftKGGY01XdcL5/sps30 puede tener actualizaciones de cada sensor de polvo 
                                 '},')
              else:
                  JSONPayload = (JSONPayload + '\"reported\": {'
@@ -324,21 +325,5 @@ while True:
         print("**** Error: "+repr(e))
         continue
 
-    #No estamos enviado la informacion del reedswitch
-    #if reedswitch_state != old_reedswitch_state:
-    #    print('**** Updating reedswith reported stated ****')
-    #    if reedswitch_state:
-    #        JSONPayload = '{"state":{"reported":{"reedswitch":true}}}'
-    #    else:
-    #        JSONPayload = '{"state":{"reported":{"reedswitch":false}}}'
-    #    old_reedswitch_state = reedswitch_state
-    #    try:
-    #        deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
-    #    except Exception as e:
-            #Puede arrojar: AWSIoTPythonSDK.exception.AWSIoTExceptions.publishQueueDisabledException
-    #        print("**** Error: "+repr(e))
-    #        continue
+    time.sleep(int(refreshinterval))
 
-    #time.sleep(int(refreshinterval))
-
-    time.sleep(10)
