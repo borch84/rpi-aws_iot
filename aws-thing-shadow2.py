@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 '''
-/*
- * Copyright 2010-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License").
- * You may not use this file except in compliance with the License.
- * A copy of the License is located at
- *
- *  http://aws.amazon.com/apache2.0
- *
- * or in the "license" file accompanying this file. This file is distributed
- * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- * express or implied. See the License for the specific language governing
- * permissions and limitations under the License.
- */
+Jorge Alvarado
+11/28/2019
+
+## Este programa lee la informacion de los sensores:
+
+sht31d
+sps30
+ds18b20
+dht22
+
+## La informacion se actualiza en el shadow document del dispositivo IoT definido en AWS
+
+## Este programa tambien controla el AC con base en la temperatura reportada por el sensor SHT31D
 
 https://s3.amazonaws.com/aws-iot-device-sdk-python-docs/html/index.html#module-AWSIoTPythonSDK.core.shadow.deviceShadow
 
@@ -234,7 +233,7 @@ while not connected:
         break
     except Exception as e:
        #TODO: Mejorar el manejo de excepciones.
-        print("**** Error: "+repr(e))
+        print("**** Error AWS MQTTShadowClient.connect(): "+repr(e))
         time.sleep(5)
         continue
 
@@ -242,6 +241,8 @@ while not connected:
 
 # Loop forever
 sps30Serial = '4FBFC0FBE824FFEA'
+dht22H = 0.0
+dht22T = 0.0
 
 while True:
     ds18b20TemperatureC,null = read_ds18b20()
@@ -257,7 +258,9 @@ while True:
        dht22T = dht22.temperature
     except RuntimeError:
        print("*** No se puede leer DHT22! ***")
-
+    except OverflowError:
+       print("*** DHT22 OverflowError! ***")
+ 
     JSONPayload = ('{\"state\": {')
 
     #Abrir el archivo para leer la informacion del SPS30
@@ -328,8 +331,20 @@ while True:
        deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
     except Exception as e:
         #Puede arrojar: AWSIoTPythonSDK.exception.AWSIoTExceptions.publishQueueDisabledException
-        print("**** Error: "+repr(e))
+        print("**** Error AWS IoT shadowUpdate: "+repr(e))
         continue
+
+
+    ## Implementacion del control del AC
+    ## Cuando la temperatura sube >= 27.5, activa modo DRY de AC
+    if sht31d.temperature >= 27.5: ##Max Temp
+       print("\n~~~~ AC Turned On! ~~~~\n")
+       os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py a") ##Activa modo auto del AC
+    if sht31d.temperature <= 22: ##Min Temp
+       ## Cuando la temperatura <= 22 apaga el AC
+       print("\n~~~~ AC Turned Off! ~~~~\n")
+       os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##Apaga AC
+
 
     time.sleep(int(refreshinterval))
 
