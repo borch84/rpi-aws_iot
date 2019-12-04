@@ -211,7 +211,7 @@ else:
 
 # AWSIoTMQTTShadowClient configuration
 myAWSIoTMQTTShadowClient.configureAutoReconnectBackoffTime(1, 32, 20)
-myAWSIoTMQTTShadowClient.configureConnectDisconnectTimeout(10)  # 10 sec
+myAWShadowClient.configureConnectDisconnectTimeout(10)  # 10 sec
 myAWSIoTMQTTShadowClient.configureMQTTOperationTimeout(5)  # 5 sec
 
 
@@ -277,7 +277,7 @@ while True:
             deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
         except Exception as e:
             #Puede arrojar: AWSIoTPythonSDK.exception.AWSIoTExceptions.publishQueueDisabledException
-            print("**** Error: "+repr(e))
+            )
             continue
 
 
