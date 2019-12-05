@@ -1,5 +1,3 @@
-#pip3 install adafruit-circuitpython-sht31d --user
-
 import time
 import board
 import busio
@@ -12,7 +10,7 @@ loopcount = 0
 while True:
 	print("\nTemperature: %0.1f C" % sensor.temperature)
 	print("Humidity: %0.1f %%" % sensor.relative_humidity)
-	time.sleep(5)
+	time.sleep(1)
 	#loopcount += 1
 	#cada 10 pasadas se activa un heater interno del sensor
 	#if loopcount == 10:

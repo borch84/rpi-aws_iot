@@ -1,919 +1,396 @@
-2019-12-03 20:20:20,784 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - MqttCore initialized
-2019-12-03 20:20:20,785 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Client id: yUp3qLUftKGGY01XdcL5
-2019-12-03 20:20:20,786 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Protocol version: MQTTv3.1.1
-2019-12-03 20:20:20,786 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Authentication type: TLSv1.2 certificate based Mutual Auth.
-2019-12-03 20:20:20,787 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring offline requests queueing: max queue size: 0
-2019-12-03 20:20:20,791 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring offline requests queue draining interval: 0.100000 sec
-2019-12-03 20:20:20,794 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring endpoint...
-2019-12-03 20:20:20,795 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring certificates...
-2019-12-03 20:20:20,796 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring reconnect back off timing...
-2019-12-03 20:20:20,797 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Base quiet time: 1.000000 sec
-2019-12-03 20:20:20,798 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Max quiet time: 32.000000 sec
-2019-12-03 20:20:20,799 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Stable connection time: 20.000000 sec
-2019-12-03 20:20:20,799 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring connect/disconnect time out: 10.000000 sec
-2019-12-03 20:20:20,800 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring MQTT operation time out: 5.000000 sec
-2019-12-03 20:20:20,801 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync connect...
-2019-12-03 20:20:20,802 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing async connect...
-2019-12-03 20:20:20,803 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Keep-alive: 600.000000 sec
-2019-12-03 20:20:21,896 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
-2019-12-03 20:20:24,013 - AWSIoTPythonSDK.core.shadow.deviceShadow - INFO - Subscribed to delta topic for deviceShadow: yUp3qLUftKGGY01XdcL5
-2019-12-03 20:20:25,243 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
-2019-12-03 20:20:25,375 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
-2019-12-03 20:20:27,488 - AWSIoTPythonSDK.core.shadow.deviceShadow - INFO - Subscribed to update accepted/rejected topics for deviceShadow: yUp3qLUftKGGY01XdcL5
-2019-12-03 20:20:27,489 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:22:28,841 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:24:33,388 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:26:34,682 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:28:36,042 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:30:37,402 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:32:38,681 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:34:40,041 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:36:41,402 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:38:42,762 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:21:09,583 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - MqttCore initialized
+2019-12-04 21:21:09,585 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Client id: yUp3qLUftKGGY01XdcL5
+2019-12-04 21:21:09,586 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Protocol version: MQTTv3.1.1
+2019-12-04 21:21:09,588 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Authentication type: TLSv1.2 certificate based Mutual Auth.
+2019-12-04 21:21:09,589 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring offline requests queueing: max queue size: 0
+2019-12-04 21:21:09,592 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring offline requests queue draining interval: 0.100000 sec
+2019-12-04 21:21:09,594 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring endpoint...
+2019-12-04 21:21:09,595 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring certificates...
+2019-12-04 21:21:09,597 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring reconnect back off timing...
+2019-12-04 21:21:09,599 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Base quiet time: 1.000000 sec
+2019-12-04 21:21:09,600 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Max quiet time: 32.000000 sec
+2019-12-04 21:21:09,600 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Stable connection time: 20.000000 sec
+2019-12-04 21:21:09,602 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring connect/disconnect time out: 10.000000 sec
+2019-12-04 21:21:09,603 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Configuring MQTT operation time out: 5.000000 sec
+2019-12-04 21:21:09,604 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync connect...
+2019-12-04 21:21:09,606 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing async connect...
+2019-12-04 21:21:09,607 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Keep-alive: 600.000000 sec
+2019-12-04 21:21:10,233 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
+2019-12-04 21:21:12,344 - AWSIoTPythonSDK.core.shadow.deviceShadow - INFO - Subscribed to delta topic for deviceShadow: yUp3qLUftKGGY01XdcL5
+2019-12-04 21:21:13,524 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
+2019-12-04 21:21:13,682 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync subscribe...
+2019-12-04 21:21:15,811 - AWSIoTPythonSDK.core.shadow.deviceShadow - INFO - Subscribed to update accepted/rejected topics for deviceShadow: yUp3qLUftKGGY01XdcL5
+2019-12-04 21:21:15,811 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:23:17,123 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:25:18,482 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:27:19,843 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:29:21,202 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:31:22,483 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:33:23,842 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:35:28,466 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:37:29,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:39:34,395 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.9,"serial":"4FBFC0FBE824FFEA","pm10.0":26.64,"nc10.0":107.07,"nc4.5":106.93,"pm2.5":20.43,"nc1.0":100.23,"nc2.5":106.2,"pm4.0":24.62,"nc0.5":78.07,"pm1.0":13.79,"error":"none"},"ds18b20": {"id":1,"t":25.4},"dht22": {"id":1,"h":0.0,"t":0.0},"sht31d": {"id":1,"t":25.0,"h":37.7}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.61,"serial":"4FBFC0FBE824FFEA","pm10.0":1.77,"nc10.0":11.49,"nc4.5":11.48,"pm2.5":1.72,"nc1.0":11.4,"nc2.5":11.48,"pm4.0":1.74,"nc0.5":9.72,"pm1.0":1.5,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":0.0,"t":0.0},"sht31d":{"id":1,"t":28.4,"h":41.3}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 17368a93-0b11-4e70-bedf-9fe1da5eeb5d accepted!
-reported state: {'sps30': {'tps': 0.9, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 107.07, 'auto_clean_interval_days': 4, 'nc1.0': 100.23, 'pm4.0': 24.62, 'pm10.0': 26.64, 'error': 'none', 'nc0.5': 78.07, 'nc4.5': 106.93, 'pm1.0': 13.79, 'nc2.5': 106.2, 'pm2.5': 20.43}, 'ds18b20': {'id': 1, 't': 25.4}, 'dht22': {'h': 0.0, 'id': 1, 't': 0.0}, 'sht31d': {'h': 37.7, 'id': 1, 't': 25.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.86,"serial":"4FBFC0FBE824FFEA","pm10.0":24.65,"nc10.0":99.7,"nc4.5":99.57,"pm2.5":18.96,"nc1.0":93.41,"nc2.5":98.9,"pm4.0":22.8,"nc0.5":72.88,"pm1.0":12.84,"error":"none"},"ds18b20": {"id":1,"t":25.1},"dht22": {"id":1,"h":0.0,"t":0.0},"sht31d": {"id":1,"t":24.7,"h":38.2}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 9a443a0a-3c10-4674-bfed-b13a0284fdc8 accepted!
-reported state: {'sps30': {'tps': 0.86, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 99.7, 'auto_clean_interval_days': 4, 'nc1.0': 93.41, 'pm4.0': 22.8, 'pm10.0': 24.65, 'error': 'none', 'nc0.5': 72.88, 'nc4.5': 99.57, 'pm1.0': 12.84, 'nc2.5': 98.9, 'pm2.5': 18.96}, 'ds18b20': {'id': 1, 't': 25.1}, 'dht22': {'h': 0.0, 'id': 1, 't': 0.0}, 'sht31d': {'h': 38.2, 'id': 1, 't': 24.7}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.86,"serial":"4FBFC0FBE824FFEA","pm10.0":20.96,"nc10.0":85.91,"nc4.5":85.8,"pm2.5":16.22,"nc1.0":80.66,"nc2.5":85.24,"pm4.0":19.41,"nc0.5":63.15,"pm1.0":11.07,"error":"none"},"ds18b20": {"id":1,"t":25.4},"dht22": {"id":1,"h":35.3,"t":25.6},"sht31d": {"id":1,"t":25.5,"h":39.0}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 6f1f0bb5-7ec6-4239-83e1-4aa64b5e8e6b accepted!
-reported state: {'sps30': {'tps': 0.86, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 85.91, 'auto_clean_interval_days': 4, 'nc1.0': 80.66, 'pm4.0': 19.41, 'pm10.0': 20.96, 'error': 'none', 'nc0.5': 63.15, 'nc4.5': 85.8, 'pm1.0': 11.07, 'nc2.5': 85.24, 'pm2.5': 16.22}, 'ds18b20': {'id': 1, 't': 25.4}, 'dht22': {'h': 35.3, 'id': 1, 't': 25.6}, 'sht31d': {'h': 39.0, 'id': 1, 't': 25.5}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.84,"serial":"4FBFC0FBE824FFEA","pm10.0":18.66,"nc10.0":80.26,"nc4.5":80.18,"pm2.5":14.75,"nc1.0":75.91,"nc2.5":79.72,"pm4.0":17.37,"nc0.5":60.14,"pm1.0":10.37,"error":"none"},"ds18b20": {"id":1,"t":25.4},"dht22": {"id":1,"h":35.3,"t":25.6},"sht31d": {"id":1,"t":25.4,"h":42.2}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: db4ed557-e81f-4072-9b99-604e68e5a4d1 accepted!
-reported state: {'sps30': {'tps': 0.84, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 80.26, 'auto_clean_interval_days': 4, 'nc1.0': 75.91, 'pm4.0': 17.37, 'pm10.0': 18.66, 'error': 'none', 'nc0.5': 60.14, 'nc4.5': 80.18, 'pm1.0': 10.37, 'nc2.5': 79.72, 'pm2.5': 14.75}, 'ds18b20': {'id': 1, 't': 25.4}, 'dht22': {'h': 35.3, 'id': 1, 't': 25.6}, 'sht31d': {'h': 42.2, 'id': 1, 't': 25.4}}
+Update request with token: 0cb68633-95db-4d28-9d77-f471dd23ac66 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.61, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.77, 'nc10.0': 11.49, 'nc4.5': 11.48, 'pm2.5': 1.72, 'nc1.0': 11.4, 'nc2.5': 11.48, 'pm4.0': 1.74, 'nc0.5': 9.72, 'pm1.0': 1.5, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 0.0, 't': 0.0}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.3}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
 SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":25.4},"dht22": {"id":1,"h":35.3,"t":25.6},"sht31d": {"id":1,"t":25.4,"h":44.7}}}}
+{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":0.0,"t":0.0},"sht31d":{"id":1,"t":28.4,"h":41.4}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: f9c0487b-1e1e-404e-8879-67935ab5d69d accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 25.4}, 'dht22': {'h': 35.3, 'id': 1, 't': 25.6}, 'sht31d': {'h': 44.7, 'id': 1, 't': 25.4}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.81,"serial":"4FBFC0FBE824FFEA","pm10.0":16.07,"nc10.0":72.36,"nc4.5":72.29,"pm2.5":12.98,"nc1.0":68.88,"nc2.5":71.93,"pm4.0":15.04,"nc0.5":55.15,"pm1.0":9.36,"error":"none"},"ds18b20": {"id":1,"t":25.8},"dht22": {"id":1,"h":35.3,"t":25.6},"sht31d": {"id":1,"t":25.8,"h":43.6}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: bdf3c668-a02a-45b2-a8e2-6c8004d3f215 accepted!
-reported state: {'sps30': {'tps': 0.81, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 72.36, 'auto_clean_interval_days': 4, 'nc1.0': 68.88, 'pm4.0': 15.04, 'pm10.0': 16.07, 'error': 'none', 'nc0.5': 55.15, 'nc4.5': 72.29, 'pm1.0': 9.36, 'nc2.5': 71.93, 'pm2.5': 12.98}, 'ds18b20': {'id': 1, 't': 25.8}, 'dht22': {'h': 35.3, 'id': 1, 't': 25.6}, 'sht31d': {'h': 43.6, 'id': 1, 't': 25.8}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.82,"serial":"4FBFC0FBE824FFEA","pm10.0":17.03,"nc10.0":74.2,"nc4.5":74.12,"pm2.5":13.54,"nc1.0":70.3,"nc2.5":73.71,"pm4.0":15.88,"nc0.5":55.86,"pm1.0":9.59,"error":"none"},"ds18b20": {"id":1,"t":26.2},"dht22": {"id":1,"h":35.3,"t":25.6},"sht31d": {"id":1,"t":26.4,"h":42.1}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 64bc402d-b9b5-4b67-b91a-73fa0cde2569 accepted!
-reported state: {'sps30': {'tps': 0.82, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 74.2, 'auto_clean_interval_days': 4, 'nc1.0': 70.3, 'pm4.0': 15.88, 'pm10.0': 17.03, 'error': 'none', 'nc0.5': 55.86, 'nc4.5': 74.12, 'pm1.0': 9.59, 'nc2.5': 73.71, 'pm2.5': 13.54}, 'ds18b20': {'id': 1, 't': 26.2}, 'dht22': {'h': 35.3, 'id': 1, 't': 25.6}, 'sht31d': {'h': 42.1, 'id': 1, 't': 26.4}}
+Update request with token: ba6297f0-57cb-4cb3-ab2c-e3a4a16cc35d accepted!
+reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 0.0, 't': 0.0}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.4}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
 SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":26.6},"dht22": {"id":1,"h":35.3,"t":25.6},"sht31d": {"id":1,"t":26.8,"h":41.1}}}}
+{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":0.0,"t":0.0},"sht31d":{"id":1,"t":28.4,"h":41.1}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: be9efef6-4884-4a32-bd65-dd710b19fccb accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 26.6}, 'dht22': {'h': 35.3, 'id': 1, 't': 25.6}, 'sht31d': {'h': 41.1, 'id': 1, 't': 26.8}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.87,"serial":"4FBFC0FBE824FFEA","pm10.0":14.24,"nc10.0":61.07,"nc4.5":61.0,"pm2.5":11.25,"nc1.0":57.73,"nc2.5":60.65,"pm4.0":13.26,"nc0.5":45.7,"pm1.0":7.89,"error":"none"},"ds18b20": {"id":1,"t":26.8},"dht22": {"id":1,"h":35.3,"t":25.6},"sht31d": {"id":1,"t":27.0,"h":40.9}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: c1aaf7b1-2897-41cf-8c96-30877edf86f2 accepted!
-reported state: {'sps30': {'tps': 0.87, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 61.07, 'auto_clean_interval_days': 4, 'nc1.0': 57.73, 'pm4.0': 13.26, 'pm10.0': 14.24, 'error': 'none', 'nc0.5': 45.7, 'nc4.5': 61.0, 'pm1.0': 7.89, 'nc2.5': 60.65, 'pm2.5': 11.25}, 'ds18b20': {'id': 1, 't': 26.8}, 'dht22': {'h': 35.3, 'id': 1, 't': 25.6}, 'sht31d': {'h': 40.9, 'id': 1, 't': 27.0}}
+Update request with token: 342cf4ed-70a2-4680-b996-788fdda45de8 accepted!
+reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 0.0, 't': 0.0}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.1}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.84,"serial":"4FBFC0FBE824FFEA","pm10.0":12.27,"nc10.0":53.05,"nc4.5":52.99,"pm2.5":9.72,"nc1.0":50.21,"nc2.5":52.69,"pm4.0":11.43,"nc0.5":39.83,"pm1.0":6.85,"error":"none"},"ds18b20": {"id":1,"t":26.9},"dht22": {"id":1,"h":35.3,"t":25.6},"sht31d": {"id":1,"t":27.1,"h":40.6}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.6,"serial":"4FBFC0FBE824FFEA","pm10.0":2.14,"nc10.0":13.97,"nc4.5":13.97,"pm2.5":2.09,"nc1.0":13.86,"nc2.5":13.96,"pm4.0":2.11,"nc0.5":11.83,"pm1.0":1.83,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":0.0,"t":0.0},"sht31d":{"id":1,"t":28.4,"h":41.3}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 519f6b21-607e-424e-b43d-f76f48ab96da accepted!
-reported state: {'sps30': {'tps': 0.84, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 53.05, 'auto_clean_interval_days': 4, 'nc1.0': 50.21, 'pm4.0': 11.43, 'pm10.0': 12.27, 'error': 'none', 'nc0.5': 39.83, 'nc4.5': 52.99, 'pm1.0': 6.85, 'nc2.5': 52.69, 'pm2.5': 9.72}, 'ds18b20': {'id': 1, 't': 26.9}, 'dht22': {'h': 35.3, 'id': 1, 't': 25.6}, 'sht31d': {'h': 40.6, 'id': 1, 't': 27.1}}2019-12-03 20:40:44,121 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:42:45,401 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:44:46,681 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:46:51,311 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:48:55,949 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:50:57,322 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:53:01,951 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:55:06,589 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:57:07,882 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 20:59:12,429 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+Update request with token: 87e97192-c8dc-4cff-9c87-6e21e4de8a6f accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.6, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 2.14, 'nc10.0': 13.97, 'nc4.5': 13.97, 'pm2.5': 2.09, 'nc1.0': 13.86, 'nc2.5': 13.96, 'pm4.0': 2.11, 'nc0.5': 11.83, 'pm1.0': 1.83, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 0.0, 't': 0.0}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.3}}
+~~~~~~~~~~~~~~~~~~~~~~~
 
+
+*** No se puede leer DHT22! ***
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.58,"serial":"4FBFC0FBE824FFEA","pm10.0":1.41,"nc10.0":9.35,"nc4.5":9.35,"pm2.5":1.39,"nc1.0":9.3,"nc2.5":9.35,"pm4.0":1.4,"nc0.5":7.94,"pm1.0":1.22,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":0.0,"t":0.0},"sht31d":{"id":1,"t":28.3,"h":41.5}}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: d1e0d373-0877-49ae-9865-d53c1ad8857f accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.58, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.41, 'nc10.0': 9.35, 'nc4.5': 9.35, 'pm2.5': 1.39, 'nc1.0': 9.3, 'nc2.5': 9.35, 'pm4.0': 1.4, 'nc0.5': 7.94, 'pm1.0': 1.22, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 0.0, 't': 0.0}, 'sht31d': {'id': 1, 't': 28.3, 'h': 41.5}}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+*** No se puede leer DHT22! ***
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.58,"serial":"4FBFC0FBE824FFEA","pm10.0":1.56,"nc10.0":10.34,"nc4.5":10.34,"pm2.5":1.54,"nc1.0":10.28,"nc2.5":10.34,"pm4.0":1.54,"nc0.5":8.79,"pm1.0":1.35,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":0.0,"t":0.0},"sht31d":{"id":1,"t":28.5,"h":41.3}}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 51287044-bc75-4ce5-b3dd-001eb6274214 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.58, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.56, 'nc10.0': 10.34, 'nc4.5': 10.34, 'pm2.5': 1.54, 'nc1.0': 10.28, 'nc2.5': 10.34, 'pm4.0': 1.54, 'nc0.5': 8.79, 'pm1.0': 1.35, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 0.0, 't': 0.0}, 'sht31d': {'id': 1, 't': 28.5, 'h': 41.3}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
 SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.1},"dht22": {"id":1,"h":35.3,"t":25.6},"sht31d": {"id":1,"t":27.3,"h":40.4}}}}
+{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":0.0,"t":0.0},"sht31d":{"id":1,"t":28.5,"h":41.3}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: dd6641e7-e1e4-45bc-8972-507ad9f15a74 accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.1}, 'dht22': {'h': 35.3, 'id': 1, 't': 25.6}, 'sht31d': {'h': 40.4, 'id': 1, 't': 27.3}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.85,"serial":"4FBFC0FBE824FFEA","pm10.0":10.12,"nc10.0":45.65,"nc4.5":45.6,"pm2.5":8.18,"nc1.0":43.46,"nc2.5":45.38,"pm4.0":9.47,"nc0.5":34.81,"pm1.0":5.91,"error":"none"},"ds18b20": {"id":1,"t":27.2},"dht22": {"id":1,"h":35.3,"t":25.6},"sht31d": {"id":1,"t":27.4,"h":40.4}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: e02fbb3a-b5fc-4ca7-b4a1-3e5aa8814791 accepted!
-reported state: {'sps30': {'tps': 0.85, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 45.65, 'auto_clean_interval_days': 4, 'nc1.0': 43.46, 'pm4.0': 9.47, 'pm10.0': 10.12, 'error': 'none', 'nc0.5': 34.81, 'nc4.5': 45.6, 'pm1.0': 5.91, 'nc2.5': 45.38, 'pm2.5': 8.18}, 'ds18b20': {'id': 1, 't': 27.2}, 'dht22': {'h': 35.3, 'id': 1, 't': 25.6}, 'sht31d': {'h': 40.4, 'id': 1, 't': 27.4}}
+Update request with token: 0e86e9e9-9c3e-4d97-b685-e0858aef7c7e accepted!
+reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 0.0, 't': 0.0}, 'sht31d': {'id': 1, 't': 28.5, 'h': 41.3}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.86,"serial":"4FBFC0FBE824FFEA","pm10.0":10.37,"nc10.0":46.9,"nc4.5":46.85,"pm2.5":8.39,"nc1.0":44.67,"nc2.5":46.62,"pm4.0":9.71,"nc0.5":35.8,"pm1.0":6.07,"error":"none"},"ds18b20": {"id":1,"t":27.4},"dht22": {"id":1,"h":35.3,"t":25.6},"sht31d": {"id":1,"t":27.6,"h":40.1}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.6,"serial":"4FBFC0FBE824FFEA","pm10.0":1.82,"nc10.0":11.79,"nc4.5":11.78,"pm2.5":1.77,"nc1.0":11.69,"nc2.5":11.78,"pm4.0":1.79,"nc0.5":9.97,"pm1.0":1.54,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.4}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 09586efe-17f8-4928-8a39-2945eaf6fc23 accepted!
-reported state: {'sps30': {'tps': 0.86, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 46.9, 'auto_clean_interval_days': 4, 'nc1.0': 44.67, 'pm4.0': 9.71, 'pm10.0': 10.37, 'error': 'none', 'nc0.5': 35.8, 'nc4.5': 46.85, 'pm1.0': 6.07, 'nc2.5': 46.62, 'pm2.5': 8.39}, 'ds18b20': {'id': 1, 't': 27.4}, 'dht22': {'h': 35.3, 'id': 1, 't': 25.6}, 'sht31d': {'h': 40.1, 'id': 1, 't': 27.6}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.8,"serial":"4FBFC0FBE824FFEA","pm10.0":9.34,"nc10.0":44.83,"nc4.5":44.8,"pm2.5":7.78,"nc1.0":43.04,"nc2.5":44.61,"pm4.0":8.81,"nc0.5":34.92,"pm1.0":5.81,"error":"none"},"ds18b20": {"id":1,"t":27.6},"dht22": {"id":1,"h":40.6,"t":26.8},"sht31d": {"id":1,"t":27.7,"h":40.0}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: c6963c47-b552-482f-9649-c755c52c77d4 accepted!
-reported state: {'sps30': {'tps': 0.8, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 44.83, 'auto_clean_interval_days': 4, 'nc1.0': 43.04, 'pm4.0': 8.81, 'pm10.0': 9.34, 'error': 'none', 'nc0.5': 34.92, 'nc4.5': 44.8, 'pm1.0': 5.81, 'nc2.5': 44.61, 'pm2.5': 7.78}, 'ds18b20': {'id': 1, 't': 27.6}, 'dht22': {'h': 40.6, 'id': 1, 't': 26.8}, 'sht31d': {'h': 40.0, 'id': 1, 't': 27.7}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.82,"serial":"4FBFC0FBE824FFEA","pm10.0":8.65,"nc10.0":40.26,"nc4.5":40.22,"pm2.5":7.1,"nc1.0":38.49,"nc2.5":40.04,"pm4.0":8.13,"nc0.5":31.03,"pm1.0":5.21,"error":"none"},"ds18b20": {"id":1,"t":27.6},"dht22": {"id":1,"h":40.4,"t":26.9},"sht31d": {"id":1,"t":27.8,"h":40.2}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 29cfcf11-77a7-440d-aba7-9caaffe43b5e accepted!
-reported state: {'sps30': {'tps': 0.82, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 40.26, 'auto_clean_interval_days': 4, 'nc1.0': 38.49, 'pm4.0': 8.13, 'pm10.0': 8.65, 'error': 'none', 'nc0.5': 31.03, 'nc4.5': 40.22, 'pm1.0': 5.21, 'nc2.5': 40.04, 'pm2.5': 7.1}, 'ds18b20': {'id': 1, 't': 27.6}, 'dht22': {'h': 40.4, 'id': 1, 't': 26.9}, 'sht31d': {'h': 40.2, 'id': 1, 't': 27.8}}
+Update request with token: 764c2255-4cd6-4da3-b651-af5b74ac22c0 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.6, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.82, 'nc10.0': 11.79, 'nc4.5': 11.78, 'pm2.5': 1.77, 'nc1.0': 11.69, 'nc2.5': 11.78, 'pm4.0': 1.79, 'nc0.5': 9.97, 'pm1.0': 1.54, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.4}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.78,"serial":"4FBFC0FBE824FFEA","pm10.0":7.93,"nc10.0":38.71,"nc4.5":38.68,"pm2.5":6.66,"nc1.0":37.24,"nc2.5":38.53,"pm4.0":7.5,"nc0.5":30.31,"pm1.0":5.02,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.4,"t":26.9},"sht31d": {"id":1,"t":27.9,"h":40.0}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.57,"serial":"4FBFC0FBE824FFEA","pm10.0":1.59,"nc10.0":10.56,"nc4.5":10.55,"pm2.5":1.57,"nc1.0":10.49,"nc2.5":10.55,"pm4.0":1.57,"nc0.5":8.97,"pm1.0":1.38,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.5}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 7bde5290-9113-4ad1-afc0-bc6a3380b399 accepted!
-reported state: {'sps30': {'tps': 0.78, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 38.71, 'auto_clean_interval_days': 4, 'nc1.0': 37.24, 'pm4.0': 7.5, 'pm10.0': 7.93, 'error': 'none', 'nc0.5': 30.31, 'nc4.5': 38.68, 'pm1.0': 5.02, 'nc2.5': 38.53, 'pm2.5': 6.66}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.4, 'id': 1, 't': 26.9}, 'sht31d': {'h': 40.0, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.77,"serial":"4FBFC0FBE824FFEA","pm10.0":7.49,"nc10.0":37.67,"nc4.5":37.64,"pm2.5":6.38,"nc1.0":36.37,"nc2.5":37.52,"pm4.0":7.11,"nc0.5":29.78,"pm1.0":4.89,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.3,"t":27.1},"sht31d": {"id":1,"t":27.9,"h":40.0}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: ad4c7951-5ef6-4116-91bc-25b58d97d694 accepted!
-reported state: {'sps30': {'tps': 0.77, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 37.67, 'auto_clean_interval_days': 4, 'nc1.0': 36.37, 'pm4.0': 7.11, 'pm10.0': 7.49, 'error': 'none', 'nc0.5': 29.78, 'nc4.5': 37.64, 'pm1.0': 4.89, 'nc2.5': 37.52, 'pm2.5': 6.38}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.1}, 'sht31d': {'h': 40.0, 'id': 1, 't': 27.9}}
+Update request with token: 87b68ff2-24c9-4463-983b-ee83ca41e1f3 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.57, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.59, 'nc10.0': 10.56, 'nc4.5': 10.55, 'pm2.5': 1.57, 'nc1.0': 10.49, 'nc2.5': 10.55, 'pm4.0': 1.57, 'nc0.5': 8.97, 'pm1.0': 1.38, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.5}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.85,"serial":"4FBFC0FBE824FFEA","pm10.0":7.47,"nc10.0":33.24,"nc4.5":33.2,"pm2.5":6.0,"nc1.0":31.58,"nc2.5":33.03,"pm4.0":6.98,"nc0.5":25.22,"pm1.0":4.3,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.3,"t":27.1},"sht31d": {"id":1,"t":27.8,"h":40.7}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.57,"serial":"4FBFC0FBE824FFEA","pm10.0":1.49,"nc10.0":9.89,"nc4.5":9.88,"pm2.5":1.47,"nc1.0":9.83,"nc2.5":9.88,"pm4.0":1.47,"nc0.5":8.4,"pm1.0":1.29,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.2}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 61250cd5-ecd7-486e-a0ba-af26263adbe2 accepted!
-reported state: {'sps30': {'tps': 0.85, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 33.24, 'auto_clean_interval_days': 4, 'nc1.0': 31.58, 'pm4.0': 6.98, 'pm10.0': 7.47, 'error': 'none', 'nc0.5': 25.22, 'nc4.5': 33.2, 'pm1.0': 4.3, 'nc2.5': 33.03, 'pm2.5': 6.0}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.1}, 'sht31d': {'h': 40.7, 'id': 1, 't': 27.8}}
+Update request with token: cfd7c10b-9648-494f-b140-79ddbbdcd1f1 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.57, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.49, 'nc10.0': 9.89, 'nc4.5': 9.88, 'pm2.5': 1.47, 'nc1.0': 9.83, 'nc2.5': 9.88, 'pm4.0': 1.47, 'nc0.5': 8.4, 'pm1.0': 1.29, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.2}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.79,"serial":"4FBFC0FBE824FFEA","pm10.0":7.96,"nc10.0":37.44,"nc4.5":37.41,"pm2.5":6.56,"nc1.0":35.85,"nc2.5":37.25,"pm4.0":7.49,"nc0.5":28.97,"pm1.0":4.85,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.3,"t":27.1},"sht31d": {"id":1,"t":27.8,"h":40.6}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 9f814faa-87a5-4400-9af9-372c2fb39932 accepted!
-reported state: {'sps30': {'tps': 0.79, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 37.44, 'auto_clean_interval_days': 4, 'nc1.0': 35.85, 'pm4.0': 7.49, 'pm10.0': 7.96, 'error': 'none', 'nc0.5': 28.97, 'nc4.5': 37.41, 'pm1.0': 4.85, 'nc2.5': 37.25, 'pm2.5': 6.56}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.1}, 'sht31d': {'h': 40.6, 'id': 1, 't': 27.8}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.4,"t":27.1},"sht31d": {"id":1,"t":27.8,"h":40.6}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 984f8627-69aa-4458-a82b-c00d4230b352 accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.4, 'id': 1, 't': 27.1}, 'sht31d': {'h': 40.6, 'id': 1, 't': 27.8}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.75,"serial":"4FBFC0FBE824FFEA","pm10.0":5.47,"nc10.0":27.36,"nc4.5":27.35,"pm2.5":4.65,"nc1.0":26.4,"nc2.5":27.25,"pm4.0":5.19,"nc0.5":21.59,"pm1.0":3.55,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.3,"t":27.2},"sht31d": {"id":1,"t":27.8,"h":40.6}}}}2019-12-03 21:01:17,070 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:03:21,629 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:05:26,191 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:07:30,829 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:09:32,121 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:11:36,670 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:13:38,041 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:15:39,321 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:17:40,681 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:19:41,961 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.59,"serial":"4FBFC0FBE824FFEA","pm10.0":1.52,"nc10.0":10.02,"nc4.5":10.02,"pm2.5":1.5,"nc1.0":9.95,"nc2.5":10.02,"pm4.0":1.5,"nc0.5":8.5,"pm1.0":1.31,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.4}}}}2019-12-04 21:41:35,764 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:43:37,134 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:45:38,483 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:47:39,767 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:49:41,124 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:51:42,402 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:53:43,762 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:55:45,124 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:57:49,748 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 21:59:51,043 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:01:52,404 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: dc1de04d-a37e-4b8a-ba3d-02f164949768 accepted!
-reported state: {'sps30': {'tps': 0.75, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 27.36, 'auto_clean_interval_days': 4, 'nc1.0': 26.4, 'pm4.0': 5.19, 'pm10.0': 5.47, 'error': 'none', 'nc0.5': 21.59, 'nc4.5': 27.35, 'pm1.0': 3.55, 'nc2.5': 27.25, 'pm2.5': 4.65}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.2}, 'sht31d': {'h': 40.6, 'id': 1, 't': 27.8}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.75,"serial":"4FBFC0FBE824FFEA","pm10.0":5.85,"nc10.0":28.5,"nc4.5":28.48,"pm2.5":4.91,"nc1.0":27.41,"nc2.5":28.37,"pm4.0":5.53,"nc0.5":22.31,"pm1.0":3.7,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.3,"t":27.2},"sht31d": {"id":1,"t":27.8,"h":40.4}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 80fd9d47-eb0b-4334-ad5c-9dbef36735df accepted!
-reported state: {'sps30': {'tps': 0.75, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 28.5, 'auto_clean_interval_days': 4, 'nc1.0': 27.41, 'pm4.0': 5.53, 'pm10.0': 5.85, 'error': 'none', 'nc0.5': 22.31, 'nc4.5': 28.48, 'pm1.0': 3.7, 'nc2.5': 28.37, 'pm2.5': 4.91}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.2}, 'sht31d': {'h': 40.4, 'id': 1, 't': 27.8}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.79,"serial":"4FBFC0FBE824FFEA","pm10.0":5.97,"nc10.0":29.41,"nc4.5":29.39,"pm2.5":5.03,"nc1.0":28.33,"nc2.5":29.28,"pm4.0":5.65,"nc0.5":23.11,"pm1.0":3.82,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.1,"t":27.2},"sht31d": {"id":1,"t":27.8,"h":40.5}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: cff665f2-9bf9-404b-9d0f-6d52f9222a42 accepted!
-reported state: {'sps30': {'tps': 0.79, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 29.41, 'auto_clean_interval_days': 4, 'nc1.0': 28.33, 'pm4.0': 5.65, 'pm10.0': 5.97, 'error': 'none', 'nc0.5': 23.11, 'nc4.5': 29.39, 'pm1.0': 3.82, 'nc2.5': 29.28, 'pm2.5': 5.03}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.1, 'id': 1, 't': 27.2}, 'sht31d': {'h': 40.5, 'id': 1, 't': 27.8}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.8,"serial":"4FBFC0FBE824FFEA","pm10.0":6.71,"nc10.0":32.69,"nc4.5":32.67,"pm2.5":5.63,"nc1.0":31.44,"nc2.5":32.54,"pm4.0":6.34,"nc0.5":25.59,"pm1.0":4.24,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.1,"t":27.2},"sht31d": {"id":1,"t":27.8,"h":40.5}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 42491b9f-64ef-4ed1-8024-7db0c8ad989f accepted!
-reported state: {'sps30': {'tps': 0.8, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 32.69, 'auto_clean_interval_days': 4, 'nc1.0': 31.44, 'pm4.0': 6.34, 'pm10.0': 6.71, 'error': 'none', 'nc0.5': 25.59, 'nc4.5': 32.67, 'pm1.0': 4.24, 'nc2.5': 32.54, 'pm2.5': 5.63}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.1, 'id': 1, 't': 27.2}, 'sht31d': {'h': 40.5, 'id': 1, 't': 27.8}}
+Update request with token: ff86202e-ee6f-444d-90cc-88d4f2efcd3a accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.59, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.52, 'nc10.0': 10.02, 'nc4.5': 10.02, 'pm2.5': 1.5, 'nc1.0': 9.95, 'nc2.5': 10.02, 'pm4.0': 1.5, 'nc0.5': 8.5, 'pm1.0': 1.31, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.4}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.83,"serial":"4FBFC0FBE824FFEA","pm10.0":6.15,"nc10.0":28.87,"nc4.5":28.84,"pm2.5":5.07,"nc1.0":27.63,"nc2.5":28.72,"pm4.0":5.79,"nc0.5":22.32,"pm1.0":3.74,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.1,"t":27.2},"sht31d": {"id":1,"t":27.8,"h":40.4}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.6,"serial":"4FBFC0FBE824FFEA","pm10.0":1.49,"nc10.0":9.79,"nc4.5":9.79,"pm2.5":1.46,"nc1.0":9.72,"nc2.5":9.78,"pm4.0":1.47,"nc0.5":8.3,"pm1.0":1.28,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.4}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: aa8ac885-7a90-4db7-ad8e-96a750ac583f accepted!
-reported state: {'sps30': {'tps': 0.83, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 28.87, 'auto_clean_interval_days': 4, 'nc1.0': 27.63, 'pm4.0': 5.79, 'pm10.0': 6.15, 'error': 'none', 'nc0.5': 22.32, 'nc4.5': 28.84, 'pm1.0': 3.74, 'nc2.5': 28.72, 'pm2.5': 5.07}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.1, 'id': 1, 't': 27.2}, 'sht31d': {'h': 40.4, 'id': 1, 't': 27.8}}
+Update request with token: 691f25d9-e1d4-4ee8-b2d4-df3fbf7bffb4 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.6, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.49, 'nc10.0': 9.79, 'nc4.5': 9.79, 'pm2.5': 1.46, 'nc1.0': 9.72, 'nc2.5': 9.78, 'pm4.0': 1.47, 'nc0.5': 8.3, 'pm1.0': 1.28, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.4}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.83,"serial":"4FBFC0FBE824FFEA","pm10.0":6.31,"nc10.0":28.52,"nc4.5":28.49,"pm2.5":5.1,"nc1.0":27.16,"nc2.5":28.35,"pm4.0":5.91,"nc0.5":21.76,"pm1.0":3.69,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.0,"t":27.3},"sht31d": {"id":1,"t":27.8,"h":40.5}}}}
+*** No se puede leer DHT22! ***
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.59,"serial":"4FBFC0FBE824FFEA","pm10.0":1.16,"nc10.0":7.59,"nc4.5":7.59,"pm2.5":1.14,"nc1.0":7.54,"nc2.5":7.59,"pm4.0":1.15,"nc0.5":6.43,"pm1.0":0.99,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.4}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: e2b8250e-78cb-4b38-92ab-f0587caa71bf accepted!
-reported state: {'sps30': {'tps': 0.83, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 28.52, 'auto_clean_interval_days': 4, 'nc1.0': 27.16, 'pm4.0': 5.91, 'pm10.0': 6.31, 'error': 'none', 'nc0.5': 21.76, 'nc4.5': 28.49, 'pm1.0': 3.69, 'nc2.5': 28.35, 'pm2.5': 5.1}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.0, 'id': 1, 't': 27.3}, 'sht31d': {'h': 40.5, 'id': 1, 't': 27.8}}
+Update request with token: 8b1721f5-994b-4c6e-a937-da97b82ef34e accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.59, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.16, 'nc10.0': 7.59, 'nc4.5': 7.59, 'pm2.5': 1.14, 'nc1.0': 7.54, 'nc2.5': 7.59, 'pm4.0': 1.15, 'nc0.5': 6.43, 'pm1.0': 0.99, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.4}}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+*** No se puede leer DHT22! ***
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.58,"serial":"4FBFC0FBE824FFEA","pm10.0":1.48,"nc10.0":9.83,"nc4.5":9.83,"pm2.5":1.46,"nc1.0":9.77,"nc2.5":9.83,"pm4.0":1.46,"nc0.5":8.35,"pm1.0":1.29,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.3}}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 251d7fa7-149d-4aac-a9d8-d7cc4e08513d accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.58, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.48, 'nc10.0': 9.83, 'nc4.5': 9.83, 'pm2.5': 1.46, 'nc1.0': 9.77, 'nc2.5': 9.83, 'pm4.0': 1.46, 'nc0.5': 8.35, 'pm1.0': 1.29, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.3}}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+*** No se puede leer DHT22! ***
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.58,"serial":"4FBFC0FBE824FFEA","pm10.0":1.29,"nc10.0":8.58,"nc4.5":8.58,"pm2.5":1.28,"nc1.0":8.52,"nc2.5":8.57,"pm4.0":1.28,"nc0.5":7.29,"pm1.0":1.12,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.4}}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 5843b20c-3401-46b3-89b6-595671794e04 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.58, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.29, 'nc10.0': 8.58, 'nc4.5': 8.58, 'pm2.5': 1.28, 'nc1.0': 8.52, 'nc2.5': 8.57, 'pm4.0': 1.28, 'nc0.5': 7.29, 'pm1.0': 1.12, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.4}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
 SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.0,"t":27.3},"sht31d": {"id":1,"t":27.9,"h":40.4}}}}
+{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.4}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 5260825d-023e-44c6-bb21-8cc60c4f6f9d accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.0, 'id': 1, 't': 27.3}, 'sht31d': {'h': 40.4, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.75,"serial":"4FBFC0FBE824FFEA","pm10.0":5.28,"nc10.0":27.39,"nc4.5":27.38,"pm2.5":4.57,"nc1.0":26.55,"nc2.5":27.29,"pm4.0":5.03,"nc0.5":21.86,"pm1.0":3.56,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.0,"t":27.3},"sht31d": {"id":1,"t":27.9,"h":40.3}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 5a09f408-7935-407d-8d7c-0931bf68efe5 accepted!
-reported state: {'sps30': {'tps': 0.75, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 27.39, 'auto_clean_interval_days': 4, 'nc1.0': 26.55, 'pm4.0': 5.03, 'pm10.0': 5.28, 'error': 'none', 'nc0.5': 21.86, 'nc4.5': 27.38, 'pm1.0': 3.56, 'nc2.5': 27.29, 'pm2.5': 4.57}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.0, 'id': 1, 't': 27.3}, 'sht31d': {'h': 40.3, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.76,"serial":"4FBFC0FBE824FFEA","pm10.0":4.99,"nc10.0":26.0,"nc4.5":25.98,"pm2.5":4.33,"nc1.0":25.21,"nc2.5":25.91,"pm4.0":4.76,"nc0.5":20.77,"pm1.0":3.38,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.0,"t":27.3},"sht31d": {"id":1,"t":27.9,"h":40.3}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4516ad1c-06c3-4192-a4cb-6a264e658272 accepted!
-reported state: {'sps30': {'tps': 0.76, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 26.0, 'auto_clean_interval_days': 4, 'nc1.0': 25.21, 'pm4.0': 4.76, 'pm10.0': 4.99, 'error': 'none', 'nc0.5': 20.77, 'nc4.5': 25.98, 'pm1.0': 3.38, 'nc2.5': 25.91, 'pm2.5': 4.33}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.0, 'id': 1, 't': 27.3}, 'sht31d': {'h': 40.3, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.77,"serial":"4FBFC0FBE824FFEA","pm10.0":5.38,"nc10.0":27.09,"nc4.5":27.08,"pm2.5":4.59,"nc1.0":26.17,"nc2.5":26.98,"pm4.0":5.1,"nc0.5":21.43,"pm1.0":3.52,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.0,"t":27.3},"sht31d": {"id":1,"t":27.9,"h":40.3}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: b8b24558-8eb3-4758-92f6-59a3c6e898f2 accepted!
-reported state: {'sps30': {'tps': 0.77, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 27.09, 'auto_clean_interval_days': 4, 'nc1.0': 26.17, 'pm4.0': 5.1, 'pm10.0': 5.38, 'error': 'none', 'nc0.5': 21.43, 'nc4.5': 27.08, 'pm1.0': 3.52, 'nc2.5': 26.98, 'pm2.5': 4.59}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.0, 'id': 1, 't': 27.3}, 'sht31d': {'h': 40.3, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.78,"serial":"4FBFC0FBE824FFEA","pm10.0":5.73,"nc10.0":28.04,"nc4.5":28.02,"pm2.5":4.82,"nc1.0":26.99,"nc2.5":27.91,"pm4.0":5.42,"nc0.5":21.98,"pm1.0":3.64,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":39.9,"t":27.4},"sht31d": {"id":1,"t":28.0,"h":40.1}}}}2019-12-03 21:21:46,509 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:23:50,987 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:25:55,468 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:27:56,681 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:29:57,961 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:31:59,241 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:34:00,521 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:36:05,068 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:38:06,361 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:40:10,908 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: a0855138-288b-41f6-9b47-34ad8dad6543 accepted!
-reported state: {'sps30': {'tps': 0.78, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 28.04, 'auto_clean_interval_days': 4, 'nc1.0': 26.99, 'pm4.0': 5.42, 'pm10.0': 5.73, 'error': 'none', 'nc0.5': 21.98, 'nc4.5': 28.02, 'pm1.0': 3.64, 'nc2.5': 27.91, 'pm2.5': 4.82}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 39.9, 'id': 1, 't': 27.4}, 'sht31d': {'h': 40.1, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.77,"serial":"4FBFC0FBE824FFEA","pm10.0":5.29,"nc10.0":27.48,"nc4.5":27.47,"pm2.5":4.58,"nc1.0":26.64,"nc2.5":27.39,"pm4.0":5.04,"nc0.5":21.95,"pm1.0":3.57,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":39.8,"t":27.4},"sht31d": {"id":1,"t":28.0,"h":40.2}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 75f569e7-cd85-4bce-b5af-940f40c3076e accepted!
-reported state: {'sps30': {'tps': 0.77, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 27.48, 'auto_clean_interval_days': 4, 'nc1.0': 26.64, 'pm4.0': 5.04, 'pm10.0': 5.29, 'error': 'none', 'nc0.5': 21.95, 'nc4.5': 27.47, 'pm1.0': 3.57, 'nc2.5': 27.39, 'pm2.5': 4.58}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 39.8, 'id': 1, 't': 27.4}, 'sht31d': {'h': 40.2, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.76,"serial":"4FBFC0FBE824FFEA","pm10.0":4.87,"nc10.0":25.04,"nc4.5":25.03,"pm2.5":4.19,"nc1.0":24.25,"nc2.5":24.95,"pm4.0":4.63,"nc0.5":19.94,"pm1.0":3.25,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":39.8,"t":27.4},"sht31d": {"id":1,"t":27.9,"h":40.3}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: e2eb2940-a0d7-4b06-a545-76de53532c59 accepted!
-reported state: {'sps30': {'tps': 0.76, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 25.04, 'auto_clean_interval_days': 4, 'nc1.0': 24.25, 'pm4.0': 4.63, 'pm10.0': 4.87, 'error': 'none', 'nc0.5': 19.94, 'nc4.5': 25.03, 'pm1.0': 3.25, 'nc2.5': 24.95, 'pm2.5': 4.19}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 39.8, 'id': 1, 't': 27.4}, 'sht31d': {'h': 40.3, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.73,"serial":"4FBFC0FBE824FFEA","pm10.0":4.72,"nc10.0":25.59,"nc4.5":25.58,"pm2.5":4.18,"nc1.0":24.93,"nc2.5":25.52,"pm4.0":4.52,"nc0.5":20.68,"pm1.0":3.33,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":39.8,"t":27.4},"sht31d": {"id":1,"t":27.9,"h":40.3}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: c4f0af36-8c71-48d5-a2db-518b13b00bd9 accepted!
-reported state: {'sps30': {'tps': 0.73, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 25.59, 'auto_clean_interval_days': 4, 'nc1.0': 24.93, 'pm4.0': 4.52, 'pm10.0': 4.72, 'error': 'none', 'nc0.5': 20.68, 'nc4.5': 25.58, 'pm1.0': 3.33, 'nc2.5': 25.52, 'pm2.5': 4.18}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 39.8, 'id': 1, 't': 27.4}, 'sht31d': {'h': 40.3, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.72,"serial":"4FBFC0FBE824FFEA","pm10.0":4.73,"nc10.0":26.34,"nc4.5":26.33,"pm2.5":4.25,"nc1.0":25.73,"nc2.5":26.27,"pm4.0":4.55,"nc0.5":21.45,"pm1.0":3.43,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":39.8,"t":27.4},"sht31d": {"id":1,"t":27.9,"h":40.3}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: ff0dba3e-435f-479f-9d32-1cd76cfd1ee2 accepted!
-reported state: {'sps30': {'tps': 0.72, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 26.34, 'auto_clean_interval_days': 4, 'nc1.0': 25.73, 'pm4.0': 4.55, 'pm10.0': 4.73, 'error': 'none', 'nc0.5': 21.45, 'nc4.5': 26.33, 'pm1.0': 3.43, 'nc2.5': 26.27, 'pm2.5': 4.25}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 39.8, 'id': 1, 't': 27.4}, 'sht31d': {'h': 40.3, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.74,"serial":"4FBFC0FBE824FFEA","pm10.0":4.17,"nc10.0":22.88,"nc4.5":22.87,"pm2.5":3.71,"nc1.0":22.32,"nc2.5":22.82,"pm4.0":4.0,"nc0.5":18.56,"pm1.0":2.98,"error":"none"},"ds18b20": {"id":1,"t":27.7},"dht22": {"id":1,"h":39.8,"t":27.4},"sht31d": {"id":1,"t":27.7,"h":42.0}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: df408389-b2ba-4c32-a407-5c382e7668d4 accepted!
-reported state: {'sps30': {'tps': 0.74, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 22.88, 'auto_clean_interval_days': 4, 'nc1.0': 22.32, 'pm4.0': 4.0, 'pm10.0': 4.17, 'error': 'none', 'nc0.5': 18.56, 'nc4.5': 22.87, 'pm1.0': 2.98, 'nc2.5': 22.82, 'pm2.5': 3.71}, 'ds18b20': {'id': 1, 't': 27.7}, 'dht22': {'h': 39.8, 'id': 1, 't': 27.4}, 'sht31d': {'h': 42.0, 'id': 1, 't': 27.7}}
+Update request with token: 3c785adb-2cd7-483c-898a-383c203099e6 accepted!
+reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.4}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
 SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.1},"dht22": {"id":1,"h":39.8,"t":27.4},"sht31d": {"id":1,"t":26.9,"h":46.3}}}}
+{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.3}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 2501a552-4760-4de4-9e6a-a8f0c7452509 accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.1}, 'dht22': {'h': 39.8, 'id': 1, 't': 27.4}, 'sht31d': {'h': 46.3, 'id': 1, 't': 26.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.69,"serial":"4FBFC0FBE824FFEA","pm10.0":4.36,"nc10.0":25.43,"nc4.5":25.42,"pm2.5":4.01,"nc1.0":24.97,"nc2.5":25.38,"pm4.0":4.22,"nc0.5":20.97,"pm1.0":3.32,"error":"none"},"ds18b20": {"id":1,"t":26.9},"dht22": {"id":1,"h":42.7,"t":27.0},"sht31d": {"id":1,"t":26.8,"h":47.0}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 8fc7fd12-cd3c-44f5-b6dd-2ebd43ec8a6e accepted!
-reported state: {'sps30': {'tps': 0.69, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 25.43, 'auto_clean_interval_days': 4, 'nc1.0': 24.97, 'pm4.0': 4.22, 'pm10.0': 4.36, 'error': 'none', 'nc0.5': 20.97, 'nc4.5': 25.42, 'pm1.0': 3.32, 'nc2.5': 25.38, 'pm2.5': 4.01}, 'ds18b20': {'id': 1, 't': 26.9}, 'dht22': {'h': 42.7, 'id': 1, 't': 27.0}, 'sht31d': {'h': 47.0, 'id': 1, 't': 26.8}}
+Update request with token: 78b5a203-ce6c-4313-a128-d7b35fffbd3a accepted!
+reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.3}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.68,"serial":"4FBFC0FBE824FFEA","pm10.0":3.55,"nc10.0":20.69,"nc4.5":20.68,"pm2.5":3.26,"nc1.0":20.3,"nc2.5":20.65,"pm4.0":3.44,"nc0.5":17.05,"pm1.0":2.7,"error":"none"},"ds18b20": {"id":1,"t":27.2},"dht22": {"id":1,"h":42.7,"t":27.0},"sht31d": {"id":1,"t":27.3,"h":45.2}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.61,"serial":"4FBFC0FBE824FFEA","pm10.0":1.07,"nc10.0":6.95,"nc4.5":6.95,"pm2.5":1.04,"nc1.0":6.89,"nc2.5":6.94,"pm4.0":1.05,"nc0.5":5.87,"pm1.0":0.91,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.4}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 441fce4c-a093-4853-973e-debcd4fc1e8b accepted!
-reported state: {'sps30': {'tps': 0.68, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 20.69, 'auto_clean_interval_days': 4, 'nc1.0': 20.3, 'pm4.0': 3.44, 'pm10.0': 3.55, 'error': 'none', 'nc0.5': 17.05, 'nc4.5': 20.68, 'pm1.0': 2.7, 'nc2.5': 20.65, 'pm2.5': 3.26}, 'ds18b20': {'id': 1, 't': 27.2}, 'dht22': {'h': 42.7, 'id': 1, 't': 27.0}, 'sht31d': {'h': 45.2, 'id': 1, 't': 27.3}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.7,"serial":"4FBFC0FBE824FFEA","pm10.0":4.13,"nc10.0":23.85,"nc4.5":23.84,"pm2.5":3.78,"nc1.0":23.39,"nc2.5":23.8,"pm4.0":3.99,"nc0.5":19.61,"pm1.0":3.11,"error":"none"},"ds18b20": {"id":1,"t":27.5},"dht22": {"id":1,"h":43.4,"t":27.1},"sht31d": {"id":1,"t":27.6,"h":43.9}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 69d81638-5f4d-4214-b30a-e522223509f8 accepted!
-reported state: {'sps30': {'tps': 0.7, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 23.85, 'auto_clean_interval_days': 4, 'nc1.0': 23.39, 'pm4.0': 3.99, 'pm10.0': 4.13, 'error': 'none', 'nc0.5': 19.61, 'nc4.5': 23.84, 'pm1.0': 3.11, 'nc2.5': 23.8, 'pm2.5': 3.78}, 'ds18b20': {'id': 1, 't': 27.5}, 'dht22': {'h': 43.4, 'id': 1, 't': 27.1}, 'sht31d': {'h': 43.9, 'id': 1, 't': 27.6}}
+Update request with token: fded88d2-3c06-4856-87e7-931603fb4756 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.61, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.07, 'nc10.0': 6.95, 'nc4.5': 6.95, 'pm2.5': 1.04, 'nc1.0': 6.89, 'nc2.5': 6.94, 'pm4.0': 1.05, 'nc0.5': 5.87, 'pm1.0': 0.91, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.4}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-*** No se puede leer DHT22! ***
-SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.6},"dht22": {"id":1,"h":43.4,"t":27.1},"sht31d": {"id":1,"t":27.7,"h":43.0}}}}2019-12-03 21:42:12,122 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:44:13,401 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:46:14,681 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:48:15,961 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:50:17,241 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:52:18,521 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:54:23,068 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:56:24,361 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 21:58:28,908 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:00:33,388 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:02:34,700 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.61,"serial":"4FBFC0FBE824FFEA","pm10.0":1.31,"nc10.0":8.57,"nc4.5":8.57,"pm2.5":1.28,"nc1.0":8.51,"nc2.5":8.57,"pm4.0":1.29,"nc0.5":7.26,"pm1.0":1.12,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.3}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 0402eb9a-ddfb-400f-b536-e4c2ff05a14f accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.6}, 'dht22': {'h': 43.4, 'id': 1, 't': 27.1}, 'sht31d': {'h': 43.0, 'id': 1, 't': 27.7}}
+Update request with token: 0866f3cb-1a60-4afd-8c1e-52d1b407723c accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.61, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.31, 'nc10.0': 8.57, 'nc4.5': 8.57, 'pm2.5': 1.28, 'nc1.0': 8.51, 'nc2.5': 8.57, 'pm4.0': 1.29, 'nc0.5': 7.26, 'pm1.0': 1.12, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.3}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.69,"serial":"4FBFC0FBE824FFEA","pm10.0":3.73,"nc10.0":21.59,"nc4.5":21.58,"pm2.5":3.42,"nc1.0":21.18,"nc2.5":21.55,"pm4.0":3.61,"nc0.5":17.76,"pm1.0":2.82,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":43.4,"t":27.1},"sht31d": {"id":1,"t":27.8,"h":42.5}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.61,"serial":"4FBFC0FBE824FFEA","pm10.0":1.23,"nc10.0":8.07,"nc4.5":8.07,"pm2.5":1.21,"nc1.0":8.01,"nc2.5":8.07,"pm4.0":1.22,"nc0.5":6.84,"pm1.0":1.06,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.3}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 1cd2d5e0-1563-4dde-ac1a-5d69db79de9d accepted!
-reported state: {'sps30': {'tps': 0.69, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 21.59, 'auto_clean_interval_days': 4, 'nc1.0': 21.18, 'pm4.0': 3.61, 'pm10.0': 3.73, 'error': 'none', 'nc0.5': 17.76, 'nc4.5': 21.58, 'pm1.0': 2.82, 'nc2.5': 21.55, 'pm2.5': 3.42}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 43.4, 'id': 1, 't': 27.1}, 'sht31d': {'h': 42.5, 'id': 1, 't': 27.8}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":43.4,"t":27.1},"sht31d": {"id":1,"t":27.8,"h":42.1}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 0b2b5d87-872d-410e-9868-b6ab47410a2f accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 43.4, 'id': 1, 't': 27.1}, 'sht31d': {'h': 42.1, 'id': 1, 't': 27.8}}
+Update request with token: 0edc839a-7e1b-4178-8090-07138b906c56 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.61, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.23, 'nc10.0': 8.07, 'nc4.5': 8.07, 'pm2.5': 1.21, 'nc1.0': 8.01, 'nc2.5': 8.07, 'pm4.0': 1.22, 'nc0.5': 6.84, 'pm1.0': 1.06, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.3}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.71,"serial":"4FBFC0FBE824FFEA","pm10.0":3.53,"nc10.0":20.17,"nc4.5":20.16,"pm2.5":3.21,"nc1.0":19.76,"nc2.5":20.13,"pm4.0":3.41,"nc0.5":16.54,"pm1.0":2.63,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":43.4,"t":27.1},"sht31d": {"id":1,"t":27.9,"h":41.7}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.6,"serial":"4FBFC0FBE824FFEA","pm10.0":1.08,"nc10.0":7.04,"nc4.5":7.04,"pm2.5":1.05,"nc1.0":6.99,"nc2.5":7.04,"pm4.0":1.06,"nc0.5":5.97,"pm1.0":0.92,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.3}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: b0666e51-5490-467a-a77f-d4b4349f24d6 accepted!
-reported state: {'sps30': {'tps': 0.71, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 20.17, 'auto_clean_interval_days': 4, 'nc1.0': 19.76, 'pm4.0': 3.41, 'pm10.0': 3.53, 'error': 'none', 'nc0.5': 16.54, 'nc4.5': 20.16, 'pm1.0': 2.63, 'nc2.5': 20.13, 'pm2.5': 3.21}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 43.4, 'id': 1, 't': 27.1}, 'sht31d': {'h': 41.7, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 5e419c8c-33e5-4b89-9ccd-476c96422270 accepted!2019-12-04 22:03:53,762 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:05:57,388 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:07:58,722 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:10:00,083 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:12:01,445 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:14:02,803 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:16:04,172 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:18:05,524 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:20:06,885 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
 
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.71,"serial":"4FBFC0FBE824FFEA","pm10.0":3.42,"nc10.0":19.65,"nc4.5":19.64,"pm2.5":3.12,"nc1.0":19.26,"nc2.5":19.61,"pm4.0":3.3,"nc0.5":16.14,"pm1.0":2.56,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":43.4,"t":27.1},"sht31d": {"id":1,"t":28.0,"h":41.5}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 04f6fa6a-9fa6-4235-be33-3ffb37a092c2 accepted!
-reported state: {'sps30': {'tps': 0.71, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 19.65, 'auto_clean_interval_days': 4, 'nc1.0': 19.26, 'pm4.0': 3.3, 'pm10.0': 3.42, 'error': 'none', 'nc0.5': 16.14, 'nc4.5': 19.64, 'pm1.0': 2.56, 'nc2.5': 19.61, 'pm2.5': 3.12}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 43.4, 'id': 1, 't': 27.1}, 'sht31d': {'h': 41.5, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-JSON Not defined json.decoder.JSONDecodeError:  Expecting value: line 1 column 1 (char 0)
-{"state": {"reported": {"sps30": {"error":"file not read","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":43.4,"t":27.1},"sht31d": {"id":1,"t":27.9,"h":41.4}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: a9a2c3e9-58e8-46d5-9dc2-8827a607a927 accepted!
-reported state: {'sps30': {'error': 'file not read', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 43.4, 'id': 1, 't': 27.1}, 'sht31d': {'h': 41.4, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.68,"serial":"4FBFC0FBE824FFEA","pm10.0":3.91,"nc10.0":23.1,"nc4.5":23.09,"pm2.5":3.62,"nc1.0":22.71,"nc2.5":23.06,"pm4.0":3.8,"nc0.5":19.1,"pm1.0":3.01,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":41.0,"t":27.4},"sht31d": {"id":1,"t":28.0,"h":41.3}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 462b50b8-89ca-4e9f-b6f4-798743ecfdee accepted!
-reported state: {'sps30': {'tps': 0.68, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 23.1, 'auto_clean_interval_days': 4, 'nc1.0': 22.71, 'pm4.0': 3.8, 'pm10.0': 3.91, 'error': 'none', 'nc0.5': 19.1, 'nc4.5': 23.09, 'pm1.0': 3.01, 'nc2.5': 23.06, 'pm2.5': 3.62}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 41.0, 'id': 1, 't': 27.4}, 'sht31d': {'h': 41.3, 'id': 1, 't': 28.0}}
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.6, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.08, 'nc10.0': 7.04, 'nc4.5': 7.04, 'pm2.5': 1.05, 'nc1.0': 6.99, 'nc2.5': 7.04, 'pm4.0': 1.06, 'nc0.5': 5.97, 'pm1.0': 0.92, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.3}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.68,"serial":"4FBFC0FBE824FFEA","pm10.0":3.4,"nc10.0":20.46,"nc4.5":20.45,"pm2.5":3.18,"nc1.0":20.15,"nc2.5":20.43,"pm4.0":3.31,"nc0.5":17.0,"pm1.0":2.67,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":41.0,"t":27.4},"sht31d": {"id":1,"t":28.0,"h":41.2}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.6,"serial":"4FBFC0FBE824FFEA","pm10.0":1.13,"nc10.0":7.46,"nc4.5":7.46,"pm2.5":1.11,"nc1.0":7.41,"nc2.5":7.46,"pm4.0":1.12,"nc0.5":6.33,"pm1.0":0.98,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.3}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: df77d0c4-13f9-4a98-b167-3df4102be7e8 accepted!
-reported state: {'sps30': {'tps': 0.68, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 20.46, 'auto_clean_interval_days': 4, 'nc1.0': 20.15, 'pm4.0': 3.31, 'pm10.0': 3.4, 'error': 'none', 'nc0.5': 17.0, 'nc4.5': 20.45, 'pm1.0': 2.67, 'nc2.5': 20.43, 'pm2.5': 3.18}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 41.0, 'id': 1, 't': 27.4}, 'sht31d': {'h': 41.2, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.69,"serial":"4FBFC0FBE824FFEA","pm10.0":3.42,"nc10.0":20.52,"nc4.5":20.52,"pm2.5":3.2,"nc1.0":20.2,"nc2.5":20.49,"pm4.0":3.33,"nc0.5":17.03,"pm1.0":2.68,"error":"none"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.9,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.1}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 6e257fc1-dc75-4b73-8ce4-1fdbbb0b9055 accepted!
-reported state: {'sps30': {'tps': 0.69, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 20.52, 'auto_clean_interval_days': 4, 'nc1.0': 20.2, 'pm4.0': 3.33, 'pm10.0': 3.42, 'error': 'none', 'nc0.5': 17.03, 'nc4.5': 20.52, 'pm1.0': 2.68, 'nc2.5': 20.49, 'pm2.5': 3.2}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.9, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.1, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.66,"serial":"4FBFC0FBE824FFEA","pm10.0":3.54,"nc10.0":21.89,"nc4.5":21.89,"pm2.5":3.36,"nc1.0":21.62,"nc2.5":21.87,"pm4.0":3.46,"nc0.5":18.31,"pm1.0":2.86,"error":"none"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.7,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.0}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 71dd8301-7af6-4030-8bdf-ac4951cc24e7 accepted!
-reported state: {'sps30': {'tps': 0.66, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 21.89, 'auto_clean_interval_days': 4, 'nc1.0': 21.62, 'pm4.0': 3.46, 'pm10.0': 3.54, 'error': 'none', 'nc0.5': 18.31, 'nc4.5': 21.89, 'pm1.0': 2.86, 'nc2.5': 21.87, 'pm2.5': 3.36}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.7, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.0, 'id': 1, 't': 28.0}}
+Update request with token: 700de62c-9592-4e7c-af99-c94f68636468 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.6, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.13, 'nc10.0': 7.46, 'nc4.5': 7.46, 'pm2.5': 1.11, 'nc1.0': 7.41, 'nc2.5': 7.46, 'pm4.0': 1.12, 'nc0.5': 6.33, 'pm1.0': 0.98, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.3}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.7,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.0}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.58,"serial":"4FBFC0FBE824FFEA","pm10.0":1.35,"nc10.0":8.9,"nc4.5":8.9,"pm2.5":1.33,"nc1.0":8.84,"nc2.5":8.9,"pm4.0":1.33,"nc0.5":7.55,"pm1.0":1.16,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.5,"h":41.3}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 45b53037-699b-4752-90f3-d2c1d6e810bf accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.7, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.0, 'id': 1, 't': 28.0}}2019-12-03 22:04:35,962 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:06:37,242 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:08:38,602 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:10:43,230 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:12:47,870 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:14:52,510 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:16:57,149 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:18:58,442 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:21:03,070 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:23:04,443 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-
+Update request with token: 0c2d1b29-d084-4224-ac83-7681b1757bc5 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.58, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.35, 'nc10.0': 8.9, 'nc4.5': 8.9, 'pm2.5': 1.33, 'nc1.0': 8.84, 'nc2.5': 8.9, 'pm4.0': 1.33, 'nc0.5': 7.55, 'pm1.0': 1.16, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.5, 'h': 41.3}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.66,"serial":"4FBFC0FBE824FFEA","pm10.0":3.09,"nc10.0":17.92,"nc4.5":17.91,"pm2.5":2.83,"nc1.0":17.58,"nc2.5":17.89,"pm4.0":2.99,"nc0.5":14.75,"pm1.0":2.34,"error":"none"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.7,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.0}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.58,"serial":"4FBFC0FBE824FFEA","pm10.0":1.11,"nc10.0":7.4,"nc4.5":7.4,"pm2.5":1.1,"nc1.0":7.36,"nc2.5":7.4,"pm4.0":1.1,"nc0.5":6.29,"pm1.0":0.97,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.3}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 169ebecc-34f4-49b9-98ac-022fc29b1eab accepted!
-reported state: {'sps30': {'tps': 0.66, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 17.92, 'auto_clean_interval_days': 4, 'nc1.0': 17.58, 'pm4.0': 2.99, 'pm10.0': 3.09, 'error': 'none', 'nc0.5': 14.75, 'nc4.5': 17.91, 'pm1.0': 2.34, 'nc2.5': 17.89, 'pm2.5': 2.83}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.7, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.0, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.66,"serial":"4FBFC0FBE824FFEA","pm10.0":3.38,"nc10.0":20.22,"nc4.5":20.22,"pm2.5":3.15,"nc1.0":19.91,"nc2.5":20.19,"pm4.0":3.29,"nc0.5":16.78,"pm1.0":2.64,"error":"none"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.7,"t":27.5},"sht31d": {"id":1,"t":28.1,"h":40.9}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 1f08dd43-5008-4e02-9c12-da1c9d91bd85 accepted!
-reported state: {'sps30': {'tps': 0.66, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 20.22, 'auto_clean_interval_days': 4, 'nc1.0': 19.91, 'pm4.0': 3.29, 'pm10.0': 3.38, 'error': 'none', 'nc0.5': 16.78, 'nc4.5': 20.22, 'pm1.0': 2.64, 'nc2.5': 20.19, 'pm2.5': 3.15}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.7, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.9, 'id': 1, 't': 28.1}}
+Update request with token: 4f2797f2-ae87-4851-9c04-524bd509a225 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.58, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.11, 'nc10.0': 7.4, 'nc4.5': 7.4, 'pm2.5': 1.1, 'nc1.0': 7.36, 'nc2.5': 7.4, 'pm4.0': 1.1, 'nc0.5': 6.29, 'pm1.0': 0.97, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.3}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.7,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.9}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.58,"serial":"4FBFC0FBE824FFEA","pm10.0":0.9,"nc10.0":5.98,"nc4.5":5.98,"pm2.5":0.89,"nc1.0":5.94,"nc2.5":5.98,"pm4.0":0.89,"nc0.5":5.08,"pm1.0":0.78,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.3}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 6b2bd131-34f7-4f97-9f5b-511eec653d1e accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.7, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.9, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.68,"serial":"4FBFC0FBE824FFEA","pm10.0":3.46,"nc10.0":20.88,"nc4.5":20.88,"pm2.5":3.24,"nc1.0":20.57,"nc2.5":20.85,"pm4.0":3.37,"nc0.5":17.36,"pm1.0":2.73,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.5,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.9}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 13ea5b12-70cc-46ec-97ea-ff4ed4a58c34 accepted!
-reported state: {'sps30': {'tps': 0.68, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 20.88, 'auto_clean_interval_days': 4, 'nc1.0': 20.57, 'pm4.0': 3.37, 'pm10.0': 3.46, 'error': 'none', 'nc0.5': 17.36, 'nc4.5': 20.88, 'pm1.0': 2.73, 'nc2.5': 20.85, 'pm2.5': 3.24}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.5, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.9, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.69,"serial":"4FBFC0FBE824FFEA","pm10.0":3.12,"nc10.0":18.87,"nc4.5":18.86,"pm2.5":2.93,"nc1.0":18.59,"nc2.5":18.84,"pm4.0":3.04,"nc0.5":15.69,"pm1.0":2.46,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.5,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.9}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 1aab7050-dc45-44ba-8af6-2b37bc37efb3 accepted!
-reported state: {'sps30': {'tps': 0.69, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 18.87, 'auto_clean_interval_days': 4, 'nc1.0': 18.59, 'pm4.0': 3.04, 'pm10.0': 3.12, 'error': 'none', 'nc0.5': 15.69, 'nc4.5': 18.86, 'pm1.0': 2.46, 'nc2.5': 18.84, 'pm2.5': 2.93}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.5, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.9, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.67,"serial":"4FBFC0FBE824FFEA","pm10.0":2.77,"nc10.0":17.02,"nc4.5":17.01,"pm2.5":2.62,"nc1.0":16.79,"nc2.5":17.0,"pm4.0":2.7,"nc0.5":14.21,"pm1.0":2.22,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.5,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.0}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 148c4546-f94f-4b52-919a-51169ae4dd12 accepted!
-reported state: {'sps30': {'tps': 0.67, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 17.02, 'auto_clean_interval_days': 4, 'nc1.0': 16.79, 'pm4.0': 2.7, 'pm10.0': 2.77, 'error': 'none', 'nc0.5': 14.21, 'nc4.5': 17.01, 'pm1.0': 2.22, 'nc2.5': 17.0, 'pm2.5': 2.62}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.5, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.0, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.4,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.9}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 40f2939f-8ffe-4333-b2ad-43d841d7aa4d accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.4, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.9, 'id': 1, 't': 28.0}}
+Update request with token: 301de5b8-8dc2-4405-b949-0cb308776390 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.58, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 0.9, 'nc10.0': 5.98, 'nc4.5': 5.98, 'pm2.5': 0.89, 'nc1.0': 5.94, 'nc2.5': 5.98, 'pm4.0': 0.89, 'nc0.5': 5.08, 'pm1.0': 0.78, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.3}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.66,"serial":"4FBFC0FBE824FFEA","pm10.0":3.14,"nc10.0":19.23,"nc4.5":19.22,"pm2.5":2.96,"nc1.0":18.97,"nc2.5":19.21,"pm4.0":3.06,"nc0.5":16.05,"pm1.0":2.51,"error":"none"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.4,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.9}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.58,"serial":"4FBFC0FBE824FFEA","pm10.0":1.35,"nc10.0":8.99,"nc4.5":8.99,"pm2.5":1.34,"nc1.0":8.94,"nc2.5":8.99,"pm4.0":1.34,"nc0.5":7.65,"pm1.0":1.18,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.1}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 8adc68b9-4fd5-4507-9843-9f497b565a1c accepted!
-reported state: {'sps30': {'tps': 0.66, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 19.23, 'auto_clean_interval_days': 4, 'nc1.0': 18.97, 'pm4.0': 3.06, 'pm10.0': 3.14, 'error': 'none', 'nc0.5': 16.05, 'nc4.5': 19.22, 'pm1.0': 2.51, 'nc2.5': 19.21, 'pm2.5': 2.96}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.4, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.9, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.67,"serial":"4FBFC0FBE824FFEA","pm10.0":2.89,"nc10.0":17.82,"nc4.5":17.82,"pm2.5":2.74,"nc1.0":17.6,"nc2.5":17.8,"pm4.0":2.82,"nc0.5":14.9,"pm1.0":2.33,"error":"none"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.4,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.8}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4b39deb7-c0b6-4c49-8283-60a6ae6f0e7a accepted!
-reported state: {'sps30': {'tps': 0.67, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 17.82, 'auto_clean_interval_days': 4, 'nc1.0': 17.6, 'pm4.0': 2.82, 'pm10.0': 2.89, 'error': 'none', 'nc0.5': 14.9, 'nc4.5': 17.82, 'pm1.0': 2.33, 'nc2.5': 17.8, 'pm2.5': 2.74}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.4, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.8, 'id': 1, 't': 28.0}}
+Update request with token: f0a1ee2a-9298-4bd1-a1b5-56cb773a4f58 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.58, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.35, 'nc10.0': 8.99, 'nc4.5': 8.99, 'pm2.5': 1.34, 'nc1.0': 8.94, 'nc2.5': 8.99, 'pm4.0': 1.34, 'nc0.5': 7.65, 'pm1.0': 1.18, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.1}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.68,"serial":"4FBFC0FBE824FFEA","pm10.0":2.75,"nc10.0":16.77,"nc4.5":16.76,"pm2.5":2.59,"nc1.0":16.54,"nc2.5":16.75,"pm4.0":2.68,"nc0.5":13.98,"pm1.0":2.19,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.4,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.9}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.58,"serial":"4FBFC0FBE824FFEA","pm10.0":1.04,"nc10.0":6.92,"nc4.5":6.92,"pm2.5":1.03,"nc1.0":6.88,"nc2.5":6.92,"pm4.0":1.03,"nc0.5":5.89,"pm1.0":0.91,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.0}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: ed0b7384-92ba-4e15-82a5-7701cf082e9b accepted!
-reported state: {'sps30': {'tps': 0.68, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 16.77, 'auto_clean_interval_days': 4, 'nc1.0': 16.54, 'pm4.0': 2.68, 'pm10.0': 2.75, 'error': 'none', 'nc0.5': 13.98, 'nc4.5': 16.76, 'pm1.0': 2.19, 'nc2.5': 16.75, 'pm2.5': 2.59}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.4, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.9, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.67,"serial":"4FBFC0FBE824FFEA","pm10.0":3.49,"nc10.0":20.97,"nc4.5":20.97,"pm2.5":3.26,"nc1.0":20.65,"nc2.5":20.94,"pm4.0":3.4,"nc0.5":17.42,"pm1.0":2.74,"error":"none"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.8}}}}2019-12-03 22:25:09,074 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:27:13,710 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:29:15,082 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:31:19,711 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:33:21,082 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:35:22,364 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:37:23,642 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:39:25,002 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:41:26,362 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:43:27,642 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: a660878a-1d08-4c6d-b58f-ae67f5e7f10c accepted!
-reported state: {'sps30': {'tps': 0.67, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 20.97, 'auto_clean_interval_days': 4, 'nc1.0': 20.65, 'pm4.0': 3.4, 'pm10.0': 3.49, 'error': 'none', 'nc0.5': 17.42, 'nc4.5': 20.97, 'pm1.0': 2.74, 'nc2.5': 20.94, 'pm2.5': 3.26}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.8, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.64,"serial":"4FBFC0FBE824FFEA","pm10.0":3.02,"nc10.0":18.56,"nc4.5":18.56,"pm2.5":2.86,"nc1.0":18.31,"nc2.5":18.54,"pm4.0":2.95,"nc0.5":15.49,"pm1.0":2.42,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":28.1,"h":40.8}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 726da07b-4d65-4a3d-8ddf-b666bbc9e841 accepted!
-reported state: {'sps30': {'tps': 0.64, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 18.56, 'auto_clean_interval_days': 4, 'nc1.0': 18.31, 'pm4.0': 2.95, 'pm10.0': 3.02, 'error': 'none', 'nc0.5': 15.49, 'nc4.5': 18.56, 'pm1.0': 2.42, 'nc2.5': 18.54, 'pm2.5': 2.86}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.8, 'id': 1, 't': 28.1}}
+Update request with token: 5a2b1101-dc0a-4045-9e6c-24412ce18d5a accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.58, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.04, 'nc10.0': 6.92, 'nc4.5': 6.92, 'pm2.5': 1.03, 'nc1.0': 6.88, 'nc2.5': 6.92, 'pm4.0': 1.03, 'nc0.5': 5.89, 'pm1.0': 0.91, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.0}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.66,"serial":"4FBFC0FBE824FFEA","pm10.0":2.56,"nc10.0":15.54,"nc4.5":15.54,"pm2.5":2.41,"nc1.0":15.32,"nc2.5":15.52,"pm4.0":2.5,"nc0.5":12.93,"pm1.0":2.03,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.0}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.56,"serial":"4FBFC0FBE824FFEA","pm10.0":1.19,"nc10.0":7.9,"nc4.5":7.9,"pm2.5":1.17,"nc1.0":7.85,"nc2.5":7.9,"pm4.0":1.17,"nc0.5":6.71,"pm1.0":1.03,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.2}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: ab324778-182f-49ce-bb86-643e48211cc5 accepted!
-reported state: {'sps30': {'tps': 0.66, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 15.54, 'auto_clean_interval_days': 4, 'nc1.0': 15.32, 'pm4.0': 2.5, 'pm10.0': 2.56, 'error': 'none', 'nc0.5': 12.93, 'nc4.5': 15.54, 'pm1.0': 2.03, 'nc2.5': 15.52, 'pm2.5': 2.41}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.0, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.68,"serial":"4FBFC0FBE824FFEA","pm10.0":2.91,"nc10.0":17.11,"nc4.5":17.1,"pm2.5":2.69,"nc1.0":16.81,"nc2.5":17.08,"pm4.0":2.82,"nc0.5":14.13,"pm1.0":2.23,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.2,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.9}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: f8482c66-9bc9-49b5-b272-8507108574f0 accepted!
-reported state: {'sps30': {'tps': 0.68, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 17.11, 'auto_clean_interval_days': 4, 'nc1.0': 16.81, 'pm4.0': 2.82, 'pm10.0': 2.91, 'error': 'none', 'nc0.5': 14.13, 'nc4.5': 17.1, 'pm1.0': 2.23, 'nc2.5': 17.08, 'pm2.5': 2.69}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.2, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.9, 'id': 1, 't': 28.0}}
+Update request with token: fe6d228f-00c4-4143-91a9-0537860bfec2 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.56, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.19, 'nc10.0': 7.9, 'nc4.5': 7.9, 'pm2.5': 1.17, 'nc1.0': 7.85, 'nc2.5': 7.9, 'pm4.0': 1.17, 'nc0.5': 6.71, 'pm1.0': 1.03, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.2}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.67,"serial":"4FBFC0FBE824FFEA","pm10.0":2.6,"nc10.0":15.34,"nc4.5":15.33,"pm2.5":2.41,"nc1.0":15.07,"nc2.5":15.31,"pm4.0":2.52,"nc0.5":12.68,"pm1.0":2.0,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.2,"t":27.5},"sht31d": {"id":1,"t":28.1,"h":40.7}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.55,"serial":"4FBFC0FBE824FFEA","pm10.0":0.87,"nc10.0":5.77,"nc4.5":5.77,"pm2.5":0.86,"nc1.0":5.74,"nc2.5":5.77,"pm4.0":0.86,"nc0.5":4.91,"pm1.0":0.76,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":40.9}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 91a5ae6c-f0fc-4313-9c29-08d7a18f76ed accepted!
-reported state: {'sps30': {'tps': 0.67, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 15.34, 'auto_clean_interval_days': 4, 'nc1.0': 15.07, 'pm4.0': 2.52, 'pm10.0': 2.6, 'error': 'none', 'nc0.5': 12.68, 'nc4.5': 15.33, 'pm1.0': 2.0, 'nc2.5': 15.31, 'pm2.5': 2.41}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.2, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.7, 'id': 1, 't': 28.1}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.67,"serial":"4FBFC0FBE824FFEA","pm10.0":2.89,"nc10.0":17.75,"nc4.5":17.75,"pm2.5":2.73,"nc1.0":17.52,"nc2.5":17.73,"pm4.0":2.82,"nc0.5":14.82,"pm1.0":2.32,"error":"none"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.2,"t":27.5},"sht31d": {"id":1,"t":28.1,"h":40.7}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: ca0ef3fb-133e-4dfe-9b2d-af6a7b45eebd accepted!
-reported state: {'sps30': {'tps': 0.67, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 17.75, 'auto_clean_interval_days': 4, 'nc1.0': 17.52, 'pm4.0': 2.82, 'pm10.0': 2.89, 'error': 'none', 'nc0.5': 14.82, 'nc4.5': 17.75, 'pm1.0': 2.32, 'nc2.5': 17.73, 'pm2.5': 2.73}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.2, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.7, 'id': 1, 't': 28.1}}
+Update request with token: a8e80614-7eb9-4183-8b1d-665ac8a82e56 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.55, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 0.87, 'nc10.0': 5.77, 'nc4.5': 5.77, 'pm2.5': 0.86, 'nc1.0': 5.74, 'nc2.5': 5.77, 'pm4.0': 0.86, 'nc0.5': 4.91, 'pm1.0': 0.76, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 40.9}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.66,"serial":"4FBFC0FBE824FFEA","pm10.0":2.53,"nc10.0":15.43,"nc4.5":15.42,"pm2.5":2.38,"nc1.0":15.21,"nc2.5":15.41,"pm4.0":2.46,"nc0.5":12.86,"pm1.0":2.02,"error":"none"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.2,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.0}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.55,"serial":"4FBFC0FBE824FFEA","pm10.0":1.0,"nc10.0":6.63,"nc4.5":6.63,"pm2.5":0.99,"nc1.0":6.59,"nc2.5":6.63,"pm4.0":0.99,"nc0.5":5.64,"pm1.0":0.87,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.1}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4662f038-c5f6-4625-a710-c7c87d23b5a1 accepted!
-reported state: {'sps30': {'tps': 0.66, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 15.43, 'auto_clean_interval_days': 4, 'nc1.0': 15.21, 'pm4.0': 2.46, 'pm10.0': 2.53, 'error': 'none', 'nc0.5': 12.86, 'nc4.5': 15.42, 'pm1.0': 2.02, 'nc2.5': 15.41, 'pm2.5': 2.38}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.2, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.0, 'id': 1, 't': 28.0}}
+Update request with token: 711d4ab7-336b-4b14-a30a-79dcc7269343 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.55, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.0, 'nc10.0': 6.63, 'nc4.5': 6.63, 'pm2.5': 0.99, 'nc1.0': 6.59, 'nc2.5': 6.63, 'pm4.0': 0.99, 'nc0.5': 5.64, 'pm1.0': 0.87, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.1}}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+2019-12-04 22:22:08,242 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:24:09,611 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:26:10,963 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:28:15,505 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:30:16,804 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:32:18,085 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:34:19,445 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:36:20,804 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:38:23,044 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:40:24,323 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+*** No se puede leer DHT22! ***
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.56,"serial":"4FBFC0FBE824FFEA","pm10.0":0.83,"nc10.0":5.51,"nc4.5":5.51,"pm2.5":0.82,"nc1.0":5.48,"nc2.5":5.51,"pm4.0":0.82,"nc0.5":4.69,"pm1.0":0.72,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.1}}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 974cf4c7-30e8-4f5f-b1a6-497556f01e75 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.56, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 0.83, 'nc10.0': 5.51, 'nc4.5': 5.51, 'pm2.5': 0.82, 'nc1.0': 5.48, 'nc2.5': 5.51, 'pm4.0': 0.82, 'nc0.5': 4.69, 'pm1.0': 0.72, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.1}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.67,"serial":"4FBFC0FBE824FFEA","pm10.0":2.33,"nc10.0":14.17,"nc4.5":14.17,"pm2.5":2.19,"nc1.0":13.97,"nc2.5":14.15,"pm4.0":2.27,"nc0.5":11.8,"pm1.0":1.85,"error":"none"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.2,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.7}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.57,"serial":"4FBFC0FBE824FFEA","pm10.0":1.13,"nc10.0":7.5,"nc4.5":7.5,"pm2.5":1.12,"nc1.0":7.46,"nc2.5":7.5,"pm4.0":1.12,"nc0.5":6.38,"pm1.0":0.98,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":41.1}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 57edbea1-39e5-4c87-9486-80925104d5a0 accepted!
-reported state: {'sps30': {'tps': 0.67, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 14.17, 'auto_clean_interval_days': 4, 'nc1.0': 13.97, 'pm4.0': 2.27, 'pm10.0': 2.33, 'error': 'none', 'nc0.5': 11.8, 'nc4.5': 14.17, 'pm1.0': 1.85, 'nc2.5': 14.15, 'pm2.5': 2.19}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.2, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.7, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.66,"serial":"4FBFC0FBE824FFEA","pm10.0":2.39,"nc10.0":14.56,"nc4.5":14.55,"pm2.5":2.25,"nc1.0":14.35,"nc2.5":14.54,"pm4.0":2.33,"nc0.5":12.13,"pm1.0":1.9,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.2,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.8}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: e4e8c23f-8404-47e8-9a40-7cc8bc05b8a4 accepted!
-reported state: {'sps30': {'tps': 0.66, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 14.56, 'auto_clean_interval_days': 4, 'nc1.0': 14.35, 'pm4.0': 2.33, 'pm10.0': 2.39, 'error': 'none', 'nc0.5': 12.13, 'nc4.5': 14.55, 'pm1.0': 1.9, 'nc2.5': 14.54, 'pm2.5': 2.25}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.2, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.8, 'id': 1, 't': 28.0}}
+Update request with token: 065af8a0-2d2f-4ad6-ae97-2f82c1708302 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.57, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 1.13, 'nc10.0': 7.5, 'nc4.5': 7.5, 'pm2.5': 1.12, 'nc1.0': 7.46, 'nc2.5': 7.5, 'pm4.0': 1.12, 'nc0.5': 6.38, 'pm1.0': 0.98, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 41.1}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.64,"serial":"4FBFC0FBE824FFEA","pm10.0":2.68,"nc10.0":16.81,"nc4.5":16.8,"pm2.5":2.57,"nc1.0":16.62,"nc2.5":16.79,"pm4.0":2.63,"nc0.5":14.1,"pm1.0":2.2,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.2,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.9}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.57,"serial":"4FBFC0FBE824FFEA","pm10.0":0.92,"nc10.0":6.14,"nc4.5":6.14,"pm2.5":0.91,"nc1.0":6.1,"nc2.5":6.14,"pm4.0":0.91,"nc0.5":5.22,"pm1.0":0.8,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":39.1,"t":28.5},"sht31d":{"id":1,"t":28.4,"h":40.8}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: d5cf6413-1ec5-4d56-a21b-bcccbc058599 accepted!
-reported state: {'sps30': {'tps': 0.64, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 16.81, 'auto_clean_interval_days': 4, 'nc1.0': 16.62, 'pm4.0': 2.63, 'pm10.0': 2.68, 'error': 'none', 'nc0.5': 14.1, 'nc4.5': 16.8, 'pm1.0': 2.2, 'nc2.5': 16.79, 'pm2.5': 2.57}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.2, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.9, 'id': 1, 't': 28.0}}2019-12-03 22:45:32,270 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:47:36,910 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:49:38,282 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:51:39,563 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:53:40,922 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:55:45,550 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:57:46,922 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 22:59:48,202 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:01:49,481 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:03:54,029 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-
+Update request with token: 4c6c31c7-fae9-4c07-adeb-3b933bf65684 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.57, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 0.92, 'nc10.0': 6.14, 'nc4.5': 6.14, 'pm2.5': 0.91, 'nc1.0': 6.1, 'nc2.5': 6.14, 'pm4.0': 0.91, 'nc0.5': 5.22, 'pm1.0': 0.8, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 39.1, 't': 28.5}, 'sht31d': {'id': 1, 't': 28.4, 'h': 40.8}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.2,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.9}}}}
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.57,"serial":"4FBFC0FBE824FFEA","pm10.0":0.86,"nc10.0":5.69,"nc4.5":5.68,"pm2.5":0.85,"nc1.0":5.65,"nc2.5":5.68,"pm4.0":0.85,"nc0.5":4.83,"pm1.0":0.74,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":38.7,"t":28.4},"sht31d":{"id":1,"t":28.4,"h":40.8}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 340a8761-4bdf-453f-864e-0c503b5cda8c accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.2, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.9, 'id': 1, 't': 28.0}}
+Update request with token: cd5e2ad6-2284-4d3e-ae34-528ed3891610 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.57, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 0.86, 'nc10.0': 5.69, 'nc4.5': 5.68, 'pm2.5': 0.85, 'nc1.0': 5.65, 'nc2.5': 5.68, 'pm4.0': 0.85, 'nc0.5': 4.83, 'pm1.0': 0.74, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 38.7, 't': 28.4}, 'sht31d': {'id': 1, 't': 28.4, 'h': 40.8}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.65,"serial":"4FBFC0FBE824FFEA","pm10.0":2.39,"nc10.0":14.93,"nc4.5":14.93,"pm2.5":2.28,"nc1.0":14.75,"nc2.5":14.91,"pm4.0":2.34,"nc0.5":12.51,"pm1.0":1.95,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.8}}}}
+*** No se puede leer DHT22! ***
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.56,"serial":"4FBFC0FBE824FFEA","pm10.0":0.63,"nc10.0":4.19,"nc4.5":4.19,"pm2.5":0.62,"nc1.0":4.17,"nc2.5":4.19,"pm4.0":0.62,"nc0.5":3.56,"pm1.0":0.55,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":38.7,"t":28.4},"sht31d":{"id":1,"t":28.4,"h":40.6}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 219c5787-ea40-4f82-aafc-dea3ae7a4968 accepted!
-reported state: {'sps30': {'tps': 0.65, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 14.93, 'auto_clean_interval_days': 4, 'nc1.0': 14.75, 'pm4.0': 2.34, 'pm10.0': 2.39, 'error': 'none', 'nc0.5': 12.51, 'nc4.5': 14.93, 'pm1.0': 1.95, 'nc2.5': 14.91, 'pm2.5': 2.28}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.8, 'id': 1, 't': 28.0}}
+Update request with token: f47f4aae-6cc3-471c-b157-c97f8e5a8f2d accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.56, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 0.63, 'nc10.0': 4.19, 'nc4.5': 4.19, 'pm2.5': 0.62, 'nc1.0': 4.17, 'nc2.5': 4.19, 'pm4.0': 0.62, 'nc0.5': 3.56, 'pm1.0': 0.55, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 38.7, 't': 28.4}, 'sht31d': {'id': 1, 't': 28.4, 'h': 40.6}}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+*** No se puede leer DHT22! ***
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.56,"serial":"4FBFC0FBE824FFEA","pm10.0":0.65,"nc10.0":4.34,"nc4.5":4.34,"pm2.5":0.65,"nc1.0":4.32,"nc2.5":4.34,"pm4.0":0.65,"nc0.5":3.69,"pm1.0":0.57,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":38.7,"t":28.4},"sht31d":{"id":1,"t":28.4,"h":40.6}}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: c2f47958-07ca-499d-abf6-a229534e79fe accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.56, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 0.65, 'nc10.0': 4.34, 'nc4.5': 4.34, 'pm2.5': 0.65, 'nc1.0': 4.32, 'nc2.5': 4.34, 'pm4.0': 0.65, 'nc0.5': 3.69, 'pm1.0': 0.57, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 38.7, 't': 28.4}, 'sht31d': {'id': 1, 't': 28.4, 'h': 40.6}}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+*** No se puede leer DHT22! ***
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.56,"serial":"4FBFC0FBE824FFEA","pm10.0":0.98,"nc10.0":6.52,"nc4.5":6.52,"pm2.5":0.97,"nc1.0":6.48,"nc2.5":6.52,"pm4.0":0.97,"nc0.5":5.54,"pm1.0":0.85,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":38.7,"t":28.4},"sht31d":{"id":1,"t":28.5,"h":40.4}}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 21e65ee0-b4ac-4f2d-ad9c-66e7b913a768 accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.56, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 0.98, 'nc10.0': 6.52, 'nc4.5': 6.52, 'pm2.5': 0.97, 'nc1.0': 6.48, 'nc2.5': 6.52, 'pm4.0': 0.97, 'nc0.5': 5.54, 'pm1.0': 0.85, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 38.7, 't': 28.4}, 'sht31d': {'id': 1, 't': 28.5, 'h': 40.4}}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+*** No se puede leer DHT22! ***
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.55,"serial":"4FBFC0FBE824FFEA","pm10.0":0.71,"nc10.0":4.74,"nc4.5":4.74,"pm2.5":0.71,"nc1.0":4.72,"nc2.5":4.74,"pm4.0":0.71,"nc0.5":4.03,"pm1.0":0.62,"error":"none"},"ds18b20":{"id":1,"t":28.7},"dht22":{"id":1,"h":38.7,"t":28.4},"sht31d":{"id":1,"t":28.4,"h":40.5}}}}
+~~~~~~~~~~~~~~~~~~~~~~~
+Update request with token: 9ebeecda-8762-4847-9666-407dc5287c8b accepted!
+reported state: {'sps30': {'auto_clean_interval_days': 4, 'tps': 0.55, 'serial': '4FBFC0FBE824FFEA', 'pm10.0': 0.71, 'nc10.0': 4.74, 'nc4.5': 4.74, 'pm2.5': 0.71, 'nc1.0': 4.72, 'nc2.5': 4.74, 'pm4.0': 0.71, 'nc0.5': 4.03, 'pm1.0': 0.62, 'error': 'none'}, 'ds18b20': {'id': 1, 't': 28.7}, 'dht22': {'id': 1, 'h': 38.7, 't': 28.4}, 'sht31d': {'id': 1, 't': 28.4, 'h': 40.5}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
 SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.7}}}}
+{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":38.7,"t":28.4},"sht31d":{"id":1,"t":28.4,"h":40.6}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 8d4d0622-a60e-4131-b174-93789e7a4574 accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.7, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.64,"serial":"4FBFC0FBE824FFEA","pm10.0":2.02,"nc10.0":12.72,"nc4.5":12.72,"pm2.5":1.94,"nc1.0":12.58,"nc2.5":12.71,"pm4.0":1.98,"nc0.5":10.68,"pm1.0":1.66,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.8}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 042a7ab1-eb95-498d-a691-86b60b9d167a accepted!
-reported state: {'sps30': {'tps': 0.64, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 12.72, 'auto_clean_interval_days': 4, 'nc1.0': 12.58, 'pm4.0': 1.98, 'pm10.0': 2.02, 'error': 'none', 'nc0.5': 10.68, 'nc4.5': 12.72, 'pm1.0': 1.66, 'nc2.5': 12.71, 'pm2.5': 1.94}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.8, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.63,"serial":"4FBFC0FBE824FFEA","pm10.0":2.22,"nc10.0":13.89,"nc4.5":13.88,"pm2.5":2.12,"nc1.0":13.73,"nc2.5":13.87,"pm4.0":2.17,"nc0.5":11.65,"pm1.0":1.82,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":27.9,"h":40.8}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: fed145e6-058f-43e2-8f08-737e72282cbe accepted!
-reported state: {'sps30': {'tps': 0.63, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 13.89, 'auto_clean_interval_days': 4, 'nc1.0': 13.73, 'pm4.0': 2.17, 'pm10.0': 2.22, 'error': 'none', 'nc0.5': 11.65, 'nc4.5': 13.88, 'pm1.0': 1.82, 'nc2.5': 13.87, 'pm2.5': 2.12}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.8, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.63,"serial":"4FBFC0FBE824FFEA","pm10.0":2.06,"nc10.0":12.9,"nc4.5":12.9,"pm2.5":1.97,"nc1.0":12.75,"nc2.5":12.89,"pm4.0":2.02,"nc0.5":10.82,"pm1.0":1.69,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.1,"t":27.6},"sht31d": {"id":1,"t":28.0,"h":40.8}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 7a6738a8-0e45-4372-989b-3965edc41559 accepted!
-reported state: {'sps30': {'tps': 0.63, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 12.9, 'auto_clean_interval_days': 4, 'nc1.0': 12.75, 'pm4.0': 2.02, 'pm10.0': 2.06, 'error': 'none', 'nc0.5': 10.82, 'nc4.5': 12.9, 'pm1.0': 1.69, 'nc2.5': 12.89, 'pm2.5': 1.97}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.1, 'id': 1, 't': 27.6}, 'sht31d': {'h': 40.8, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.63,"serial":"4FBFC0FBE824FFEA","pm10.0":2.62,"nc10.0":16.38,"nc4.5":16.38,"pm2.5":2.5,"nc1.0":16.2,"nc2.5":16.37,"pm4.0":2.56,"nc0.5":13.74,"pm1.0":2.14,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":40.1,"t":27.6},"sht31d": {"id":1,"t":27.8,"h":42.2}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 43a6378f-e7a3-4a2a-9482-d4ba02ef03ba accepted!
-reported state: {'sps30': {'tps': 0.63, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 16.38, 'auto_clean_interval_days': 4, 'nc1.0': 16.2, 'pm4.0': 2.56, 'pm10.0': 2.62, 'error': 'none', 'nc0.5': 13.74, 'nc4.5': 16.38, 'pm1.0': 2.14, 'nc2.5': 16.37, 'pm2.5': 2.5}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 40.1, 'id': 1, 't': 27.6}, 'sht31d': {'h': 42.2, 'id': 1, 't': 27.8}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.62,"serial":"4FBFC0FBE824FFEA","pm10.0":2.12,"nc10.0":13.4,"nc4.5":13.39,"pm2.5":2.04,"nc1.0":13.26,"nc2.5":13.39,"pm4.0":2.08,"nc0.5":11.26,"pm1.0":1.75,"error":"none"},"ds18b20": {"id":1,"t":27.2},"dht22": {"id":1,"h":40.1,"t":27.6},"sht31d": {"id":1,"t":27.0,"h":46.4}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 93752391-0e24-4947-82c2-fb975ab0a567 accepted!
-reported state: {'sps30': {'tps': 0.62, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 13.4, 'auto_clean_interval_days': 4, 'nc1.0': 13.26, 'pm4.0': 2.08, 'pm10.0': 2.12, 'error': 'none', 'nc0.5': 11.26, 'nc4.5': 13.39, 'pm1.0': 1.75, 'nc2.5': 13.39, 'pm2.5': 2.04}, 'ds18b20': {'id': 1, 't': 27.2}, 'dht22': {'h': 40.1, 'id': 1, 't': 27.6}, 'sht31d': {'h': 46.4, 'id': 1, 't': 27.0}}
+Update request with token: c8a73b68-26de-4843-b00b-ad0a0d86cc01 accepted!
+reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 38.7, 't': 28.4}, 'sht31d': {'id': 1, 't': 28.4, 'h': 40.6}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
 SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.0},"dht22": {"id":1,"h":40.1,"t":27.6},"sht31d": {"id":1,"t":26.9,"h":47.1}}}}
+{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":38.7,"t":28.4},"sht31d":{"id":1,"t":28.3,"h":40.6}}}}
 ~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 2be6dc2b-687f-4bed-9cee-21fa04b80d9d accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.0}, 'dht22': {'h': 40.1, 'id': 1, 't': 27.6}, 'sht31d': {'h': 47.1, 'id': 1, 't': 26.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.65,"serial":"4FBFC0FBE824FFEA","pm10.0":2.04,"nc10.0":13.03,"nc4.5":13.03,"pm2.5":1.97,"nc1.0":12.9,"nc2.5":13.02,"pm4.0":2.0,"nc0.5":10.98,"pm1.0":1.7,"error":"none"},"ds18b20": {"id":1,"t":27.3},"dht22": {"id":1,"h":43.8,"t":27.2},"sht31d": {"id":1,"t":27.4,"h":45.1}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: a7641c08-cb76-4286-9281-bdd2c5a7a336 accepted!
-reported state: {'sps30': {'tps': 0.65, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 13.03, 'auto_clean_interval_days': 4, 'nc1.0': 12.9, 'pm4.0': 2.0, 'pm10.0': 2.04, 'error': 'none', 'nc0.5': 10.98, 'nc4.5': 13.03, 'pm1.0': 1.7, 'nc2.5': 13.02, 'pm2.5': 1.97}, 'ds18b20': {'id': 1, 't': 27.3}, 'dht22': {'h': 43.8, 'id': 1, 't': 27.2}, 'sht31d': {'h': 45.1, 'id': 1, 't': 27.4}}
+Update request with token: 72823c3a-865d-4189-86a1-3faa8b0f323f accepted!
+reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 28.8}, 'dht22': {'id': 1, 'h': 38.7, 't': 28.4}, 'sht31d': {'id': 1, 't': 28.3, 'h': 40.6}}
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
 *** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.65,"serial":"4FBFC0FBE824FFEA","pm10.0":2.47,"nc10.0":15.78,"nc4.5":15.78,"pm2.5":2.39,"nc1.0":15.63,"nc2.5":15.77,"pm4.0":2.43,"nc0.5":13.3,"pm1.0":2.06,"error":"none"},"ds18b20": {"id":1,"t":27.5},"dht22": {"id":1,"h":43.8,"t":27.2},"sht31d": {"id":1,"t":27.6,"h":43.9}}}}2019-12-03 23:05:55,586 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:08:00,107 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:10:04,587 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:12:05,801 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:14:10,347 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:16:11,560 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:18:16,107 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:20:17,401 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:22:18,681 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:24:23,227 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 79a4e538-edee-4cbf-aff9-21e4da0912cb accepted!
-reported state: {'sps30': {'tps': 0.65, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 15.78, 'auto_clean_interval_days': 4, 'nc1.0': 15.63, 'pm4.0': 2.43, 'pm10.0': 2.47, 'error': 'none', 'nc0.5': 13.3, 'nc4.5': 15.78, 'pm1.0': 2.06, 'nc2.5': 15.77, 'pm2.5': 2.39}, 'ds18b20': {'id': 1, 't': 27.5}, 'dht22': {'h': 43.8, 'id': 1, 't': 27.2}, 'sht31d': {'h': 43.9, 'id': 1, 't': 27.6}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.68,"serial":"4FBFC0FBE824FFEA","pm10.0":2.38,"nc10.0":14.93,"nc4.5":14.93,"pm2.5":2.28,"nc1.0":14.76,"nc2.5":14.92,"pm4.0":2.33,"nc0.5":12.53,"pm1.0":1.95,"error":"none"},"ds18b20": {"id":1,"t":27.7},"dht22": {"id":1,"h":43.1,"t":27.3},"sht31d": {"id":1,"t":27.8,"h":43.3}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 17a659aa-45e6-4c54-919d-85d10acbb5fe accepted!
-reported state: {'sps30': {'tps': 0.68, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 14.93, 'auto_clean_interval_days': 4, 'nc1.0': 14.76, 'pm4.0': 2.33, 'pm10.0': 2.38, 'error': 'none', 'nc0.5': 12.53, 'nc4.5': 14.93, 'pm1.0': 1.95, 'nc2.5': 14.92, 'pm2.5': 2.28}, 'ds18b20': {'id': 1, 't': 27.7}, 'dht22': {'h': 43.1, 'id': 1, 't': 27.3}, 'sht31d': {'h': 43.3, 'id': 1, 't': 27.8}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.65,"serial":"4FBFC0FBE824FFEA","pm10.0":1.96,"nc10.0":12.48,"nc4.5":12.48,"pm2.5":1.89,"nc1.0":12.36,"nc2.5":12.47,"pm4.0":1.92,"nc0.5":10.51,"pm1.0":1.63,"error":"none"},"ds18b20": {"id":1,"t":27.7},"dht22": {"id":1,"h":42.5,"t":27.3},"sht31d": {"id":1,"t":27.8,"h":42.8}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: cda131c4-6d08-488f-999a-438f1748e9ec accepted!
-reported state: {'sps30': {'tps': 0.65, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 12.48, 'auto_clean_interval_days': 4, 'nc1.0': 12.36, 'pm4.0': 1.92, 'pm10.0': 1.96, 'error': 'none', 'nc0.5': 10.51, 'nc4.5': 12.48, 'pm1.0': 1.63, 'nc2.5': 12.47, 'pm2.5': 1.89}, 'ds18b20': {'id': 1, 't': 27.7}, 'dht22': {'h': 42.5, 'id': 1, 't': 27.3}, 'sht31d': {'h': 42.8, 'id': 1, 't': 27.8}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.64,"serial":"4FBFC0FBE824FFEA","pm10.0":2.45,"nc10.0":15.72,"nc4.5":15.71,"pm2.5":2.37,"nc1.0":15.58,"nc2.5":15.71,"pm4.0":2.4,"nc0.5":13.26,"pm1.0":2.06,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":42.5,"t":27.3},"sht31d": {"id":1,"t":27.9,"h":42.2}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 457f4584-4cd8-452d-80c4-f54ec384eb72 accepted!
-reported state: {'sps30': {'tps': 0.64, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 15.72, 'auto_clean_interval_days': 4, 'nc1.0': 15.58, 'pm4.0': 2.4, 'pm10.0': 2.45, 'error': 'none', 'nc0.5': 13.26, 'nc4.5': 15.71, 'pm1.0': 2.06, 'nc2.5': 15.71, 'pm2.5': 2.37}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 42.5, 'id': 1, 't': 27.3}, 'sht31d': {'h': 42.2, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.64,"serial":"4FBFC0FBE824FFEA","pm10.0":1.85,"nc10.0":11.9,"nc4.5":11.9,"pm2.5":1.79,"nc1.0":11.8,"nc2.5":11.89,"pm4.0":1.82,"nc0.5":10.05,"pm1.0":1.56,"error":"none"},"ds18b20": {"id":1,"t":27.8},"dht22": {"id":1,"h":41.8,"t":27.4},"sht31d": {"id":1,"t":27.9,"h":41.9}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 04b0ec0a-56ba-4b7d-bc35-630864706049 accepted!
-reported state: {'sps30': {'tps': 0.64, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 11.9, 'auto_clean_interval_days': 4, 'nc1.0': 11.8, 'pm4.0': 1.82, 'pm10.0': 1.85, 'error': 'none', 'nc0.5': 10.05, 'nc4.5': 11.9, 'pm1.0': 1.56, 'nc2.5': 11.89, 'pm2.5': 1.79}, 'ds18b20': {'id': 1, 't': 27.8}, 'dht22': {'h': 41.8, 'id': 1, 't': 27.4}, 'sht31d': {'h': 41.9, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":41.8,"t":27.4},"sht31d": {"id":1,"t":28.0,"h":41.7}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: fb0c6e7c-fffc-4f63-9546-9abb9534fea2 accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 41.8, 'id': 1, 't': 27.4}, 'sht31d': {'h': 41.7, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.68,"serial":"4FBFC0FBE824FFEA","pm10.0":2.13,"nc10.0":13.23,"nc4.5":13.23,"pm2.5":2.03,"nc1.0":13.07,"nc2.5":13.22,"pm4.0":2.08,"nc0.5":11.08,"pm1.0":1.73,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":41.4,"t":27.4},"sht31d": {"id":1,"t":27.9,"h":41.6}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 1f4b5a56-4db1-40d6-92d1-c861fde76a0e accepted!
-reported state: {'sps30': {'tps': 0.68, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 13.23, 'auto_clean_interval_days': 4, 'nc1.0': 13.07, 'pm4.0': 2.08, 'pm10.0': 2.13, 'error': 'none', 'nc0.5': 11.08, 'nc4.5': 13.23, 'pm1.0': 1.73, 'nc2.5': 13.22, 'pm2.5': 2.03}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 41.4, 'id': 1, 't': 27.4}, 'sht31d': {'h': 41.6, 'id': 1, 't': 27.9}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.67,"serial":"4FBFC0FBE824FFEA","pm10.0":2.45,"nc10.0":15.0,"nc4.5":15.0,"pm2.5":2.31,"nc1.0":14.8,"nc2.5":14.98,"pm4.0":2.39,"nc0.5":12.52,"pm1.0":1.96,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":41.4,"t":27.4},"sht31d": {"id":1,"t":28.0,"h":41.6}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 88b838b8-eb96-43a4-99bf-c69f620b16aa accepted!
-reported state: {'sps30': {'tps': 0.67, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 15.0, 'auto_clean_interval_days': 4, 'nc1.0': 14.8, 'pm4.0': 2.39, 'pm10.0': 2.45, 'error': 'none', 'nc0.5': 12.52, 'nc4.5': 15.0, 'pm1.0': 1.96, 'nc2.5': 14.98, 'pm2.5': 2.31}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 41.4, 'id': 1, 't': 27.4}, 'sht31d': {'h': 41.6, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.65,"serial":"4FBFC0FBE824FFEA","pm10.0":2.22,"nc10.0":13.73,"nc4.5":13.73,"pm2.5":2.11,"nc1.0":13.56,"nc2.5":13.72,"pm4.0":2.17,"nc0.5":11.48,"pm1.0":1.79,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":41.4,"t":27.4},"sht31d": {"id":1,"t":28.0,"h":41.3}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: ff9ae47a-f20d-4d2a-8940-9c0bcb2a903f accepted!
-reported state: {'sps30': {'tps': 0.65, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 13.73, 'auto_clean_interval_days': 4, 'nc1.0': 13.56, 'pm4.0': 2.17, 'pm10.0': 2.22, 'error': 'none', 'nc0.5': 11.48, 'nc4.5': 13.73, 'pm1.0': 1.79, 'nc2.5': 13.72, 'pm2.5': 2.11}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 41.4, 'id': 1, 't': 27.4}, 'sht31d': {'h': 41.3, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.62,"serial":"4FBFC0FBE824FFEA","pm10.0":2.25,"nc10.0":14.33,"nc4.5":14.33,"pm2.5":2.17,"nc1.0":14.19,"nc2.5":14.32,"pm4.0":2.2,"nc0.5":12.07,"pm1.0":1.87,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":41.0,"t":27.4},"sht31d": {"id":1,"t":28.0,"h":41.3}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: ecabdbb0-157b-465e-9ea1-7e61d6555c9d accepted!
-reported state: {'sps30': {'tps': 0.62, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 14.33, 'auto_clean_interval_days': 4, 'nc1.0': 14.19, 'pm4.0': 2.2, 'pm10.0': 2.25, 'error': 'none', 'nc0.5': 12.07, 'nc4.5': 14.33, 'pm1.0': 1.87, 'nc2.5': 14.32, 'pm2.5': 2.17}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 41.0, 'id': 1, 't': 27.4}, 'sht31d': {'h': 41.3, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.64,"serial":"4FBFC0FBE824FFEA","pm10.0":2.23,"nc10.0":14.22,"nc4.5":14.22,"pm2.5":2.15,"nc1.0":14.08,"nc2.5":14.21,"pm4.0":2.18,"nc0.5":11.98,"pm1.0":1.86,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":41.0,"t":27.4},"sht31d": {"id":1,"t":28.0,"h":41.3}}}}2019-12-03 23:26:24,442 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:28:28,987 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:30:30,201 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:32:31,481 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:34:32,761 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:36:34,041 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:38:38,587 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:40:43,067 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:42:44,361 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:44:48,827 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:46:50,202 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: aacf3bee-7510-48d1-bd3f-3fc0a5494fe3 accepted!
-reported state: {'sps30': {'tps': 0.64, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 14.22, 'auto_clean_interval_days': 4, 'nc1.0': 14.08, 'pm4.0': 2.18, 'pm10.0': 2.23, 'error': 'none', 'nc0.5': 11.98, 'nc4.5': 14.22, 'pm1.0': 1.86, 'nc2.5': 14.21, 'pm2.5': 2.15}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 41.0, 'id': 1, 't': 27.4}, 'sht31d': {'h': 41.3, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-SPS30 Error:  error reading measurement
-{"state": {"reported": {"sps30": {"error":"error reading measurement","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.8,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.2}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 8b02cc31-ba96-41db-ad4e-8e48e0aad76a accepted!
-reported state: {'sps30': {'error': 'error reading measurement', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.8, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.2, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.62,"serial":"4FBFC0FBE824FFEA","pm10.0":2.53,"nc10.0":16.27,"nc4.5":16.27,"pm2.5":2.46,"nc1.0":16.13,"nc2.5":16.26,"pm4.0":2.49,"nc0.5":13.73,"pm1.0":2.13,"error":"none"},"ds18b20": {"id":1,"t":28.0},"dht22": {"id":1,"h":40.8,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.0}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 6398d2ff-6e96-404e-b247-738e9636415a accepted!
-reported state: {'sps30': {'tps': 0.62, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 16.27, 'auto_clean_interval_days': 4, 'nc1.0': 16.13, 'pm4.0': 2.49, 'pm10.0': 2.53, 'error': 'none', 'nc0.5': 13.73, 'nc4.5': 16.27, 'pm1.0': 2.13, 'nc2.5': 16.26, 'pm2.5': 2.46}, 'ds18b20': {'id': 1, 't': 28.0}, 'dht22': {'h': 40.8, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.0, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.62,"serial":"4FBFC0FBE824FFEA","pm10.0":1.71,"nc10.0":11.12,"nc4.5":11.12,"pm2.5":1.67,"nc1.0":11.03,"nc2.5":11.12,"pm4.0":1.69,"nc0.5":9.41,"pm1.0":1.45,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.8,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.1}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 05d013b2-aa4f-4319-a85a-3dce48d66c71 accepted!
-reported state: {'sps30': {'tps': 0.62, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 11.12, 'auto_clean_interval_days': 4, 'nc1.0': 11.03, 'pm4.0': 1.69, 'pm10.0': 1.71, 'error': 'none', 'nc0.5': 9.41, 'nc4.5': 11.12, 'pm1.0': 1.45, 'nc2.5': 11.12, 'pm2.5': 1.67}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.8, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.1, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.62,"serial":"4FBFC0FBE824FFEA","pm10.0":1.95,"nc10.0":12.72,"nc4.5":12.72,"pm2.5":1.91,"nc1.0":12.63,"nc2.5":12.72,"pm4.0":1.92,"nc0.5":10.77,"pm1.0":1.66,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.8,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.0}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: f1fe44f6-8ac9-475e-a9c6-e764859a1fcd accepted!
-reported state: {'sps30': {'tps': 0.62, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 12.72, 'auto_clean_interval_days': 4, 'nc1.0': 12.63, 'pm4.0': 1.92, 'pm10.0': 1.95, 'error': 'none', 'nc0.5': 10.77, 'nc4.5': 12.72, 'pm1.0': 1.66, 'nc2.5': 12.72, 'pm2.5': 1.91}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.8, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.0, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.61,"serial":"4FBFC0FBE824FFEA","pm10.0":2.12,"nc10.0":13.7,"nc4.5":13.7,"pm2.5":2.06,"nc1.0":13.59,"nc2.5":13.7,"pm4.0":2.08,"nc0.5":11.58,"pm1.0":1.79,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.8,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.0}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: dc7debc4-9931-4cc2-96d3-a5082e0dfb33 accepted!
-reported state: {'sps30': {'tps': 0.61, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 13.7, 'auto_clean_interval_days': 4, 'nc1.0': 13.59, 'pm4.0': 2.08, 'pm10.0': 2.12, 'error': 'none', 'nc0.5': 11.58, 'nc4.5': 13.7, 'pm1.0': 1.79, 'nc2.5': 13.7, 'pm2.5': 2.06}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.8, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.0, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.62,"serial":"4FBFC0FBE824FFEA","pm10.0":2.25,"nc10.0":14.6,"nc4.5":14.6,"pm2.5":2.19,"nc1.0":14.49,"nc2.5":14.6,"pm4.0":2.21,"nc0.5":12.35,"pm1.0":1.91,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.8}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 584e30ed-0899-4d62-ae45-e47e79c8378f accepted!
-reported state: {'sps30': {'tps': 0.62, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 14.6, 'auto_clean_interval_days': 4, 'nc1.0': 14.49, 'pm4.0': 2.21, 'pm10.0': 2.25, 'error': 'none', 'nc0.5': 12.35, 'nc4.5': 14.6, 'pm1.0': 1.91, 'nc2.5': 14.6, 'pm2.5': 2.19}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.8, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.6,"serial":"4FBFC0FBE824FFEA","pm10.0":2.29,"nc10.0":14.93,"nc4.5":14.93,"pm2.5":2.24,"nc1.0":14.81,"nc2.5":14.92,"pm4.0":2.26,"nc0.5":12.64,"pm1.0":1.95,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.8}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: 4a1ad9ad-6753-450a-9bd5-7fddadf6a308 accepted!
-reported state: {'sps30': {'tps': 0.6, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 14.93, 'auto_clean_interval_days': 4, 'nc1.0': 14.81, 'pm4.0': 2.26, 'pm10.0': 2.29, 'error': 'none', 'nc0.5': 12.64, 'nc4.5': 14.93, 'pm1.0': 1.95, 'nc2.5': 14.92, 'pm2.5': 2.24}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.8, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-JSON Not defined json.decoder.JSONDecodeError:  Expecting value: line 1 column 1 (char 0)
-{"state": {"reported": {"sps30": {"error":"file not read","serial":"4FBFC0FBE824FFEA"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":41.0}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: dc96dcdd-4f7d-4989-92a3-137925c0ab8f accepted!
-reported state: {'sps30': {'error': 'file not read', 'serial': '4FBFC0FBE824FFEA'}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.5}, 'sht31d': {'h': 41.0, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.61,"serial":"4FBFC0FBE824FFEA","pm10.0":2.09,"nc10.0":13.66,"nc4.5":13.66,"pm2.5":2.05,"nc1.0":13.56,"nc2.5":13.66,"pm4.0":2.06,"nc0.5":11.57,"pm1.0":1.79,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.8}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: f92ab505-50b0-4b78-9846-f40d1d5345da accepted!
-reported state: {'sps30': {'tps': 0.61, 'serial': '4FBFC0FBE824FFEA', 'nc10.0': 13.66, 'auto_clean_interval_days': 4, 'nc1.0': 13.56, 'pm4.0': 2.06, 'pm10.0': 2.09, 'error': 'none', 'nc0.5': 11.57, 'nc4.5': 13.66, 'pm1.0': 1.79, 'nc2.5': 13.66, 'pm2.5': 2.05}, 'ds18b20': {'id': 1, 't': 27.9}, 'dht22': {'h': 40.3, 'id': 1, 't': 27.5}, 'sht31d': {'h': 40.8, 'id': 1, 't': 28.0}}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-
-*** No se puede leer DHT22! ***
-{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.63,"serial":"4FBFC0FBE824FFEA","pm10.0":2.05,"nc10.0":13.35,"nc4.5":13.35,"pm2.5":2.0,"nc1.0":13.25,"nc2.5":13.34,"pm4.0":2.02,"nc0.5":11.3,"pm1.0":1.75,"error":"none"},"ds18b20": {"id":1,"t":27.9},"dht22": {"id":1,"h":40.3,"t":27.5},"sht31d": {"id":1,"t":28.0,"h":40.8}}}}
-~~~~~~~~~~~~~~~~~~~~~~~
-Update request with token: b93805e5-df73-49b4-bdf9-6d6fb47863f1 accepted!2019-12-03 23:48:51,563 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:50:52,842 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:52:57,470 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:55:02,110 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:57:03,482 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
-2019-12-03 23:59:04,842 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+{"state": {"reported": {"sps30": {"auto_clean_interval_days":4,"tps":0.55,"serial":"4FBFC0FBE824FFEA","pm10.0":0.73,"nc10.0":4.88,"nc4.5":4.88,"pm2.5":0.73,"nc1.0":4.85,"nc2.5":4.88,"pm4.0":0.73,"nc0.5":4.15,"pm1.0":0.64,"error":"none"},"ds18b20":{"id":1,"t":28.8},"dht22":{"id":1,"h":38.7,"t":28.4},"sht31d":{"id":1,"t":28.4,"h":40.5}}}}2019-12-04 22:42:25,691 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:44:27,057 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:46:32,468 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:48:33,946 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:50:35,284 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:52:36,657 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:54:38,004 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:56:39,365 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 22:58:40,735 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...
+2019-12-04 23:00:44,357 - AWSIoTPythonSDK.core.protocol.mqtt_core - INFO - Performing sync publish...

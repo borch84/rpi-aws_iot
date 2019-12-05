@@ -307,23 +307,53 @@ while True:
                                 '},')
         f.close()
 
-    JSONPayload = (JSONPayload + '\"ds18b20\": {'
-        				'\"id\":' + repr(1)+','
-        				'\"t\":' + repr(ds18b20TemperatureC)+
-      					'},'
-      				'\"dht22\": {'
-        				'\"id\":'+ repr(1)+','
-        				'\"h\":' + repr(dht22H)+','
-        				'\"t\":' + repr(dht22T)+
-      				'},'
-      				'\"sht31d\": {'
-        				'\"id\":' + repr(1)+','
-        				'\"t\":' + repr(round(sht31d.temperature,1))+','
-        				'\"h\":' + repr(round(sht31d.relative_humidity,1))+
-      				'}'
-    			'}'
-  		    '}'
-		'}')
+    ds18b20_JSONPayload = ('{\"id\":' + repr(1)+','
+                             '\"t\":' + repr(ds18b20TemperatureC)+
+                           '}')
+
+    dht22_JSONPayload = ('{\"id\":' + repr(1)+','
+                           '\"h\":' + repr(dht22H)+','
+                           '\"t\":' + repr(dht22T)+
+                         '}')
+
+    sht31d_JSONPayload = ('{\"id\":' + repr(1)+','
+                            '\"t\":' + repr(round(sht31d.temperature,1))+','
+                            '\"h\":' + repr(round(sht31d.relative_humidity,1))+
+                          '}')
+
+    ds18b20_File = open("ds18b20.json","w")
+    ds18b20_File.write(ds18b20_JSONPayload)
+    ds18b20_File.close()
+
+    dht22_File = open("dht22.json","w")
+    dht22_File.write(dht22_JSONPayload)
+    dht22_File.close()
+
+    sht31d_File = open("sht31d.json", "w")
+    sht31d_File.write(sht31d_JSONPayload)
+    sht31d_File.close()
+
+    JSONPayload = (JSONPayload + '\"ds18b20\":' + ds18b20_JSONPayload + ',' +
+                                 '\"dht22\":' + dht22_JSONPayload + ',' +
+                                 '\"sht31d\":' + sht31d_JSONPayload + '}}}')
+
+    #JSONPayload = (JSONPayload + '\"ds18b20\": {'
+    #    				'\"id\":' + repr(1)+','
+    #    				'\"t\":' + repr(ds18b20TemperatureC)+
+    #  					'},'
+    #                           '\"dht22\": {'
+    #    				'\"id\":'+ repr(1)+','
+    #    				'\"h\":' + repr(dht22H)+','
+    #    				'\"t\":' + repr(dht22T)+
+    #  				'},'
+    #  				'\"sht31d\": {'
+    #    				'\"id\":' + repr(1)+','
+    #    				'\"t\":' + repr(round(sht31d.temperature,1))+','
+    #    				'\"h\":' + repr(round(sht31d.relative_humidity,1))+
+    #  				'}'
+    #			'}'
+    # 		    '}'
+    #		'}')
 
     print(JSONPayload)
 

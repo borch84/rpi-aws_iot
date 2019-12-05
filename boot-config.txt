@@ -1,0 +1,5 @@
+dtparam=i2c_arm=on
+dtparam=audio=on
+dtoverlay=vc4-fkms-v3d
+dtoverlay=w1-gpio
+dtparam=i2c1=on
