@@ -26,7 +26,6 @@ import argparse
 
 import os
 import glob
-import time
 #import sys
 
 ##Pronto voy a eliminar el DHT22 para usar solo Sensirion SHT31D
@@ -264,7 +263,7 @@ while True:
     JSONPayload = ('{\"state\": {')
 
     #Abrir el archivo para leer la informacion del SPS30
-    with open('Sensirion/sps30-uart-3.0.0/sps30.json', 'r') as f:
+    with open('/home/pi/aws_iot/Sensirion/sps30-uart-3.0.0/sps30.json', 'r') as f:
         try:
              sps30_json = json.load(f)
              #print(sps30_json)
@@ -321,15 +320,15 @@ while True:
                             '\"h\":' + repr(round(sht31d.relative_humidity,1))+
                           '}')
 
-    ds18b20_File = open("ds18b20.json","w")
+    ds18b20_File = open("/home/pi/aws_iot/ds18b20.json","w")
     ds18b20_File.write(ds18b20_JSONPayload)
     ds18b20_File.close()
 
-    dht22_File = open("dht22.json","w")
+    dht22_File = open("/home/pi/aws_iot/dht22.json","w")
     dht22_File.write(dht22_JSONPayload)
     dht22_File.close()
 
-    sht31d_File = open("sht31d.json", "w")
+    sht31d_File = open("/home/pi/aws_iot/sht31d.json", "w")
     sht31d_File.write(sht31d_JSONPayload)
     sht31d_File.close()
 
@@ -367,7 +366,7 @@ while True:
 
     ## Implementacion del control del AC
     ## Cuando la temperatura sube >= 27.5, activa modo DRY de AC
-    if sht31d.temperature >= 27.5: ##Max Temp
+    if sht31d.temperature > 27.5: ##Max Temp
        print("\n~~~~ AC Turned On! ~~~~\n")
        os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py a") ##Activa modo auto del AC
     if sht31d.temperature <= 23.5: ##Min Temp
