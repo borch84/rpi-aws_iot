@@ -1,7 +1,6 @@
   187  sudo apt-get install python3-pip 
   188  sudo pip3 install adafruit-circuitpython-sht31d
   302  sudo pip3 install --upgrade pip
-  608  pip3 install AWSIoTPythonSDK
   609  sudo pip3 install AWSIoTPythonSDK
   611  sudo pip3 install adafruit_dht
   614  sudo pip3 remove adafruit_dht
@@ -9,5 +8,5 @@
   616  sudo pip3 uninstall adafruit_dht
   617  sudo pip3 install adafruit-circuitpython-dht
   619  sudo pip3 install gpiozero 
-  727  sudo pip3 install smbus
+  727  sudo pip3 install smbus ## i2C https://learn.adafruit.com/adafruit-sht31-d-temperature-and-humidity-sensor-breakout/python-circuitpython
 
