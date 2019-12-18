@@ -366,7 +366,7 @@ while True:
 
     ## Implementacion del control del AC
     ## Cuando la temperatura sube >= 27.5, activa modo DRY de AC
-    if sht31d.temperature > 27.5: ##Max Temp
+    if sht31d.temperature > 27.9: ##Max Temp
        print("\n~~~~ AC Turned On! ~~~~\n")
        os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py a") ##Activa modo auto del AC
     if sht31d.temperature <= 23.5: ##Min Temp
