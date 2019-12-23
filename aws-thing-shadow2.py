@@ -310,10 +310,10 @@ while True:
                              '\"t\":' + repr(ds18b20TemperatureC)+
                            '}')
 
-    dht22_JSONPayload = ('{\"id\":' + repr(1)+','
-                           '\"h\":' + repr(dht22H)+','
-                           '\"t\":' + repr(dht22T)+
-                         '}')
+    #dht22_JSONPayload = ('{\"id\":' + repr(1)+','
+    #                       '\"h\":' + repr(dht22H)+','
+    #                       '\"t\":' + repr(dht22T)+
+    #                     '}')
 
     sht31d_JSONPayload = ('{\"id\":' + repr(1)+','
                             '\"t\":' + repr(round(sht31d.temperature,1))+','
@@ -324,35 +324,17 @@ while True:
     ds18b20_File.write(ds18b20_JSONPayload)
     ds18b20_File.close()
 
-    dht22_File = open("/home/pi/aws_iot/dht22.json","w")
-    dht22_File.write(dht22_JSONPayload)
-    dht22_File.close()
+    #dht22_File = open("/home/pi/aws_iot/dht22.json","w")
+    #dht22_File.write(dht22_JSONPayload)
+    #dht22_File.close()
 
     sht31d_File = open("/home/pi/aws_iot/sht31d.json", "w")
     sht31d_File.write(sht31d_JSONPayload)
     sht31d_File.close()
 
     JSONPayload = (JSONPayload + '\"ds18b20\":' + ds18b20_JSONPayload + ',' +
-                                 '\"dht22\":' + dht22_JSONPayload + ',' +
+                                 #'\"dht22\":' + dht22_JSONPayload + ',' +
                                  '\"sht31d\":' + sht31d_JSONPayload + '}}}')
-
-    #JSONPayload = (JSONPayload + '\"ds18b20\": {'
-    #    				'\"id\":' + repr(1)+','
-    #    				'\"t\":' + repr(ds18b20TemperatureC)+
-    #  					'},'
-    #                           '\"dht22\": {'
-    #    				'\"id\":'+ repr(1)+','
-    #    				'\"h\":' + repr(dht22H)+','
-    #    				'\"t\":' + repr(dht22T)+
-    #  				'},'
-    #  				'\"sht31d\": {'
-    #    				'\"id\":' + repr(1)+','
-    #    				'\"t\":' + repr(round(sht31d.temperature,1))+','
-    #    				'\"h\":' + repr(round(sht31d.relative_humidity,1))+
-    #  				'}'
-    #			'}'
-    # 		    '}'
-    #		'}')
 
     print(JSONPayload)
 
@@ -366,7 +348,7 @@ while True:
 
     ## Implementacion del control del AC
     ## Cuando la temperatura sube >= 27.5, activa modo DRY de AC
-    if sht31d.temperature > 27.9: ##Max Temp
+    if sht31d.temperature > 27.5: ##Max Temp
        print("\n~~~~ AC Turned On! ~~~~\n")
        os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py a") ##Activa modo auto del AC
     if sht31d.temperature <= 23.5: ##Min Temp
