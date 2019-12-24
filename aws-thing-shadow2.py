@@ -41,8 +41,9 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 #RPi.GPIO la bomba esta conectado al pin 15 = GPIO22
-GPIO.setup(22, GPIO.OUT)
-GPIO.output(22,1) #1=apaga la bomba
+waterpumpPin = 22
+GPIO.setup(waterpumpPin, GPIO.OUT)
+GPIO.output(waterpumpPin,1) #1=apaga la bomba
 
 
 ##Sensirion SHT31D
@@ -59,7 +60,7 @@ from gpiozero import DigitalInputDevice
 reedswitch_state = False
 old_reedswitch_state = False
 def reedswitch_closed():
-    print("reed switch is closed!")
+    print("reed switch i.s closed!")
     global reedswitch_state
     reedswitch_state = True
 def reedswitch_opened():
@@ -137,10 +138,10 @@ class shadowCallbackContainer:
 
         if payloadDict["state"]["waterpump"] == True:
             print("waterpump On")
-            GPIO.output(15,0) #GPIO22 = 15 BOARD
+            GPIO.output(waterpumpPin,0) #GPIO22 = 15 BOARD
         else:
             print("waterpump Off")
-            GPIO.output(15,1) #0=activar el pin / 1=desactiva el pin
+            GPIO.output(waterpumpPin,1) #0=activar el pin / 1=desactiva el pin
 
         print("Request to update the reported state...")
         newPayload = '{"state":{"reported":' + deltaMessage + '}}'
