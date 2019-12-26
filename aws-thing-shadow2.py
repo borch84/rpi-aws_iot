@@ -16,7 +16,7 @@ dht22
 
 https://s3.amazonaws.com/aws-iot-device-sdk-python-docs/html/index.html#module-AWSIoTPythonSDK.core.shadow.deviceShadow
 
- '''
+'''
 
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTShadowClient
 import logging
@@ -27,11 +27,13 @@ import argparse
 import os
 import glob
 #import sys
+import paho.mqtt.client as mqtt 
 
-##Pronto voy a eliminar el DHT22 para usar solo Sensirion SHT31D
+
+## Se comento codigo referente a DHT22 porque falla mucho
 ## https://github.com/adafruit/Adafruit_CircuitPython_DHT
-import adafruit_dht
-dht22 = adafruit_dht.DHT22(19)
+#import adafruit_dht
+#dht22 = adafruit_dht.DHT22(19)
 
 
 ##RPi.GPIO
@@ -101,24 +103,47 @@ def read_ds18b20():
 def customShadowCallback_Update(payload, responseStatus, token):
     # payload is a JSON string ready to be parsed using json.loads(...)
     # in both Py2.x and Py3.x
+    print("~~~~ customShadowCallback_Delta ~~~~")
     if responseStatus == "timeout":
         print("Update request " + token + " time out!")
 
     if responseStatus == "accepted":
         payloadDict = json.loads(payload)
-        print("~~~~~~~~~~~~~~~~~~~~~~~")
         print("Update request with token: " + token + " accepted!")
         #print("reported reedswitch state: " + str(payloadDict["state"]["reported"]["reedswitch"]))
         print("reported state: " + str(payloadDict["state"]["reported"]))
-        print("~~~~~~~~~~~~~~~~~~~~~~~\n\n")
 
     if responseStatus == "rejected":
         print("Update request " + token + " rejected!")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
 
+
+## Variables para controlar entre que horas el AC puede activarse
+acStartHour = 6
+acEndHour = 18
 
 class shadowCallbackContainer:
     def __init__(self, deviceShadowInstance):
         self.deviceShadowInstance = deviceShadowInstance
+
+    ## shadowGet para ver el estado actual del documento shadow
+    def shadowGet_Callback(self, payload,responseStatus,token):
+        print("~~~~ shadowGet_Callback ~~~~")
+        payloadDict = json.loads(payload)
+        try:
+            acStartHour = payloadDict["state"]["reported"]["acStartHour"]
+            print("acStartHour: "+ acStartHour)
+        except KeyError as error:
+            print("acStartHour: 6")
+            acStartHour = 6
+        try:
+            acEndHour = payloadDict["state"]["reported"]["acEndHour"]
+            print("acEndHour: "+ acEndHour) 
+        except KeyError as error:
+            print("acEndHour: 18")
+            acEndHour = 18
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
 
     # Custom Shadow callback
     def customShadowCallback_Delta(self, payload, responseStatus, token):
@@ -131,7 +156,7 @@ class shadowCallbackContainer:
 	# ejecutar un codigo extra en este punto. Si es abrir o cerrar una ventana, 
 	# el rpi tiene que enviar la senal a un pin conectado a un relay. 
 
-        print("Received a delta message:")
+        print("~~~~ customShadowCallback_Delta ~~~~")
         payloadDict = json.loads(payload)
         deltaMessage = json.dumps(payloadDict["state"])
         print(deltaMessage)
@@ -146,7 +171,7 @@ class shadowCallbackContainer:
         print("Request to update the reported state...")
         newPayload = '{"state":{"reported":' + deltaMessage + '}}'
         self.deviceShadowInstance.shadowUpdate(newPayload, None, 5)
-        print("Sent.")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 
 ## Read in command-line parameters
@@ -216,7 +241,6 @@ myAWSIoTMQTTShadowClient.configureMQTTOperationTimeout(5)  # 5 sec
 ##AWS IoT
 connected = False
 
-
 ## Connect to AWS IoT
 while not connected:
     try:
@@ -225,6 +249,9 @@ while not connected:
        # Create a deviceShadow with persistent subscription
         deviceShadowHandler = myAWSIoTMQTTShadowClient.createShadowHandlerWithName(thingName, True)
         shadowCallbackContainer_Bot = shadowCallbackContainer(deviceShadowHandler)
+
+       # Configura el callback cuando se hace la consulta del objecto shadow document
+        deviceShadowHandler.shadowGet(shadowCallbackContainer_Bot.shadowGet_Callback,5)
 
        # Listen on deltas
         deviceShadowHandler.shadowRegisterDeltaCallback(shadowCallbackContainer_Bot.customShadowCallback_Delta)
@@ -239,28 +266,55 @@ while not connected:
 
 
 
-# Loop forever
 sps30Serial = '4FBFC0FBE824FFEA'
-dht22H = 0.0
-dht22T = 0.0
+#dht22H = 0.0
+#dht22T = 0.0
 
+## Esta funcion devuelve la hora actual del sistema
+def getHour():
+   from datetime import datetime
+   return int((((str(datetime.now())).split(' ')[1]).split('.')[0]).split(':')[1])
+
+## Definicion de callbacks para MQTT que corre en el host aws-rpi02
+def on_message_acControlTopic_Callback(client, userdata, message):
+   #print("Message Recieved: "+message.payload.decode())
+   payload = json.loads(message.payload.decode())
+   print("~~~~ on_message_acControlTopic_Callback ~~~~")
+   acStartHour = payload["acStartHour"]
+   print("acStartHour: " + repr(acStartHour))
+   acEndHour = payload["acEndHour"]
+   print("acEndHour: " + repr(acEndHour))
+   print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
+
+
+broker_url = "192.168.4.202"
+broker_port = 1883
+mqttClient = mqtt.Client()
+#mqttClient.on_connect = on_connect
+#mqttClient.on_disconnect = on_disconnect
+mqttClient.connect(broker_url, broker_port)
+mqttClient.subscribe("acControlTopic", qos=1)
+mqttClient.message_callback_add("acControlTopic",on_message_acControlTopic_Callback)
+mqttClient.loop_start()
+
+#Forever Loop
 while True:
     ds18b20TemperatureC,null = read_ds18b20()
     ds18b20TemperatureC = round(ds18b20TemperatureC,1)
 
-    try:
-       dht22H = dht22.humidity
-       time.sleep(1)
-       dht22H = dht22.humidity ## Se lee dos veces la temp y humedad para permitir q la lectura del sensor se nivele
-       time.sleep(1)
-       dht22T = dht22.temperature
-       time.sleep(1)
-       dht22T = dht22.temperature
-    except RuntimeError:
-       print("*** No se puede leer DHT22! ***")
-    except OverflowError:
-       print("*** DHT22 OverflowError! ***")
- 
+#    try:
+#       dht22H = dht22.humidity
+#       time.sleep(1)
+#       dht22H = dht22.humidity ## Se lee dos veces la temp y humedad para permitir q la lectura del sensor se nivele
+#       time.sleep(1)
+#       dht22T = dht22.temperature
+#       time.sleep(1)
+#       dht22T = dht22.temperature
+#    except RuntimeError:
+#       print("*** No se puede leer DHT22! ***")
+#    except OverflowError:
+#       print("*** DHT22 OverflowError! ***")
+
     JSONPayload = ('{\"state\": {')
 
     #Abrir el archivo para leer la informacion del SPS30
@@ -316,9 +370,12 @@ while True:
     #                       '\"t\":' + repr(dht22T)+
     #                     '}')
 
+    sht31dT = round(sht31d.temperature,1)
+    sht31dH = round(sht31d.relative_humidity,1)
+
     sht31d_JSONPayload = ('{\"id\":' + repr(1)+','
-                            '\"t\":' + repr(round(sht31d.temperature,1))+','
-                            '\"h\":' + repr(round(sht31d.relative_humidity,1))+
+                            '\"t\":' + repr(sht31dT)+','
+                            '\"h\":' + repr(sht31dH)+
                           '}')
 
     ds18b20_File = open("/home/pi/aws_iot/ds18b20.json","w")
@@ -349,14 +406,19 @@ while True:
 
     ## Implementacion del control del AC
     ## Cuando la temperatura sube >= 27.5, activa modo DRY de AC
-    if sht31d.temperature > 27.5: ##Max Temp
-       print("\n~~~~ AC Turned On! ~~~~\n")
-       os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py a") ##Activa modo auto del AC
-    if sht31d.temperature <= 23.5: ##Min Temp
-       ## Cuando la temperatura <= 22 apaga el AC
-       print("\n~~~~ AC Turned Off! ~~~~\n")
-       os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##Apaga AC
+    currentHour = getHour()
+    ## Primero se revisa si el AC puede activarse con base en las horas de actividad del AC
+    if currentHour >= acStartHour and currentHour <= acEndHour:
+       if sht31dT > 27.5: ##Max Temp
+          print("\n~~~~ AC Turned On! ~~~~\n")
+          os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py a") ##Activa modo auto del AC
+       if sht31dT <= 23.5: ##Min Temp
+          ## Cuando la temperatura <= 22 apaga el AC
+          print("\n~~~~ AC Turned Off! ~~~~\n")
+          os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##Apaga AC
 
 
     time.sleep(int(refreshinterval))
+
+
 
