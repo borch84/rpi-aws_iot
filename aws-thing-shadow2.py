@@ -131,17 +131,17 @@ class shadowCallbackContainer:
         print("~~~~ shadowGet_Callback ~~~~")
         payloadDict = json.loads(payload)
         try:
+            global acStartHour
             acStartHour = payloadDict["state"]["reported"]["acStartHour"]
             print("acStartHour: "+ acStartHour)
         except KeyError as error:
             print("acStartHour: 6")
-            acStartHour = 6
         try:
+            global acEndHour
             acEndHour = payloadDict["state"]["reported"]["acEndHour"]
             print("acEndHour: "+ acEndHour) 
         except KeyError as error:
             print("acEndHour: 18")
-            acEndHour = 18
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 
@@ -270,18 +270,20 @@ sps30Serial = '4FBFC0FBE824FFEA'
 #dht22H = 0.0
 #dht22T = 0.0
 
-## Esta funcion devuelve la hora actual del sistema
+## Esta funcion devuelve la hora actual del sistema para determinar si el AC se activa o no
 def getHour():
    from datetime import datetime
-   return int((((str(datetime.now())).split(' ')[1]).split('.')[0]).split(':')[1])
+   return int((((str(datetime.now())).split(' ')[1]).split('.')[0]).split(':')[0])
 
 ## Definicion de callbacks para MQTT que corre en el host aws-rpi02
 def on_message_acControlTopic_Callback(client, userdata, message):
    #print("Message Recieved: "+message.payload.decode())
    payload = json.loads(message.payload.decode())
    print("~~~~ on_message_acControlTopic_Callback ~~~~")
+   global acStartHour 
    acStartHour = payload["acStartHour"]
    print("acStartHour: " + repr(acStartHour))
+   global acEndHour 
    acEndHour = payload["acEndHour"]
    print("acEndHour: " + repr(acEndHour))
    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
@@ -408,8 +410,12 @@ while True:
     ## Cuando la temperatura sube >= 27.5, activa modo DRY de AC
     currentHour = getHour()
     ## Primero se revisa si el AC puede activarse con base en las horas de actividad del AC
+    print("acStartHour: "+repr(acStartHour))
+    print("acEndHour: "+repr(acEndHour))
+    print("currentHour: "+repr(currentHour))
+
     if currentHour >= acStartHour and currentHour <= acEndHour:
-       if sht31dT > 27.5: ##Max Temp
+       if sht31dT >= 27.5: ##Max Temp
           print("\n~~~~ AC Turned On! ~~~~\n")
           os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py a") ##Activa modo auto del AC
        if sht31dT <= 23.5: ##Min Temp
