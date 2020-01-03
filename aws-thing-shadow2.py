@@ -288,6 +288,15 @@ def on_message_acControlTopic_Callback(client, userdata, message):
    print("acEndHour: " + repr(acEndHour))
    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
 
+def on_message_esp32LevelSwitch_Callback(client, userdata, message):
+   #print("Message Recieved: "+message.payload.decode())
+   payload = json.loads(message.payload.decode())
+   print("~~~~ on_message_esp32LevelSwitch_Callback ~~~~")
+   print(client)
+   print(userdata)
+   print(payload)
+   print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
+
 
 broker_url = "192.168.4.202"
 broker_port = 1883
@@ -296,7 +305,9 @@ mqttClient = mqtt.Client()
 #mqttClient.on_disconnect = on_disconnect
 mqttClient.connect(broker_url, broker_port)
 mqttClient.subscribe("acControlTopic", qos=1)
+mqttClient.subscribe("esp32/levelswitch",qos=1)
 mqttClient.message_callback_add("acControlTopic",on_message_acControlTopic_Callback)
+mqttClient.message_callback_add("esp32/levelswitch",on_message_esp32LevelSwitch_Callback)
 mqttClient.loop_start()
 
 #Forever Loop
