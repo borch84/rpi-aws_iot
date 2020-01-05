@@ -103,7 +103,7 @@ def read_ds18b20():
 def customShadowCallback_Update(payload, responseStatus, token):
     # payload is a JSON string ready to be parsed using json.loads(...)
     # in both Py2.x and Py3.x
-    print("~~~~ customShadowCallback_Delta ~~~~")
+    print("~~~~ customShadowCallback_Update ~~~~")
     if responseStatus == "timeout":
         print("Update request " + token + " time out!")
 
@@ -251,6 +251,8 @@ while not connected:
         shadowCallbackContainer_Bot = shadowCallbackContainer(deviceShadowHandler)
 
        # Configura el callback cuando se hace la consulta del objecto shadow document
+       # shadowGet_Callback se llama la primera vez que el programa inicia para 
+       # obtener los valores de acStartHour y acEndHour del documento shadow. 
         deviceShadowHandler.shadowGet(shadowCallbackContainer_Bot.shadowGet_Callback,5)
 
        # Listen on deltas
@@ -279,22 +281,37 @@ def getHour():
 def on_message_acControlTopic_Callback(client, userdata, message):
    #print("Message Recieved: "+message.payload.decode())
    payload = json.loads(message.payload.decode())
-   print("~~~~ on_message_acControlTopic_Callback ~~~~")
-   global acStartHour 
-   acStartHour = payload["acStartHour"]
+   print("~~~~ on_message_mqtt_acControlTopic_Callback ~~~~")
+   global acStartHour
+   global acEndHour
+   try:
+      acStartHour = payload["acStartHour"]
+      acEndHour = payload["acEndHour"]
+      acOn = payload["acOn"]
+      if repr(acOn) == "1":
+         os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py a") ##Activa modo auto del AC
+      if repr(acOn) == "0":
+         os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##0 apaga el aire
+
+   except KeyError as e:
+      print("Exception: KeyError")
+
    print("acStartHour: " + repr(acStartHour))
-   global acEndHour 
-   acEndHour = payload["acEndHour"]
    print("acEndHour: " + repr(acEndHour))
+   print("acOn: " + repr(acOn))
    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
 
+
+esp32LevelSwitch = 1 ##1 significa que el level switch esta abajo
 def on_message_esp32LevelSwitch_Callback(client, userdata, message):
    #print("Message Recieved: "+message.payload.decode())
    payload = json.loads(message.payload.decode())
-   print("~~~~ on_message_esp32LevelSwitch_Callback ~~~~")
+   print("~~~~ on_message_mqtt_esp32/levelwitch_topic_Callback ~~~~")
    print(client)
    print(userdata)
-   print(payload)
+   global esp32LevelSwitch
+   esp32LevelSwitch = payload
+   print(esp32LevelSwitch)
    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
 
 
@@ -403,9 +420,16 @@ while True:
     sht31d_File.write(sht31d_JSONPayload)
     sht31d_File.close()
 
+    #esp32/levelswitch values:
+    esp32LevelSwitchJSONPayload = ('{\"id\":' + repr(1)+','
+                                     '\"value\":' + repr(esp32LevelSwitch)+
+                                   '}')
+
+
     JSONPayload = (JSONPayload + '\"ds18b20\":' + ds18b20_JSONPayload + ',' +
                                  #'\"dht22\":' + dht22_JSONPayload + ',' +
-                                 '\"sht31d\":' + sht31d_JSONPayload + '}}}')
+                                 '\"sht31d\":' + sht31d_JSONPayload + ','
+                                 '\"esp32LevelSwitch\":'+ esp32LevelSwitchJSONPayload + '}}}')
 
     print(JSONPayload)
 
