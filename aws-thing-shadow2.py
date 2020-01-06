@@ -9,6 +9,10 @@ sht31d
 sps30
 ds18b20
 dht22
+levelswitch: recibe un update del topic mqtt esp32/levelswitch. El esp32 comunica al mqtt broker aws-rpi02
+el valor detectado por el sensor de nivel de agua.
+
+reedswitch
 
 ## La informacion se actualiza en el shadow document del dispositivo IoT definido en AWS
 
@@ -305,13 +309,16 @@ def on_message_acControlTopic_Callback(client, userdata, message):
 esp32LevelSwitch = 1 ##1 significa que el level switch esta abajo
 def on_message_esp32LevelSwitch_Callback(client, userdata, message):
    #print("Message Recieved: "+message.payload.decode())
-   payload = json.loads(message.payload.decode())
    print("~~~~ on_message_mqtt_esp32/levelwitch_topic_Callback ~~~~")
-   print(client)
-   print(userdata)
-   global esp32LevelSwitch
-   esp32LevelSwitch = payload
-   print(esp32LevelSwitch)
+   try:
+     payload = json.loads(message.payload.decode())
+     print(client)
+     print(userdata)
+     global esp32LevelSwitch
+     esp32LevelSwitch = payload
+     print(esp32LevelSwitch)
+   except json.decoder.JSONDecodeError as e:
+     print("~~~~ JSONDecodeError ~~~~")
    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
 
 
