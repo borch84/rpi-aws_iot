@@ -286,6 +286,7 @@ def on_message_acControlTopic_Callback(client, userdata, message):
    #print("Message Recieved: "+message.payload.decode())
    payload = json.loads(message.payload.decode())
    print("~~~~ on_message_mqtt_acControlTopic_Callback ~~~~")
+   acOn = 0
    global acStartHour
    global acEndHour
    try:
@@ -298,7 +299,7 @@ def on_message_acControlTopic_Callback(client, userdata, message):
          os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##0 apaga el aire
 
    except KeyError as e:
-      print("Exception: KeyError")
+      print("Exception: KeyError: ")
 
    print("acStartHour: " + repr(acStartHour))
    print("acEndHour: " + repr(acEndHour))
@@ -322,7 +323,7 @@ def on_message_esp32LevelSwitch_Callback(client, userdata, message):
    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
 
 
-broker_url = "192.168.4.202"
+broker_url = "192.168.4.202" #mosquitto docker corriendo en el raspberrypi
 broker_port = 1883
 mqttClient = mqtt.Client()
 #mqttClient.on_connect = on_connect
