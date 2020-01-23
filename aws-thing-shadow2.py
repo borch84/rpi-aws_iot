@@ -334,6 +334,15 @@ mqttClient.message_callback_add("acControlTopic",on_message_acControlTopic_Callb
 mqttClient.message_callback_add("esp32/levelswitch",on_message_esp32LevelSwitch_Callback)
 mqttClient.loop_start()
 
+## Obtiene el Serial Number del RPi SoC
+rpiSoCSerial = ""
+with open('/home/pi/aws_iot/rpi-cpu-serial.json','r') as f:
+   soc_json = json.load(f)
+   rpiSoCSerial = soc_json['serial']
+   f.close()
+
+
+
 #Forever Loop
 while True:
     ds18b20TemperatureC,null = read_ds18b20()
@@ -352,7 +361,7 @@ while True:
 #    except OverflowError:
 #       print("*** DHT22 OverflowError! ***")
 
-    JSONPayload = ('{\"state\": {')
+    JSONPayload = ('{\"state\": { \"reported\": {')
 
     #Abrir el archivo para leer la informacion del SPS30
     with open('/home/pi/aws_iot/Sensirion/sps30-uart-3.0.0/sps30.json', 'r') as f:
@@ -362,14 +371,14 @@ while True:
 
              if "error" in sps30_json:
                  print("SPS30 Error: ", sps30_json['error'])
-                 JSONPayload = (JSONPayload + '\"reported\": {'
+                 JSONPayload = (JSONPayload + 
                                 '\"sps30\": {'
                                         '\"error\":\"'+sps30_json['error']+'\",'
                                         '\"serial\":\"'+sps30Serial+'\"' #En cada actualizacion es necesario incluir
 #el numero de serie del sensor sps30, porque la coleccion /thingCollection/yUp3qLUftKGGY01XdcL5/sps30 puede tener actualizaciones de cada sensor de polvo 
                                 '},')
              else:
-                 JSONPayload = (JSONPayload + '\"reported\": {'
+                 JSONPayload = (JSONPayload + 
                                 '\"sps30\": {'
                                         '\"auto_clean_interval_days\":'+repr(sps30_json['auto_clean_interval_days'])+','
                                         '\"tps\":'+repr(sps30_json['tps'])+','
@@ -391,7 +400,7 @@ while True:
         except json.decoder.JSONDecodeError as error:
              print("JSON Not defined json.decoder.JSONDecodeError: ", error)
              #json no definido
-             JSONPayload = (JSONPayload + '\"reported\": {'
+             JSONPayload = (JSONPayload + 
                                 '\"sps30\": {'
                                         '\"error\":\"file not read\",'
                                         '\"serial\":\"'+sps30Serial+'\"'
@@ -423,6 +432,19 @@ while True:
     #dht22_File.write(dht22_JSONPayload)
     #dht22_File.close()
 
+    #RaspberryPi CPU CORE Temp
+    rpiSoCTemp = ""
+    with open('/home/pi/aws_iot/rpi-cpu-core-temp.log','r') as f:
+      core_temp_json = json.load(f)
+      #print(core_temp_json['CPUTemp'])
+      rpiSoCTemp = repr(core_temp_json['CPUTemp'])
+      f.close()
+
+    rpiSoC_JSONPayload = ('{\"serial\":\"'+ rpiSoCSerial + '\",'
+                            '\"cpuTemp\":'+rpiSoCTemp +
+                          '}')
+
+
     sht31d_File = open("/home/pi/aws_iot/sht31d.json", "w")
     sht31d_File.write(sht31d_JSONPayload)
     sht31d_File.close()
@@ -435,7 +457,8 @@ while True:
 
     JSONPayload = (JSONPayload + '\"ds18b20\":' + ds18b20_JSONPayload + ',' +
                                  #'\"dht22\":' + dht22_JSONPayload + ',' +
-                                 '\"sht31d\":' + sht31d_JSONPayload + ','
+                                 '\"rpiSoC\":' + rpiSoC_JSONPayload + ',' +
+                                 '\"sht31d\":' + sht31d_JSONPayload + ',' +
                                  '\"esp32LevelSwitch\":'+ esp32LevelSwitchJSONPayload + '}}}')
 
     print(JSONPayload)
