@@ -111,17 +111,19 @@ int main(void) {
         ret = sps30_read_measurement(&m);
         if (ret < 0) {
             printf("error reading measurement\n");
-            fprintf(fp,"{\"error\":\"error reading measurement\"}");
+            //No impreme errores en el archivo sps30.json
+            //fprintf(fp,"{\"error\":\"error reading measurement\"}");
+            fclose(fp); //cierra el archivo sps30.json
         } else {
 	    fprintf(fp,"{");
             int16_t chipState = SPS30_IS_ERR_STATE(ret);
 	    if (chipState) {
                 //printf("Chip state: %u - measurements may not be accurate\n",SPS30_GET_ERR_STATE(ret));
                 printf("Chip state: %u - measurements may not be accurate\n",chipState);
-		fprintf(fp,"\"error\":\"CHPST%u\",",chipState);
+		//fprintf(fp,"\"error\":\"CHPST%u\",",chipState);
             }
 
-            printf("serial: %s\n"
+           printf("serial: %s\n"
 		   "auto_clean_interval_days: %u\n"
 		   "measured values:\n"
                    "\t%0.2f pm1.0\n"
@@ -151,9 +153,10 @@ int main(void) {
                        "\"tps\":%0.2f}",
 		       serial, AUTO_CLEAN_DAYS, m.mc_1p0, m.mc_2p5, m.mc_4p0, m.mc_10p0, m.nc_0p5, m.nc_1p0,
                        m.nc_2p5, m.nc_4p0, m.nc_10p0, m.typical_particle_size); 
+	   fclose(fp);
+	   sensirion_sleep_usec(120000000); /* sleep for 120s */
 	}
-	fclose(fp);
-        sensirion_sleep_usec(5000000); /* sleep for 5s */
+
     } while (1);
 
     if (sensirion_uart_close() != 0)
