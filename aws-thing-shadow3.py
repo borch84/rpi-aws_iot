@@ -29,7 +29,7 @@ import json
 import argparse
 
 import os
-import glob
+#import glob
 #import sys
 import paho.mqtt.client as mqtt 
 
@@ -53,12 +53,12 @@ GPIO.output(waterpumpPin,1) #1=apaga la bomba
 
 
 ##Sensirion SHT31D
-import board
-import busio #https://circuitpython.readthedocs.io/en/latest/shared-bindings/busio/__init__.html#module-busio
-import adafruit_sht31d
-i2c = busio.I2C(board.SCL, board.SDA)
+#import board
+#import busio #https://circuitpython.readthedocs.io/en/latest/shared-bindings/busio/__init__.html#module-busio
+#import adafruit_sht31d
+#i2c = busio.I2C(board.SCL, board.SDA)
 #https://learn.adafruit.com/adafruit-sht31-d-temperature-and-humidity-sensor-breakout/python-circuitpython
-sht31d = adafruit_sht31d.SHT31D(i2c)
+#sht31d = adafruit_sht31d.SHT31D(i2c)
 
 
 ##reedswitch
@@ -79,28 +79,7 @@ reedswitch.when_deactivated = reedswitch_opened
 
 
 ##ds18b20
-os.system('modprobe w1-gpio')
-os.system('modprobe w1-therm')
-base_dir = '/sys/bus/w1/devices/'
-ds18b20_folder = glob.glob(base_dir + '28*')[0]
-ds18b20_file = ds18b20_folder + '/w1_slave'
-def read_temp_ds18b20_raw():
-    f = open(ds18b20_file, 'r')
-    lines = f.readlines()
-    f.close()
-    return lines
-
-def read_ds18b20():
-    lines = read_temp_ds18b20_raw()
-    while lines[0].strip()[-3:] != 'YES':
-        time.sleep(0.2)
-        lines = read_temp_ds18b20_raw()
-    equals_pos = lines[1].find('t=')
-    if equals_pos != -1:
-        temp_string = lines[1][equals_pos+2:]
-        temp_c = float(temp_string) / 1000.0
-        temp_f = temp_c * 9.0 / 5.0 + 32.0
-        return temp_c, temp_f
+import ds18b20
 
 
 ##AWS IoT Callbacks
@@ -281,200 +260,60 @@ def getHour():
    from datetime import datetime
    return int((((str(datetime.now())).split(' ')[1]).split('.')[0]).split(':')[0])
 
-## Definicion de callbacks para MQTT que corre en el host aws-rpi02
-def on_message_acControlTopic_Callback(client, userdata, message):
-   #print("Message Recieved: "+message.payload.decode())
-   payload = json.loads(message.payload.decode())
-   print("~~~~ on_message_mqtt_acControlTopic_Callback ~~~~")
-   acOn = 0
-   global acStartHour
-   global acEndHour
-   try:
-      acStartHour = payload["acStartHour"]
-      acEndHour = payload["acEndHour"]
-      acOn = payload["acOn"]
-      if repr(acOn) == "1":
-         os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py a") ##Activa modo auto del AC
-      if repr(acOn) == "0":
-         os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##0 apaga el aire
 
-   except KeyError as e:
-      print("Exception: KeyError: ")
+## sps30
+import sps30
 
-   print("acStartHour: " + repr(acStartHour))
-   print("acEndHour: " + repr(acEndHour))
-   print("acOn: " + repr(acOn))
-   print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
+## sht31d
+import sht31d
 
+## rpiSoC
+import rpiSoC
+rpiSoCSerial = rpiSoC.getRPiCPUSerial()
 
-esp32LevelSwitch = 1 ##1 significa que el level switch esta abajo
-def on_message_esp32LevelSwitch_Callback(client, userdata, message):
-   #print("Message Recieved: "+message.payload.decode())
-   print("~~~~ on_message_mqtt_esp32/levelwitch_topic_Callback ~~~~")
-   try:
-     payload = json.loads(message.payload.decode())
-     print(client)
-     print(userdata)
-     global esp32LevelSwitch
-     esp32LevelSwitch = payload
-     print(esp32LevelSwitch)
-   except json.decoder.JSONDecodeError as e:
-     print("~~~~ JSONDecodeError ~~~~")
-   print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
-
-
-broker_url = "192.168.4.202" #mosquitto docker corriendo en el raspberrypi
-broker_port = 1883
-mqttClient = mqtt.Client()
-#mqttClient.on_connect = on_connect
-#mqttClient.on_disconnect = on_disconnect
-mqttClient.connect(broker_url, broker_port)
-mqttClient.subscribe("acControlTopic", qos=1)
-mqttClient.subscribe("esp32/levelswitch",qos=1)
-mqttClient.message_callback_add("acControlTopic",on_message_acControlTopic_Callback)
-mqttClient.message_callback_add("esp32/levelswitch",on_message_esp32LevelSwitch_Callback)
-mqttClient.loop_start()
-
-## Obtiene el Serial Number del RPi SoC
-rpiSoCSerial = ""
-with open('/home/pi/aws_iot/rpi-cpu-serial.json','r') as f:
-   soc_json = json.load(f)
-   rpiSoCSerial = soc_json['serial']
-   f.close()
-
-
+## esp32levelswitch
+import esp32levelswitch
 
 #Forever Loop
 while True:
-    try:
-       ds18b20TemperatureC,null = read_ds18b20()
-       ds18b20TemperatureC = round(ds18b20TemperatureC,1)
-    except Exception as e:
-       print("**** Error al leer ds18b20! ****")
-
-#    try:
-#       dht22H = dht22.humidity
-#       time.sleep(1)
-#       dht22H = dht22.humidity ## Se lee dos veces la temp y humedad para permitir q la lectura del sensor se nivele
-#       time.sleep(1)
-#       dht22T = dht22.temperature
-#       time.sleep(1)
-#       dht22T = dht22.temperature
-#    except RuntimeError:
-#       print("*** No se puede leer DHT22! ***")
-#    except OverflowError:
-#       print("*** DHT22 OverflowError! ***")
-
     JSONPayload = ('{\"state\": { \"reported\": {')
-    sps30_JSONPayload = ""
-
-    #Abrir el archivo para leer la informacion del SPS30
-    with open('/home/pi/aws_iot/Sensirion/sps30-uart-3.0.0/sps30.json', 'r') as f:
-        try:
-             sps30_json = json.load(f)
-             #print(sps30_json)
-
-             if "error" in sps30_json:
-                 print("SPS30 Error: ", sps30_json['error'])
-                 #JSONPayload = (JSONPayload + 
-                 #sps30Payload = ('\"sps30\": {'
-                 #                       '\"error\":\"'+sps30_json['error']+'\",'
-                 #                       '\"serial\":\"'+sps30Serial+'\"' #En cada actualizacion es necesario incluir
-#el numero de serie del sensor sps30, porque la coleccion /thingCollection/yUp3qLUftKGGY01XdcL5/sps30 puede tener actualizaciones de cada sensor de polvo 
-                 #               '},')
-             else:
-                 #JSONPayload = (JSONPayload + 
-                 sps30_JSONPayload = ('\"sps30\": {'
-                                        '\"auto_clean_interval_days\":'+repr(sps30_json['auto_clean_interval_days'])+','
-                                        '\"tps\":'+repr(sps30_json['tps'])+','
-                                        #'\"serial\":\"'+sps30_json['serial']+'\",'
-                                        '\"serial\":\"'+sps30Serial+'\",'
-					'\"pm10.0\":'+ repr(sps30_json['pm10.0']) +','
-                                        '\"nc10.0\":'+ repr(sps30_json['nc10.0'])+','
-                                        '\"nc4.5\":'+ repr(sps30_json['nc4.5'])+','
-                                        '\"pm2.5\":'+ repr(sps30_json['pm2.5'])+','
-                                        '\"nc1.0\":'+ repr(sps30_json['nc1.0'])+','
-                                        '\"nc2.5\":'+ repr(sps30_json['nc2.5'])+','
-                                        '\"pm4.0\":'+ repr(sps30_json['pm4.0'])+','
-                                        '\"nc0.5\":'+ repr(sps30_json['nc0.5'])+','
-                                        '\"pm1.0\":'+ repr(sps30_json['pm1.0'])+','
-                                        '\"error\":\"none\"'
-                                '},')
-
-
-        except json.decoder.JSONDecodeError as error:
-             print("JSON Not defined json.decoder.JSONDecodeError: ", error)
-             #json no definido
-             #JSONPayload = (JSONPayload + 
-             #                   '\"sps30\": {'
-             #                           '\"error\":\"file not read\",'
-             #                           '\"serial\":\"'+sps30Serial+'\"'
-             #                   '},')
-        f.close()
 
     #ds18b20
-    ds18b20_JSONPayload = ('\"ds18b20\": {\"id\":' + repr(1)+','
-                             '\"t\":' + repr(ds18b20TemperatureC)+
-                           '}')
+    ds18b20_JSONPayload = ds18b20.jsonpayload()
+    if ds18b20_JSONPayload != None:
+       JSONPayload = JSONPayload + ds18b20_JSONPayload + ','
 
-    #dht22_JSONPayload = ('{\"id\":' + repr(1)+','
-    #                       '\"h\":' + repr(dht22H)+','
-    #                       '\"t\":' + repr(dht22T)+
-    #                     '}')
+    #sps30
+    sps30_JSONPayload = sps30.jsonpayload()
+    if sps30_JSONPayload != None:
+       JSONPayload = JSONPayload + sps30_JSONPayload + ','
+
+    #sht31d
+    sht31d_JSONPayload,sht31dT,sht31dH = sht31d.jsonpayload()
+    if sht31d_JSONPayload != None:
+       JSONPayload = JSONPayload + '\"sht31d\":' + sht31d_JSONPayload + ','
 
 
-    try:
-      sht31dT = round(sht31d.temperature,1)
-      sht31dH = round(sht31d.relative_humidity,1)
-      sht31d_JSONPayload = ('{\"id\":' + repr(1)+','
-                              '\"t\":' + repr(sht31dT)+','
-                              '\"h\":' + repr(sht31dH)+
-                            '}')
-      sht31d_JSONPayload = '\"sht31d\":' + sht31d_JSONPayload + ','
-    except RuntimeError as e:
-      print("**** RuntimeError: CRC Mismatch! ****");
-      sht31d_JSONPayload = ' ' #Se limpia el payload para no actualizarlo
-
-    ds18b20_File = open("/home/pi/aws_iot/ds18b20.json","w")
-    ds18b20_File.write(ds18b20_JSONPayload)
-    ds18b20_File.close()
 
     #dht22_File = open("/home/pi/aws_iot/dht22.json","w")
     #dht22_File.write(dht22_JSONPayload)
     #dht22_File.close()
 
     #RaspberryPi CPU CORE Temp
-    rpiSoCTemp = ""
-    rpiSoC_JSONPayload = ""
-    try:
-      with open('/home/pi/aws_iot/rpi-cpu-core-temp.log','r') as f:
-        core_temp_json = json.load(f)
-        #print(core_temp_json['CPUTemp'])
-        rpiSoCTemp = repr(core_temp_json['CPUTemp'])
-        f.close()
-        rpiSoC_JSONPayload = ('\"rpiSoC\":' + '{\"serial\":\"'+ rpiSoCSerial + '\",'
-                               '\"cpuTemp\":'+rpiSoCTemp +
-                              '}' + ',')
-    except Exception as e:
-       print("**** Excepcion leyendo rpi-cpu-temp.log! ****"+repr(e))
+    rpiSoC_JSONPayload = rpiSoC.jsonpayload(rpiSoCSerial)
+    if rpiSoC_JSONPayload != None:
+       JSONPayload = JSONPayload + rpiSoC_JSONPayload + ','
 
-    sht31d_File = open("/home/pi/aws_iot/sht31d.json", "w")
-    sht31d_File.write(sht31d_JSONPayload)
-    sht31d_File.close()
 
     #esp32/levelswitch values:
-    esp32LevelSwitchJSONPayload = ('\"esp32LevelSwitch\": {\"id\":' + repr(1)+','
-                                     '\"value\":' + repr(esp32LevelSwitch)+
-                                   '}')
+    esp32LevelSwitchJSONPayload = esp32levelswitch.jsonpayload("/home/pi/aws_iot/esp32levelswitch_1.json")
+    if esp32LevelSwitchJSONPayload != None:
+      JSONPayload = JSONPayload + esp32LevelSwitchJSONPayload
 
 
-    JSONPayload = ('{\"state\": { \"reported\": {' +
-                   #sps30_JSONPayload +
-                   ds18b20_JSONPayload + ',' +
-                   #'\"dht22\":' + dht22_JSONPayload + ',' +
-                   rpiSoC_JSONPayload +
-                   sht31d_JSONPayload +
-                   esp32LevelSwitchJSONPayload + '}}}')
+    JSONPayload = ( JSONPayload +
+                    #esp32LevelSwitchJSONPayload +
+                   '}}}')
 
     print(JSONPayload)
 
@@ -495,9 +334,9 @@ while True:
     print("currentHour: "+repr(currentHour))
 
     if currentHour >= acStartHour and currentHour <= acEndHour:
-       if sht31dT >= 27.5: ##Max Temp
+       if sht31dT >= 27.0: ##Max Temp
           print("\n~~~~ AC Turned On! ~~~~\n")
-          os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py a") ##Activa modo auto del AC
+          os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 1") ##Activa modo auto del AC
        if sht31dT <= 23.5: ##Min Temp
           ## Cuando la temperatura <= 22 apaga el AC
           print("\n~~~~ AC Turned Off! ~~~~\n")
