@@ -102,29 +102,37 @@ def customShadowCallback_Update(payload, responseStatus, token):
 
 
 ## Variables para controlar entre que horas el AC puede activarse
-acStartHour = 6
-acEndHour = 18
+#acStartHour = 6
+#acEndHour = 18
 
 class shadowCallbackContainer:
     def __init__(self, deviceShadowInstance):
         self.deviceShadowInstance = deviceShadowInstance
 
     ## shadowGet para ver el estado actual del documento shadow
+    ## cuando inicia el programa, se tiene que consultar el documento shadow para
+    ## inicializar las variables del control del AC
     def shadowGet_Callback(self, payload,responseStatus,token):
         print("~~~~ shadowGet_Callback ~~~~")
         payloadDict = json.loads(payload)
         try:
-            global acStartHour
-            acStartHour = payloadDict["state"]["reported"]["acStartHour"]
-            print("acStartHour: "+ acStartHour)
-        except KeyError as error:
-            print("acStartHour: 6")
-        try:
-            global acEndHour
-            acEndHour = payloadDict["state"]["reported"]["acEndHour"]
-            print("acEndHour: "+ acEndHour) 
-        except KeyError as error:
-            print("acEndHour: 18")
+            acStartHour = payloadDict["state"]["reported"]["acControl"]["acStartHour"]
+            acEndHour = payloadDict["state"]["reported"]["acControl"]["acEndHour"]
+            minT = payloadDict["state"]["reported"]["acControl"]["minT"]
+            maxT = payloadDict["state"]["reported"]["acControl"]["maxT"]
+            f = open("/home/pi/aws_iot/acControl.json","w")
+            acControlJSON = ('{'+ 
+                            '\"minT\":' + repr(minT) + ','
+                            '\"maxT\":' + repr(maxT) + ','
+                            '\"acStartHour\":' + repr(acStartHour) + ','
+                            '\"acEndHour\":' + repr(acEndHour) +
+                            '}')
+            print(acControlJSON)
+            f.write(acControlJSON)
+            f.close() 
+
+        except Exception as e:
+            print("**** shadowGet_Callback Exception:",e)
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 
@@ -251,14 +259,14 @@ while not connected:
 
 
 
-sps30Serial = '4FBFC0FBE824FFEA'
+#sps30Serial = '4FBFC0FBE824FFEA'
 #dht22H = 0.0
 #dht22T = 0.0
 
 ## Esta funcion devuelve la hora actual del sistema para determinar si el AC se activa o no
-def getHour():
-   from datetime import datetime
-   return int((((str(datetime.now())).split(' ')[1]).split('.')[0]).split(':')[0])
+# def getHour():
+#    from datetime import datetime
+#    return int((((str(datetime.now())).split(' ')[1]).split('.')[0]).split(':')[0])
 
 
 ## sps30
@@ -327,20 +335,20 @@ while True:
 
     ## Implementacion del control del AC
     ## Cuando la temperatura sube >= 27.5, activa modo DRY de AC
-    currentHour = getHour()
-    ## Primero se revisa si el AC puede activarse con base en las horas de actividad del AC
-    print("acStartHour: "+repr(acStartHour))
-    print("acEndHour: "+repr(acEndHour))
-    print("currentHour: "+repr(currentHour))
+    # currentHour = getHour()
+    # ## Primero se revisa si el AC puede activarse con base en las horas de actividad del AC
+    # print("acStartHour: "+repr(acStartHour))
+    # print("acEndHour: "+repr(acEndHour))
+    # print("currentHour: "+repr(currentHour))
 
-    if currentHour >= acStartHour and currentHour <= acEndHour:
-       if sht31dT >= 27.0: ##Max Temp
-          print("\n~~~~ AC Turned On! ~~~~\n")
-          os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 1") ##Activa modo auto del AC
-       if sht31dT <= 23.5: ##Min Temp
-          ## Cuando la temperatura <= 22 apaga el AC
-          print("\n~~~~ AC Turned Off! ~~~~\n")
-          os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##Apaga AC
+    # if currentHour >= acStartHour and currentHour <= acEndHour:
+    #    if sht31dT >= 27.0: ##Max Temp
+    #       print("\n~~~~ AC Turned On! ~~~~\n")
+    #       os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 1") ##Activa modo auto del AC
+    #    if sht31dT <= 23.5: ##Min Temp
+    #       ## Cuando la temperatura <= 22 apaga el AC
+    #       print("\n~~~~ AC Turned Off! ~~~~\n")
+    #       os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##Apaga AC
 
 
     time.sleep(int(refreshinterval))

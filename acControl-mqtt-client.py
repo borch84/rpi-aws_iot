@@ -24,6 +24,8 @@ def on_message_acControlTopic_Callback(client, userdata, message):
       acStartHour = payload["acStartHour"]
       acEndHour = payload["acEndHour"]
       acOn = payload["acOn"]
+      minT = payload["minT"]
+      maxT = payload["maxT"]
 
       f = open("/home/pi/aws_iot/acControl.json","w")
 
@@ -36,15 +38,18 @@ def on_message_acControlTopic_Callback(client, userdata, message):
       f.write(acControlJSON)
       f.close()      
 
-      print("acStartHour: " + repr(acStartHour))
-      print("acEndHour: " + repr(acEndHour))
-      print("acOn: " + repr(acOn))
-      
+      print("acStartHour: "+repr(acStartHour))
+      print("acEndHour: "+repr(acEndHour))
+      print("currentHour: "+repr(currentHour))
+      print("minT: "+repr(minT))
+      print("maxT: "+repr(maxT))
 
       if acOn == 1:
-         os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 1") ##Activa modo auto del AC
+        print("\n~~~~ AC Turned On! ~~~~\n")
+        os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 1") ##Activa modo auto del AC
       if acOn == 0:
-         os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##0 apaga el aire
+        print("\n~~~~ AC Turned Off! ~~~~\n")
+        os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##0 apaga el aire
 
    except KeyError as e:
       print("Exception: KeyError: ")
@@ -112,6 +117,8 @@ while True:
   print("acStartHour: "+repr(acStartHour))
   print("acEndHour: "+repr(acEndHour))
   print("currentHour: "+repr(currentHour))
+  print("minT: "+repr(minT))
+  print("maxT: "+repr(maxT))
 
   ##Leer sht31dT 
   try:
