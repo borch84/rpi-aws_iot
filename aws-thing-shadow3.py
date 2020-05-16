@@ -120,7 +120,7 @@ class shadowCallbackContainer:
             acEndHour = payloadDict["state"]["reported"]["acControl"]["acEndHour"]
             minT = payloadDict["state"]["reported"]["acControl"]["minT"]
             maxT = payloadDict["state"]["reported"]["acControl"]["maxT"]
-            f = open("/home/pi/aws_iot/acControl.json","w")
+            f = open("acControl.json","w")
             acControlJSON = ('{'+ 
                             '\"minT\":' + repr(minT) + ','
                             '\"maxT\":' + repr(maxT) + ','
@@ -314,14 +314,12 @@ while True:
 
 
     #esp32/levelswitch values:
-    esp32LevelSwitchJSONPayload = esp32levelswitch.jsonpayload("/home/pi/aws_iot/esp32levelswitch_1.json")
+    esp32LevelSwitchJSONPayload = esp32levelswitch.jsonpayload("esp32levelswitch_1.json")
     if esp32LevelSwitchJSONPayload != None:
       JSONPayload = JSONPayload + esp32LevelSwitchJSONPayload
 
 
-    JSONPayload = ( JSONPayload +
-                    #esp32LevelSwitchJSONPayload +
-                   '}}}')
+    JSONPayload = ( JSONPayload + '}}}')
 
     print(JSONPayload)
 

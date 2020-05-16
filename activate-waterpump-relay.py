@@ -4,8 +4,8 @@ import time
 import argparse
 import RPi.GPIO as GPIO
 GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BOARD)
-
+#GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-p", "--pin",action="store", required=True, dest="pin", help="Pin Relay Number")
@@ -15,10 +15,14 @@ args = parser.parse_args()
 pin = int(args.pin)
 seconds = args.seconds
 
-#El numero de pin corresponde al pin del board, por ejemplo:
-#pin15 = gpio22
-#pin16 = gpio23
-#En este caso se usa el numero de pin 15 para activar la bomba
+
+""" El numero de pin corresponde al pin del board, por ejemplo:
+https://sourceforge.net/p/raspberry-gpio-python/wiki/BasicUsage/
+BOARD = BCM
+pin15 = gpio22
+pin16 = gpio23
+pin7 = gpio4 """
+
 GPIO.setup(pin,GPIO.OUT)
 GPIO.output(pin,0) #0 activa el pin Normally open
 time.sleep(int(seconds))
