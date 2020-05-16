@@ -14,6 +14,16 @@ import RPI_I2C_driver
 #Atlas Scientific i2c implementation
 from Atlas import atlas_i2c
 
+"""
+Para correr este programa: python3 ec100.py -sp 4 -pp 17 -s 3 -maxec 0
+
+-sp --solenoide_pin = 4
+-pp --pump_pin = 17
+-s --seconds
+-maxec
+
+"""
+
 def main():
 
     parser = argparse.ArgumentParser()
