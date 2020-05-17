@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from __future__ import print_function
 import time
 import sys 
@@ -31,14 +32,16 @@ def main():
     parser.add_argument("-pp", "--pump_pin",action="store", required=True, dest="pumppin", help="BCM Pump Pin Relay Number")
     parser.add_argument("-s", "--seconds", action="store", required=True, dest="seconds", help="Number of seconds the pin should be On")
     parser.add_argument("-maxec", "--maxec",action="store", required=True, dest="maxec", help="Upper EC Value")
+    parser.add_argument("-fp", "--file_path",action="store", required=True, dest="file_path", help="EC Reading JSON File Path")
 
     args = parser.parse_args()
     sole_pin = int(args.solepin)
     pump_pin = int(args.pumppin)
     timeout_seconds = int(args.seconds)
     maxec = int(args.maxec)
+    file_path = args.file_path
 
-    ec_device = atlas_i2c(address=100,bus=1,file_path="ec100.json")  # creates the I2C port object, specify the address, bus and file path name to write the json object
+    ec_device = atlas_i2c(address=100,bus=1,file_path=file_path)  # creates the I2C port object, specify the address, bus and file path name to write the json object
     mylcd = RPI_I2C_driver.lcd()
     mylcd.lcd_clear()
     mylcd.lcd_display_string("** High Corp **", 1)
