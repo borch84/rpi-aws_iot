@@ -1,3 +1,5 @@
 __pycache__/
-Atlas.pyc RPI_I2C_driver.pyc
 *.pyc
+*.log
+rpi-cediquim-certs/
+*.json
