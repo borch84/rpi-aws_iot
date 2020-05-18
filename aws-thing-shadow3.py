@@ -29,9 +29,6 @@ import json
 import argparse
 
 import os
-#import glob
-#import sys
-import paho.mqtt.client as mqtt 
 
 
 ## Se comento codigo referente a DHT22 porque falla mucho
@@ -50,15 +47,6 @@ GPIO.setwarnings(False)
 waterpumpPin = 22
 GPIO.setup(waterpumpPin, GPIO.OUT)
 GPIO.output(waterpumpPin,1) #1=apaga la bomba
-
-
-##Sensirion SHT31D
-#import board
-#import busio #https://circuitpython.readthedocs.io/en/latest/shared-bindings/busio/__init__.html#module-busio
-#import adafruit_sht31d
-#i2c = busio.I2C(board.SCL, board.SDA)
-#https://learn.adafruit.com/adafruit-sht31-d-temperature-and-humidity-sensor-breakout/python-circuitpython
-#sht31d = adafruit_sht31d.SHT31D(i2c)
 
 
 ##reedswitch
@@ -259,16 +247,6 @@ while not connected:
 
 
 
-#sps30Serial = '4FBFC0FBE824FFEA'
-#dht22H = 0.0
-#dht22T = 0.0
-
-## Esta funcion devuelve la hora actual del sistema para determinar si el AC se activa o no
-# def getHour():
-#    from datetime import datetime
-#    return int((((str(datetime.now())).split(' ')[1]).split('.')[0]).split(':')[0])
-
-
 ## sps30
 import sps30
 
@@ -329,24 +307,6 @@ while True:
         #Puede arrojar: AWSIoTPythonSDK.exception.AWSIoTExceptions.publishQueueDisabledException
         print("**** Error AWS IoT shadowUpdate: "+repr(e))
         continue
-
-
-    ## Implementacion del control del AC
-    ## Cuando la temperatura sube >= 27.5, activa modo DRY de AC
-    # currentHour = getHour()
-    # ## Primero se revisa si el AC puede activarse con base en las horas de actividad del AC
-    # print("acStartHour: "+repr(acStartHour))
-    # print("acEndHour: "+repr(acEndHour))
-    # print("currentHour: "+repr(currentHour))
-
-    # if currentHour >= acStartHour and currentHour <= acEndHour:
-    #    if sht31dT >= 27.0: ##Max Temp
-    #       print("\n~~~~ AC Turned On! ~~~~\n")
-    #       os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 1") ##Activa modo auto del AC
-    #    if sht31dT <= 23.5: ##Min Temp
-    #       ## Cuando la temperatura <= 22 apaga el AC
-    #       print("\n~~~~ AC Turned Off! ~~~~\n")
-    #       os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##Apaga AC
 
 
     time.sleep(int(refreshinterval))
