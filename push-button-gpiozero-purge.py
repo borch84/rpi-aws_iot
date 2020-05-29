@@ -33,6 +33,9 @@ file_path = args.file_path
 
 GPIO.setup(sole_pin,GPIO.OUT)
 GPIO.setup(pump_pin,GPIO.OUT)
+GPIO.output(sole_pin,1)
+GPIO.output(pump_pin,1)
+
 
 #LCD 16x2:
 import RPI_I2C_driver
