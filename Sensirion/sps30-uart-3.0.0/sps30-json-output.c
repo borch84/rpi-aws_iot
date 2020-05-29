@@ -42,7 +42,7 @@
 
 int main(void) {
     FILE *fp;
-    fp = fopen("sps30.json","w");
+    fp = fopen("/home/pi/aws_iot/Sensirion/sps30-uart-3.0.0/sps30.json","w");
     if (fp == NULL) {
        printf("file can't be opened\n");
        exit(1);
@@ -100,9 +100,9 @@ int main(void) {
     printf("measurements started\n");
     fclose(fp);
 
-    do {
+    //do {
         //fp=freopen(NULL,"w",fp); //reopen el file limpia el contenido
-        fp = fopen("sps30.json","w");
+        fp = fopen("/home/pi/aws_iot/Sensirion/sps30-uart-3.0.0/sps30.json","w");
         if (fp == NULL) {
        	 printf("file can't be opened\n");
        	 exit(1);
@@ -115,15 +115,15 @@ int main(void) {
             //fprintf(fp,"{\"error\":\"error reading measurement\"}");
             fclose(fp); //cierra el archivo sps30.json
         } else {
-	    fprintf(fp,"{");
+	        fprintf(fp,"{");
             int16_t chipState = SPS30_IS_ERR_STATE(ret);
-	    if (chipState) {
+	        if (chipState) {
                 //printf("Chip state: %u - measurements may not be accurate\n",SPS30_GET_ERR_STATE(ret));
                 printf("Chip state: %u - measurements may not be accurate\n",chipState);
-		//fprintf(fp,"\"error\":\"CHPST%u\",",chipState);
+		        //fprintf(fp,"\"error\":\"CHPST%u\",",chipState);
             }
 
-           printf("serial: %s\n"
+            printf("serial: %s\n"
 		   "auto_clean_interval_days: %u\n"
 		   "measured values:\n"
                    "\t%0.2f pm1.0\n"
@@ -139,7 +139,7 @@ int main(void) {
                    serial, AUTO_CLEAN_DAYS, m.mc_1p0, m.mc_2p5, m.mc_4p0, m.mc_10p0, m.nc_0p5, m.nc_1p0,
                    m.nc_2p5, m.nc_4p0, m.nc_10p0, m.typical_particle_size);
         
-	   fprintf(fp, "\"serial\":\"%s\","
+	        fprintf(fp, "\"serial\":\"%s\","
 		       "\"auto_clean_interval_days\":%d,"
 		       "\"pm1.0\":%0.2f,"
                        "\"pm2.5\":%0.2f,"
@@ -151,16 +151,23 @@ int main(void) {
                        "\"nc4.5\":%0.2f,"
                        "\"nc10.0\":%0.2f,"
                        "\"tps\":%0.2f}",
-		       serial, AUTO_CLEAN_DAYS, m.mc_1p0, m.mc_2p5, m.mc_4p0, m.mc_10p0, m.nc_0p5, m.nc_1p0,
+		    serial, AUTO_CLEAN_DAYS, m.mc_1p0, m.mc_2p5, m.mc_4p0, m.mc_10p0, m.nc_0p5, m.nc_1p0,
                        m.nc_2p5, m.nc_4p0, m.nc_10p0, m.typical_particle_size); 
-	   fclose(fp);
-	   sensirion_sleep_usec(120000000); /* sleep for 120s */
-	}
+	        fclose(fp);
+	        //sensirion_sleep_usec(120000000); /* sleep for 120s */
+	    }
 
-    } while (1);
+    //} while (1);
+
+    /*
+
+    sensirion_uart_close() no esta definido en el archivo sensirion_uart_implementation.c para raspberry.
 
     if (sensirion_uart_close() != 0)
         printf("failed to close UART\n");
+
+    */
+
 
     return 0;
 }
