@@ -71,7 +71,7 @@ while True:
       sht31dT = sht31d_json['t']
       print("currentTemp: "+repr(sht31dT))
       f.close()
-      if currentHour >= acStartHour and currentHour < acEndHour:
+      if currentHour >= acStartHour and currentHour <= acEndHour:
          if sht31dT >= maxT: ##Max Temp
             print("\n~~~~ AC Turned On! ~~~~\n")
             os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 1") ##Activa modo auto del AC
