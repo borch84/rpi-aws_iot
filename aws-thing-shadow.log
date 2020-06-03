@@ -1,2 +1,0 @@
-  File "/home/pi/aws_iot/aws-thing-shadow.py", line 232
-SyntaxError: Non-UTF-8 code starting with '\xe2' in file /home/pi/aws_iot/aws-thing-shadow.py on line 232, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
