@@ -1,5 +1,4 @@
 
-import paho.mqtt.client as mqtt
 import json
 import time
 import argparse
@@ -11,56 +10,8 @@ def getHour():
    return int((((str(datetime.now())).split(' ')[1]).split('.')[0]).split(':')[0])
 
 
-def on_message_acControlTopic_Callback(client, userdata, message):
-   #print("Message Recieved: "+message.payload.decode())
-   payload = json.loads(message.payload.decode())
-   print("\n~~~~ on_message_mqtt_acControlTopic_Callback ~~~~")
-   #acOn = 0
-   global acStartHour
-   global acEndHour
-   global minT
-   global maxT
-   try:
-      acStartHour = payload["acStartHour"]
-      acEndHour = payload["acEndHour"]
-      acOn = payload["acOn"]
-      minT = payload["minT"]
-      maxT = payload["maxT"]
-
-      f = open("/home/pi/aws_iot/acControl.json","w")
-
-      acControlJSON = ('{'+ 
-                          '\"minT\":' + repr(minT) + ','
-                          '\"maxT\":' + repr(maxT) + ','
-                          '\"acStartHour\":' + repr(acStartHour) + ','
-                          '\"acEndHour\":' + repr(acEndHour) +
-                       '}')
-      f.write(acControlJSON)
-      f.close()      
-
-      print("acStartHour: "+repr(acStartHour))
-      print("acEndHour: "+repr(acEndHour))
-      print("currentHour: "+repr(currentHour))
-      print("minT: "+repr(minT))
-      print("maxT: "+repr(maxT))
-
-      if acOn == 1:
-        print("\n~~~~ AC Turned On! ~~~~\n")
-        os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 1") ##Activa modo auto del AC
-      if acOn == 0:
-        print("\n~~~~ AC Turned Off! ~~~~\n")
-        os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##0 apaga el aire
-
-   except KeyError as e:
-      print("Exception: KeyError: ")
-
-   print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
-
-
 ## Read in command-line parameters
 parser = argparse.ArgumentParser()
-parser.add_argument("-b", "--broker_url", action="store", dest="broker_url", help="broker_url", required=True)
-parser.add_argument("-t", "--topic", action="store", dest="topic", help="AC Control Topic", required=True)
 parser.add_argument("-min", "--min_temp", action="store", dest="minT", help="Min Temperature", required=False)
 parser.add_argument("-max", "--max_temp", action="store", dest="maxT", help="Max Temperature", required=False)
 parser.add_argument("-acStartHour", "--acStartHour", action="store", dest="acStartHour", help="acStartHour", required=False)
@@ -69,8 +20,6 @@ parser.add_argument("-ri", "--refreshInterval", action="store", dest="refreshint
 
 
 args = parser.parse_args()
-broker_url = args.broker_url
-topic = args.topic
 
 f = open("/home/pi/aws_iot/acControl.json","r")
 acControlJSON  = json.load(f)
@@ -99,12 +48,7 @@ else:
   
 refreshinterval = args.refreshinterval
 
-broker_port = 1883
-mqttClient = mqtt.Client()
-mqttClient.connect(broker_url, broker_port)
-mqttClient.subscribe(topic,qos=1)
-mqttClient.message_callback_add(topic,on_message_acControlTopic_Callback)
-mqttClient.loop_start()
+
 
 while True:
   ## Implementacion del control del AC
@@ -127,7 +71,7 @@ while True:
       sht31dT = sht31d_json['t']
       print("currentTemp: "+repr(sht31dT))
       f.close()
-      if currentHour >= acStartHour and currentHour < acEndHour:
+      if currentHour >= acStartHour and currentHour <= acEndHour:
          if sht31dT >= maxT: ##Max Temp
             print("\n~~~~ AC Turned On! ~~~~\n")
             os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 1") ##Activa modo auto del AC
@@ -136,6 +80,6 @@ while True:
             print("\n~~~~ AC Turned Off! ~~~~\n")
             os.system("/usr/bin/python3 /home/pi/aws_iot/rpi-i2c-cron.py 0") ##Apaga AC
   except Exception as e:
-    print("**** acControl MQTT Client Exception: ",repr(e))
+    print("**** acControl Exception: ",repr(e))
   
   time.sleep(int(refreshinterval))

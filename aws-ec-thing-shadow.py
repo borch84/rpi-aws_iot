@@ -28,8 +28,6 @@ import time
 import json
 import argparse
 
-import os
-
 
 ## Se comento codigo referente a DHT22 porque falla mucho
 ## https://github.com/adafruit/Adafruit_CircuitPython_DHT
@@ -49,25 +47,24 @@ GPIO.setup(waterpumpPin, GPIO.OUT)
 GPIO.output(waterpumpPin,1) #1=apaga la bomba
 
 
-##reedswitch
-from gpiozero import DigitalInputDevice
-reedswitch_state = False
-old_reedswitch_state = False
-def reedswitch_closed():
-    print("reed switch i.s closed!")
-    global reedswitch_state
-    reedswitch_state = True
-def reedswitch_opened():
-    print("reed switch is opened!")
-    global reedswitch_state
-    reedswitch_state = False
-reedswitch = DigitalInputDevice(17,pull_up=True, bounce_time=1)
-reedswitch.when_activated = reedswitch_closed
-reedswitch.when_deactivated = reedswitch_opened
+## reedswitch
+#  Comentado por borch porque el rpi-cediquim no tiene conectado ningun reedswitch
+#from gpiozero import DigitalInputDevice
+#reedswitch_state = False
+#old_reedswitch_state = False
+#def reedswitch_closed():
+#    print("reed switch is closed!")
+#    global reedswitch_state
+#    reedswitch_state = True
+#def reedswitch_opened():
+#    print("reed switch is opened!")
+#    global reedswitch_state
+#    reedswitch_state = False
+#reedswitch = DigitalInputDevice(17,pull_up=True, bounce_time=1)
+#reedswitch.when_activated = reedswitch_closed
+#reedswitch.when_deactivated = reedswitch_opened
 
 
-##ds18b20
-import ds18b20
 
 
 ##AWS IoT Callbacks
@@ -108,7 +105,7 @@ class shadowCallbackContainer:
             acEndHour = payloadDict["state"]["reported"]["acControl"]["acEndHour"]
             minT = payloadDict["state"]["reported"]["acControl"]["minT"]
             maxT = payloadDict["state"]["reported"]["acControl"]["maxT"]
-            f = open("/home/pi/aws_iot/acControl.json","w")
+            f = open("acControl.json","w")
             acControlJSON = ('{'+ 
                             '\"minT\":' + repr(minT) + ','
                             '\"maxT\":' + repr(maxT) + ','
@@ -120,7 +117,7 @@ class shadowCallbackContainer:
             f.close() 
 
         except Exception as e:
-            print("**** shadowGet_Callback Exception:",e)
+            print("**** shadowGet_Callback Exception:"+repr(e))
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 
@@ -247,54 +244,74 @@ while not connected:
 
 
 
+
 ## sps30
-import sps30
+# Comentado porque el EC no tiene conectado el sensor SPS30
+#import sps30
 
 ## sht31d
-import sht31d
+# Comentado porque en este momento EC no tiene conectado el sensor de temperatura y humedad SHT31D
+#import sht31d
+
+##ds18b20
+# Comentado porque este EC no tiene ningun sensor ds18b20 conectado
+#import ds18b20
 
 ## rpiSoC
 import rpiSoC
 rpiSoCSerial = rpiSoC.getRPiCPUSerial()
 
 ## esp32levelswitch
-import esp32levelswitch
+# Comentado porque este programa no recibe informacion de ningun ESP32 reedswitch remoto conectado por MQTT
+#import esp32levelswitch
 
 #Forever Loop
 while True:
     JSONPayload = ('{\"state\": { \"reported\": {')
 
     #ds18b20
-    ds18b20_JSONPayload = ds18b20.jsonpayload()
-    if ds18b20_JSONPayload != None:
-       JSONPayload = JSONPayload + ds18b20_JSONPayload + ','
+    #ds18b20_JSONPayload = ds18b20.jsonpayload()
+    #if ds18b20_JSONPayload != None:
+    #   JSONPayload = JSONPayload + ds18b20_JSONPayload + ','
 
     #sps30
-    sps30_JSONPayload = sps30.jsonpayload()
-    if sps30_JSONPayload != None:
-       JSONPayload = JSONPayload + sps30_JSONPayload + ','
+    #sps30_JSONPayload = sps30.jsonpayload()
+    #if sps30_JSONPayload != None:
+    #   JSONPayload = JSONPayload + sps30_JSONPayload + ','
 
     #sht31d
-    sht31d_JSONPayload,sht31dT,sht31dH = sht31d.jsonpayload()
-    if sht31d_JSONPayload != None:
-       JSONPayload = JSONPayload + '\"sht31d\":' + sht31d_JSONPayload + ','
+    #sht31d_JSONPayload,sht31dT,sht31dH = sht31d.jsonpayload()
+    #if sht31d_JSONPayload != None:
+    #   JSONPayload = JSONPayload + '\"sht31d\":' + sht31d_JSONPayload + ','
+
+    #ec
+    try:
+        with open("/home/pi/rpi-aws_iot/ec100.json","r") as ec_file:
+            ec_data = ec_file.read()
+        ec_file.close()
+        ec_json = json.loads(ec_data)
+        ec_JSONPayload = ""
+        if ec_json["status"] == "OK":
+            ec_JSONPayload = ('\"ec\": {\"id\":' + repr(100)+','
+                              '\"ec\":' + repr(ec_json["ec"])+
+                            '}')
+            JSONPayload = JSONPayload + ec_JSONPayload + ','
+    except Exception as e:
+        print ("EC Exception: "+repr(e))
 
 
-
-    #dht22_File = open("/home/pi/aws_iot/dht22.json","w")
-    #dht22_File.write(dht22_JSONPayload)
-    #dht22_File.close()
 
     #RaspberryPi CPU CORE Temp
     rpiSoC_JSONPayload = rpiSoC.jsonpayload(rpiSoCSerial)
     if rpiSoC_JSONPayload != None:
-       JSONPayload = JSONPayload + rpiSoC_JSONPayload + ','
+       JSONPayload = JSONPayload + rpiSoC_JSONPayload 
 
 
     #esp32/levelswitch values:
-    esp32LevelSwitchJSONPayload = esp32levelswitch.jsonpayload("/home/pi/aws_iot/esp32levelswitch_1.json")
-    if esp32LevelSwitchJSONPayload != None:
-      JSONPayload = JSONPayload + esp32LevelSwitchJSONPayload
+    #esp32LevelSwitchJSONPayload = esp32levelswitch.jsonpayload("esp32levelswitch_1.json")
+    #if esp32LevelSwitchJSONPayload != None:
+    #  JSONPayload = JSONPayload + esp32LevelSwitchJSONPayload
+
 
 
     JSONPayload = ( JSONPayload + '}}}')
