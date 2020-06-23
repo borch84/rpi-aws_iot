@@ -33,8 +33,8 @@ file_path = args.file_path
 
 GPIO.setup(sole_pin,GPIO.OUT)
 GPIO.setup(pump_pin,GPIO.OUT)
-GPIO.output(sole_pin,1)
-GPIO.output(pump_pin,1)
+GPIO.output(sole_pin,1) # 1 desactiva el relay 
+GPIO.output(pump_pin,1) 
 
 
 #LCD 16x2:
