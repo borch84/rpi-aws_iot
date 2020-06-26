@@ -5,8 +5,10 @@ import serial
 import threading
 import RPi.GPIO as GPIO
 from Atlas import atlas_i2c
-device = atlas_i2c(address=100,bus=1,file_path="/home/pi/rpi-aws_iot/ec100.json") 
+import time_purge_handler_file
 
+device = atlas_i2c(address=100,bus=1,file_path="/home/pi/rpi-aws_iot/ec100.json")
+ 
 ser = serial.Serial(
         port='/dev/ttyS0', #Replace ttyS0 with ttyAM0 for Pi1,Pi2,Pi0
         baudrate = 9600,
@@ -37,30 +39,7 @@ GPIO.output(pump_pin,1)
 
 minute_value = 0
 
-def read_minute_purge_json():
-  try:
-    with open('/home/pi/aws_iot/minute_purge.json','r') as f:
-      min_purga_json = json.load(f)
-      value = min_purga_json['min']
-      f.close()
-      return value
-  except Exception as e:
-      print("**** Excepcion reading minute_purge.json! ****"+repr(e))
-      return -1
-
-def write_minute_purge_json(new_value):
-  try:
-    with open('/home/pi/aws_iot/minute_purge.json','w') as f:
-      json = "{\"min\":"+ str(new_value) +"}" 
-      f.write(json)
-      f.close()
-      return True
-  except Exception as e:
-      print("**** Excepcion writing minute_purge.json! ****"+repr(e))
-      return False
-
-
-minute_value = read_minute_purge_json() #Revisar el valor del timeout de la purga
+minute_value = time_purge_handler_file.read_purge_time_json('/home/pi/rpi-aws_iot/purge_time.json')
 ser.write(b'minuto_purga.txt=\"'+str.encode(repr(minute_value))+b'\"\xff\xff\xff')
 
 while 1:
@@ -117,13 +96,13 @@ while 1:
           print("minus button")
           if minute_value > 1:
             minute_value -= 1
-            write_minute_purge_json(minute_value)
+            time_purge_handler_file.write_purge_time_json('/home/pi/rpi-aws_iot/purge_time.json',minute_value)
             ser.write(b'minuto_purga.txt=\"'+str.encode(repr(minute_value))+b'\"\xff\xff\xff')
 
         elif(x[2:3] == b'\x08'):
           print("plus button")
           if minute_value < 10:
             minute_value += 1
-            write_minute_purge_json(minute_value)
+            time_purge_handler_file.write_purge_time_json('/home/pi/rpi-aws_iot/purge_time.json',minute_value)
             ser.write(b'minuto_purga.txt=\"'+str.encode(repr(minute_value))+b'\"\xff\xff\xff')
 
