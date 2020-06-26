@@ -10,18 +10,19 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
 #LCD 16x2:
-import RPI_I2C_driver
+# import RPI_I2C_driver # not using when nextion is connected
 
 #Atlas Scientific i2c implementation
 from Atlas import atlas_i2c
 
 """
-Para correr este programa: python3 ec100.py -sp 4 -pp 17 -s 3 -maxec 0
+Para correr este programa: 
 
 -sp --solenoide_pin = 4
 -pp --pump_pin = 17
--s --seconds
--maxec
+-maxec 900 
+-fp /home/pi/rpi-aws_iot/ec100.json 
+-pt /home/pi/rpi-aws_iot/purge_time.json
 
 """
 
@@ -45,17 +46,18 @@ def main():
     timeout_seconds = time_purge_handler_file.read_purge_time_json('/home/pi/rpi-aws_iot/purge_time.json')
 
     ec_device = atlas_i2c(address=100,bus=1,file_path=file_path)  # creates the I2C port object, specify the address, bus and file path name to write the json object
-    mylcd = RPI_I2C_driver.lcd()
+    
+    """mylcd = RPI_I2C_driver.lcd()
     mylcd.lcd_clear()
     mylcd.lcd_display_string("** High Corp **", 1)
     mylcd.lcd_display_string("Reading...", 2)
-
+    """
     try:
         #print (device.query(sys.argv[1]),file=sys.stdout)
         ec_result = ec_device.query('r')
-        mylcd.lcd_clear()
+        """mylcd.lcd_clear()
         mylcd.lcd_display_string("** High Corp **", 1)
-        mylcd.lcd_display_string("EC: "+ repr(ec_result)+" uS", 2)
+        mylcd.lcd_display_string("EC: "+ repr(ec_result)+" uS", 2) """
         if ec_result >= maxec: #upper maximum EC level
             print ("EC Value: "+ repr(ec_result)+" uS")
             print ("~~~~ Abre el soleoinde y desactiva Bomba ~~~~")
