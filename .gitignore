@@ -2,7 +2,9 @@ __pycache__/
 *.pyc
 *.log
 rpi-cediquim-certs/
-*.json
 node_modules/
 yUp3qLUftKGGY01XdcL5/
 aws-rpi01-iot-certificates/
+dht22.json
+ec100.json
+esp32levelswitch_1.json
