@@ -14,8 +14,9 @@ class atlas_i2c:
                      #certain older boards use bus 0
     default_address = 100  # the default address for the EC sensor
     device_file_path = "ec100.json" #
+    sensor_type = "ec"
 
-    def __init__(self, address=default_address, bus=default_bus,file_path=device_file_path):
+    def __init__(self, address=default_address, bus=default_bus,file_path=device_file_path, sensor_type=sensor_type):
         # open two file streams, one for reading and one for writing
         # the specific I2C channel is selected with bus
         # it is usually 1, except for older revisions where its 0
@@ -26,6 +27,7 @@ class atlas_i2c:
         # initializes I2C to either a user specified or default address
         self.set_i2c_address(address)
         self.device_file_path = file_path
+        self.sensor_type = sensor_type
 
     def set_i2c_address(self, addr):
         # set the I2C communications to the slave specified by the address
@@ -62,11 +64,11 @@ class atlas_i2c:
             #pi, and you shouldn't have to do this!
             # convert the char list to a string and returns it
             device_file = open(self.device_file_path, "w")
-            str_ec = ''.join(char_list)
+            str_value = ''.join(char_list)
             #print(str_ec)
-            device_file.write("{\"status\":\"OK\",\"ec\":"+str_ec+"}")
+            device_file.write('{\"status\":\"OK\",\"'+ self.sensor_type +'\":'+str_value+'}') 
             device_file.close()
-            return float(str_ec)
+            return float(str_value)
         else:
             #print("{\"status\":\"ER\",\"code\":" + str(ord(response[0]))+"}",file=sys.stderr)
             device_file = open(self.device_file_path, "w")

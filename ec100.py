@@ -45,7 +45,7 @@ def main():
 
     timeout_seconds = time_purge_handler_file.read_purge_time_json('/home/pi/rpi-aws_iot/purge_time.json')
 
-    ec_device = atlas_i2c(address=100,bus=1,file_path=file_path)  # creates the I2C port object, specify the address, bus and file path name to write the json object
+    ec_device = atlas_i2c(address=100,bus=1,file_path=file_path,sensor_type='ec')  # creates the I2C port object, specify the address, bus and file path name to write the json object
     
     """mylcd = RPI_I2C_driver.lcd()
     mylcd.lcd_clear()
