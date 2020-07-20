@@ -13,7 +13,6 @@ chardet==3.0.4
 colorzero==1.1
 crcmod==1.7
 cryptography==2.6.1
-distro-info==0.21
 docker==3.4.1
 docker-compose==1.21.0
 dockerpty==0.4.1
@@ -48,7 +47,6 @@ spidev==3.4
 ssh-import-id==5.7
 sysv-ipc==1.0.1
 texttable==1.6.0
-unattended-upgrades==0.1
 urllib3==1.24.2
 virtualenv==15.1.0
 websocket-client==0.53.0
