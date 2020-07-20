@@ -8,3 +8,7 @@ aws-rpi01-iot-certificates/
 dht22.json
 ec100.json
 esp32levelswitch_1.json
+Sensirion/sps30-uart-3.0.0/sps30.json
+ds18b20.json
+rpi-cpu-serial.json
+sht31d.json
