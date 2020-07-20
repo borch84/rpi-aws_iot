@@ -12,3 +12,4 @@ Sensirion/sps30-uart-3.0.0/sps30.json
 ds18b20.json
 rpi-cpu-serial.json
 sht31d.json
+acControl.json
