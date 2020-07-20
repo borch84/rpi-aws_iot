@@ -267,7 +267,7 @@ while True:
     #ds18b20
     ds18b20_JSONPayload = ds18b20.jsonpayload()
     if ds18b20_JSONPayload != None:
-       JSONPayload = JSONPayload + ds18b20_JSONPayload + ','
+       JSONPayload = JSONPayload + '\"ds18b20\":' + ds18b20_JSONPayload + ','
 
     #sps30
     sps30_JSONPayload = sps30.jsonpayload()

@@ -16,7 +16,7 @@ def jsonpayload():
          #temp_f = temp_c * 9.0 / 5.0 + 32.0
 
          temp_c = round(temp_c,1)
-         ds18b20_JSONPayload = ('\"ds18b20\": {\"id\":' + repr(1)+','
+         ds18b20_JSONPayload = ('{\"id\":' + repr(1)+','
                                              '\"t\":' + repr(temp_c) +
                                             '}')
          ds18b20_File = open("/home/pi/aws_iot/ds18b20.json","w")
