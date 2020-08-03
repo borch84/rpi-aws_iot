@@ -33,4 +33,4 @@
 #* * * * * /home/pi/aws_iot/acControl-watchdog.sh
 @daily find /home/pi/aws_iot/ -name "*log" -ctime +1 -exec rm {} \;
 * * * * * /home/pi/aws_iot/Sensirion/sps30-uart-3.0.0/sps30-json-output 
-*/2 * * * python3 /home/pi/aws_iot/ph99.py -fp /home/pi/aws_iot/ph99.json
+*/2 * * * * /home/pi/aws_iot/ph99.py -fp /home/pi/aws_iot/ph99.json
