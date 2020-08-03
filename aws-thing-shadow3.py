@@ -291,6 +291,21 @@ while True:
        JSONPayload = JSONPayload + rpiSoC_JSONPayload + ','
 
 
+    #ph
+    try:
+        with open("/home/pi/aws_iot/ph99.json","r") as ph_file:
+            ph_data = ph_file.read()
+        ph_file.close()
+        ph_json = json.loads(ph_data)
+        ph_JSONPayload = ""
+        if ph_json["status"] == "OK":
+            ph_JSONPayload = ('\"ph\": {\"id\":' + repr(99)+','
+                              '\"ph\":' + repr(ph_json["ph"])+
+                            '}')
+            JSONPayload = JSONPayload + ph_JSONPayload + ','
+    except Exception as e:
+        print ("Ph Exception: "+repr(e))
+
     #esp32/levelswitch values:
     esp32LevelSwitchJSONPayload = esp32levelswitch.jsonpayload("/home/pi/aws_iot/esp32levelswitch_1.json")
     if esp32LevelSwitchJSONPayload != None:
