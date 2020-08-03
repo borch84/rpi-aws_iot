@@ -34,4 +34,4 @@
 @daily find /home/pi/aws_iot/ -name "*log" -ctime +1 -exec rm {} \;
 */2 * * * * /home/pi/aws_iot/Sensirion/sps30-uart-3.0.0/sps30-json-output 
 */2 * * * * /home/pi/aws_iot/ph99.py -fp /home/pi/aws_iot/ph99.json
-* * * * * /home/pi/watchdog-nextion-serial-rpi02.py 
+* * * * * /home/pi/aws_iot/watchdog-nextion-serial-rpi02.py 
