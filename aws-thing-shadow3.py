@@ -306,6 +306,20 @@ while True:
     except Exception as e:
         print ("Ph Exception: "+repr(e))
 
+    #FS usage
+    try:
+        with open("/home/pi/aws_iot/fs_usage.json","r") as fs_file:
+            fs_data = fs_file.read()
+        fs_file.close()
+        fs_json = json.loads(fs_data)
+        fs_JSONPayload = ""
+        fs_JSONPayload = ('\"fs\": {\"id\":\"root\",' + 
+                                   '\"usage\":' + repr(fs_json["fs_usage"])+
+                            '}')
+        JSONPayload = JSONPayload + fs_JSONPayload + ','
+    except Exception as e:
+        print ("FS Exception: "+repr(e))
+
     #esp32/levelswitch values:
     esp32LevelSwitchJSONPayload = esp32levelswitch.jsonpayload("/home/pi/aws_iot/esp32levelswitch_1.json")
     if esp32LevelSwitchJSONPayload != None:
