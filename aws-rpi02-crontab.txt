@@ -35,4 +35,6 @@
 */2 * * * * /home/pi/aws_iot/Sensirion/sps30-uart-3.0.0/sps30-json-output 
 */2 * * * * /home/pi/aws_iot/ph99.py -fp /home/pi/aws_iot/ph99.json
 * * * * * /home/pi/aws_iot/watchdog-nextion-serial-rpi02.py 
-*/2 * * * * /home/pi/aws_iot/insert-influxdb.py
+*/2 * * * * /home/pi/aws_iot/insert-influxdb.py -f /home/pi/aws_iot/ph99.json -m ph99 -s 99 -l ph
+*/5 * * * * /home/pi/aws_iot/insert-influxdb.py -f /home/pi/aws_iot/fs_usage.json -m fs_root -s root -l fs_usage
+*/5 * * * * /home/pi/aws_iot/fs_usage.sh
