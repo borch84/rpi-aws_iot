@@ -14,3 +14,4 @@ rpi-cpu-serial.json
 sht31d.json
 acControl.json
 ph99.json
+fs_usage.json
