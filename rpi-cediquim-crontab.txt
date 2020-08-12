@@ -26,3 +26,4 @@
 * * * * * /home/pi/rpi-aws_iot/aws-ec-thing-shadow-watchdog.sh
 * * * * * /home/pi/rpi-aws_iot/watchdog-nextion-serial-cediquim.sh
 @daily find /home/pi/aws_iot/ -name "*log" -ctime +1 -exec rm {} \;
+*/5 * * * * /home/pi/aws_iot/fs_usage.sh

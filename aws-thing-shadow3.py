@@ -164,6 +164,8 @@ parser.add_argument("-w", "--websocket", action="store_true", dest="useWebsocket
 parser.add_argument("-n", "--thingName", action="store", dest="thingName", default="Bot", help="Targeted thing name", required=True)
 parser.add_argument("-id", "--clientId", action="store", dest="clientId", default="ThingShadowEcho",help="Targeted client id", required=True)
 parser.add_argument("-ri", "--refreshInterval", action="store", dest="refreshinterval", required=True, help="Refresh interval in Seconds")
+parser.add_argument("-as", "--active_sensors", action="store", dest="active_sensors", required=True, help="Active Sensors JSON File")
+
 
 args = parser.parse_args()
 host = args.host
@@ -175,6 +177,15 @@ useWebsocket = args.useWebsocket
 thingName = args.thingName
 clientId = args.clientId
 refreshinterval = args.refreshinterval
+active_sensors_file_path = args.active_sensors
+try:
+    with open(active_sensors_file_path,'r') as f:
+        active_sensors = json.load(f)
+        f.close()
+except Exception as e:
+    print("**** Exception: ", repr(e))
+    exit(1)
+
 
 if args.useWebsocket and args.certificatePath and args.privateKeyPath:
     parser.error("X.509 cert authentication and WebSocket are mutual exclusive. Please pick one.")
@@ -248,36 +259,42 @@ while not connected:
 
 
 ## sps30
-import sps30
+if active_sensors['sps30']:
+    import sps30
 
 ## sht31d
-import sht31d
+if active_sensors['sht31d']:
+    import sht31d
 
 ## rpiSoC
 import rpiSoC
 rpiSoCSerial = rpiSoC.getRPiCPUSerial()
 
 ## esp32levelswitch
-import esp32levelswitch
+if active_sensors['esp32levelswitch']:
+    import esp32levelswitch
 
 #Forever Loop
 while True:
     JSONPayload = ('{\"state\": { \"reported\": {')
 
     #ds18b20
-    ds18b20_JSONPayload = ds18b20.jsonpayload()
-    if ds18b20_JSONPayload != None:
-       JSONPayload = JSONPayload + '\"ds18b20\":' + ds18b20_JSONPayload + ','
+    if active_sensors['ds18b20']:
+        ds18b20_JSONPayload = ds18b20.jsonpayload()
+        if ds18b20_JSONPayload != None:
+            JSONPayload = JSONPayload + '\"ds18b20\":' + ds18b20_JSONPayload + ','
 
     #sps30
-    sps30_JSONPayload = sps30.jsonpayload()
-    if sps30_JSONPayload != None:
-       JSONPayload = JSONPayload + sps30_JSONPayload + ','
+    if active_sensors['sps30']:
+        sps30_JSONPayload = sps30.jsonpayload()
+        if sps30_JSONPayload != None:
+            JSONPayload = JSONPayload + sps30_JSONPayload + ','
 
     #sht31d
-    sht31d_JSONPayload,sht31dT,sht31dH = sht31d.jsonpayload()
-    if sht31d_JSONPayload != None:
-       JSONPayload = JSONPayload + '\"sht31d\":' + sht31d_JSONPayload + ','
+    if active_sensors['sht31d']:
+        sht31d_JSONPayload,sht31dT,sht31dH = sht31d.jsonpayload()
+        if sht31d_JSONPayload != None:
+            JSONPayload = JSONPayload + '\"sht31d\":' + sht31d_JSONPayload + ','
 
 
 
@@ -292,19 +309,36 @@ while True:
 
 
     #ph
-    try:
-        with open("/home/pi/aws_iot/ph99.json","r") as ph_file:
-            ph_data = ph_file.read()
-        ph_file.close()
-        ph_json = json.loads(ph_data)
-        ph_JSONPayload = ""
-        if ph_json["status"] == "OK":
-            ph_JSONPayload = ('\"ph\": {\"id\":' + repr(99)+','
-                              '\"ph\":' + repr(ph_json["ph"])+
-                            '}')
-            JSONPayload = JSONPayload + ph_JSONPayload + ','
-    except Exception as e:
-        print ("Ph Exception: "+repr(e))
+    if active_sensors['ph']:
+        try:
+            with open("/home/pi/aws_iot/ph99.json","r") as ph_file:
+                ph_data = ph_file.read()
+            ph_file.close()
+            ph_json = json.loads(ph_data)
+            ph_JSONPayload = ""
+            if ph_json["status"] == "OK":
+                ph_JSONPayload = ('\"ph\": {\"id\":' + repr(99)+','
+                                '\"ph\":' + repr(ph_json["ph"])+
+                                '}')
+                JSONPayload = JSONPayload + ph_JSONPayload + ','
+        except Exception as e:
+            print ("Ph Exception: "+repr(e))
+    
+    #ec
+    if active_sensors['ec']:
+        try:
+            with open("/home/pi/rpi-aws_iot/ec100.json","r") as ec_file:
+                ec_data = ec_file.read()
+            ec_file.close()
+            ec_json = json.loads(ec_data)
+            ec_JSONPayload = ""
+            if ec_json["status"] == "OK":
+                ec_JSONPayload = ('\"ec\": {\"id\":' + repr(100)+','
+                                '\"ec\":' + repr(ec_json["ec"])+
+                                '}')
+                JSONPayload = JSONPayload + ec_JSONPayload + ','
+        except Exception as e:
+            print ("EC Exception: "+repr(e))
 
     #FS usage
     try:
@@ -316,14 +350,15 @@ while True:
         fs_JSONPayload = ('\"fs\": {\"id\":\"root\",' + 
                                    '\"usage\":' + repr(fs_json["fs_usage"])+
                             '}')
-        JSONPayload = JSONPayload + fs_JSONPayload + ','
+        JSONPayload = JSONPayload + fs_JSONPayload
     except Exception as e:
         print ("FS Exception: "+repr(e))
 
     #esp32/levelswitch values:
-    esp32LevelSwitchJSONPayload = esp32levelswitch.jsonpayload("/home/pi/aws_iot/esp32levelswitch_1.json")
-    if esp32LevelSwitchJSONPayload != None:
-      JSONPayload = JSONPayload + esp32LevelSwitchJSONPayload
+    if active_sensors['esp32levelswitch']:
+        esp32LevelSwitchJSONPayload = esp32levelswitch.jsonpayload("/home/pi/aws_iot/esp32levelswitch_1.json")
+        if esp32LevelSwitchJSONPayload != None:
+            JSONPayload = JSONPayload + ',' + esp32LevelSwitchJSONPayload
 
 
     JSONPayload = ( JSONPayload + '}}}')
