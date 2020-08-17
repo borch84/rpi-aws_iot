@@ -1,0 +1,8 @@
+{
+    "sht31d": true,
+    "ds18b20": false,
+    "sps30": false,
+    "esp32levelswitch": false,
+    "ec": false,
+    "ph": false
+}
