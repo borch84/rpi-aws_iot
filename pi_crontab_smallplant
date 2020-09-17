@@ -1,0 +1,1 @@
+# 0 12 * * * pi /usr/bin/python3 /home/pi/aws_iot/activate-waterpump-relay.py -p 23 -j pump2_purge.json
