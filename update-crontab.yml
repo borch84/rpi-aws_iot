@@ -1,0 +1,31 @@
+---
+- hosts: localhost
+  remote_user: pi
+  gather_facts: false
+  tasks:
+  - name: Include vars
+    include_vars: "{{ vars_file }}"
+  
+  - name: Display {{ json_file }} 
+    shell: cat {{ json_file }}
+    register: jsonraw
+
+  - name: Dump Json Data
+    set_fact:
+      jsondata: "{{ jsonraw.stdout|from_json }}"
+
+  - name: setHour
+    set_fact:
+      start_hour: "{{ jsondata | json_query(jmesquery) }}"
+    vars:
+      jmesquery: 'start_hour'
+
+  - name: Debug
+    debug: var="{{ start_hour }}"
+
+  - name: Update Crontab
+    cron:
+      name: "{{ description }}"
+      hour: "{{ start_hour }}"
+      minute: "0"
+      job: "/usr/bin/python3 /home/pi/aws_iot/activate-waterpump-relay.py -p {{ pin }} -j {{ json_file }}"
