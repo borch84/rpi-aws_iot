@@ -1,23 +1,27 @@
 import json
 
-def read_purge_time_json(file_path):
+def read_purge_time_json(file_path, field):
   try:
     with open(file_path,'r') as f:
       purge_time_json = json.load(f)
-      value = purge_time_json['min']
+      value = purge_time_json[field]
       f.close()
       return value
   except Exception as e:
       print("**** Exception reading json file: "+repr(e))
       return -1
 
-def write_purge_time_json(file_path,new_value):
+def write_purge_time_json(file_path,new_value,field):
   try:
-    with open(file_path,'w') as f:
-      json = "{\"min\":"+ str(new_value) +"}" 
-      f.write(json)
+    with open(file_path,'r') as f:
+      #json_data = "{\"" + field + "\":"+ str(new_value) +"}" 
+      json_data = json.load(f)
       f.close()
-      return True
+    json_data[field] = new_value
+    with open(file_path,'w') as f:
+      json.dump(json_data,f)
+      f.close()
+    return True
   except Exception as e:
       print("**** Exception writing json file: "+repr(e))
       return False
