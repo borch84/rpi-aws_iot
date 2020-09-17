@@ -39,7 +39,7 @@ GPIO.output(pump_pin,1)
 
 minute_value = 0
 
-minute_value = time_purge_handler_file.read_purge_time_json('/home/pi/rpi-aws_iot/purge_time.json')
+minute_value = time_purge_handler_file.read_purge_time_json('/home/pi/rpi-aws_iot/purge_time.json','min')
 ser.write(b'minuto_purga.txt=\"'+str.encode(repr(minute_value))+b'\"\xff\xff\xff')
 
 while 1:
@@ -96,13 +96,13 @@ while 1:
           print("minus button")
           if minute_value > 1:
             minute_value -= 1
-            time_purge_handler_file.write_purge_time_json('/home/pi/rpi-aws_iot/purge_time.json',minute_value)
+            time_purge_handler_file.write_purge_time_json('/home/pi/rpi-aws_iot/purge_time.json',minute_value,'min')
             ser.write(b'minuto_purga.txt=\"'+str.encode(repr(minute_value))+b'\"\xff\xff\xff')
 
         elif(x[2:3] == b'\x08'):
           print("plus button")
           if minute_value < 10:
             minute_value += 1
-            time_purge_handler_file.write_purge_time_json('/home/pi/rpi-aws_iot/purge_time.json',minute_value)
+            time_purge_handler_file.write_purge_time_json('/home/pi/rpi-aws_iot/purge_time.json',minute_value,'min')
             ser.write(b'minuto_purga.txt=\"'+str.encode(repr(minute_value))+b'\"\xff\xff\xff')
 
