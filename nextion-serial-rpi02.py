@@ -12,13 +12,15 @@ import subprocess
 device = atlas_i2c(address=99,bus=1,file_path="/home/pi/aws_iot/ph99.json",sensor_type="ph")
 
 class mqttThreadClass(Thread):
-  def __init__(self, broker, topic, name, ac_file):
+  def __init__(self, broker, topic, name, ac_file, serial, setNextionACVars):
     Thread.__init__(self)
     self.name = name
     print("Init: "+self.name) 
     self.broker = broker
     self.topic = topic
     self.ac_file = ac_file
+    self.serial = serial
+    self.setNextionACVars = setNextionACVars
     #flag to pause thread
     self.paused = False
     # Explicitly using Lock over RLock since the use of self.paused
@@ -54,10 +56,15 @@ class mqttThreadClass(Thread):
     print("\n~~~~ on_message_mqtt_acControlTopic_Callback ~~~~")
     print("Message Recieved: "+message.payload.decode())
     payload = json.loads(message.payload.decode())
-    #TODO
     if "getConfig" in payload:
-     print("Send Config to MQTT Topic: getConfigTopic")
-     self.mqttClient.publish("getConfigTopic",payload='{"JSON":true}',qos=0, retain=False)
+      print("Send Config to MQTT Topic: getConfigTopic")
+      with open(self.ac_file,'r') as f:
+        json_payload = f.read()
+        f.close()
+      self.mqttClient.publish("getConfigTopic",payload=json_payload,qos=0, retain=False)
+    if "newConfig" in payload:
+      print("Received new config from MQTT topic acControlTopic")
+
 
 class ReadSensorsThread(Timer):
   def __init__(self, interval, function, args, name):
@@ -131,11 +138,30 @@ ser = serial.Serial(
         timeout=0.5
 )
 
+# Set Nextion AC Ctrl Page's labels 
+def setNextionACVars(ser,ac_st,ac_et,ac_min,ac_ena,ac_status):
+  ser.write(b'ac_st.txt=\"'+str.encode(repr(ac_st))+b'\"\xff\xff\xff')
+  ser.write(b'ac_et.txt=\"'+str.encode(repr(ac_et))+b'\"\xff\xff\xff')
+  ser.write(b'ac_min.txt=\"'+str.encode(repr(ac_min))+b'\"\xff\xff\xff')
+  ser.write(b'ac_max.txt=\"'+str.encode(repr(ac_max))+b'\"\xff\xff\xff')
+  if ac_ena:
+    ser.write(b'ac_enabled.val=1\xff\xff\xff')
+    ser.write(b'ac_enabled.txt="Disable AC"\xff\xff\xff')
+  if not ac_ena:
+    ser.write(b'ac_enabled.val=0\xff\xff\xff')
+    ser.write(b'ac_enabled.txt="Enable AC"\xff\xff\xff')
+  if ac_status == 0:
+    ser.write(b'ac_ctrl.txt="Start AC"\xff\xff\xff')
+    ser.write(b'ac_ctrl.val=0\xff\xff\xff')
+  if ac_status == 1:
+    ser.write(b'ac_ctrl.txt="Stop AC"\xff\xff\xff')
+    ser.write(b'ac_ctrl.val=1\xff\xff\xff')
+
 read_sensors_function(ser)
 sensorThread = ReadSensorsThread(interval=10,function=read_sensors_function, args=(ser,),name="SENSOR-THREAD") # Read sensor data every 10s
 sensorThread.start()
 
-mqttThreadObject = mqttThreadClass(broker="192.168.4.203", topic="acControlTopic", name="MQTT-AC-THREAD", ac_file="/home/pi/aws_iot/acControl.json")
+mqttThreadObject = mqttThreadClass(broker="192.168.4.203", topic="acControlTopic", name="MQTT-AC-THREAD", ac_file="/home/pi/aws_iot/acControl.json", serial=ser, setNextionACVars=setNextionACVars)
 mqttThreadObject.start()
 
 # Test Pause sensor thread
@@ -170,24 +196,6 @@ GPIO.output(pump2_pin,1)
 pump1_start_hour, pump1_min, pump1_enabled = getJSONValues('pump1_purge.json',['start_hour','min','enabled'])
 pump2_start_hour, pump2_min, pump2_enabled = getJSONValues('pump2_purge.json',['start_hour','min','enabled'])
 
-# Set Nextion AC Ctrl Page's labels 
-def setNextionACVars(ser,ac_st,ac_et,ac_min,ac_ena,ac_status):
-  ser.write(b'ac_st.txt=\"'+str.encode(repr(ac_st))+b'\"\xff\xff\xff')
-  ser.write(b'ac_et.txt=\"'+str.encode(repr(ac_et))+b'\"\xff\xff\xff')
-  ser.write(b'ac_min.txt=\"'+str.encode(repr(ac_min))+b'\"\xff\xff\xff')
-  ser.write(b'ac_max.txt=\"'+str.encode(repr(ac_max))+b'\"\xff\xff\xff')
-  if ac_ena:
-    ser.write(b'ac_enabled.val=1\xff\xff\xff')
-    ser.write(b'ac_enabled.txt="Disable AC"\xff\xff\xff')
-  if not ac_ena:
-    ser.write(b'ac_enabled.val=0\xff\xff\xff')
-    ser.write(b'ac_enabled.txt="Enable AC"\xff\xff\xff')
-  if ac_status == 0:
-    ser.write(b'ac_ctrl.txt="Start AC"\xff\xff\xff')
-    ser.write(b'ac_ctrl.val=0\xff\xff\xff')
-  if ac_status == 1:
-    ser.write(b'ac_ctrl.txt="Stop AC"\xff\xff\xff')
-    ser.write(b'ac_ctrl.val=1\xff\xff\xff')
 
 # AC Control Variables
 # ac_st = 6
@@ -200,6 +208,37 @@ def setNextionACVars(ser,ac_st,ac_et,ac_min,ac_ena,ac_status):
 ac_st, ac_et, ac_min, ac_max, ac_ena, ac_status = getJSONValues('/home/pi/aws_iot/acControl.json',['acStartHour','acEndHour','minT','maxT','enabled','ac_status'])
 setNextionACVars(ser,ac_st,ac_et,ac_min,ac_ena,ac_status)
 
+def save_acControl(ac_min, ac_max, ac_st, ac_et, ac_ena):
+  print("save ac control button")
+  try:
+    with open("acControl.json",'r') as f:
+      json_data = json.load(f)
+      f.close()
+    json_data['minT'] = ac_min
+    json_data['maxT'] = ac_max
+    json_data['acStartHour'] = ac_st
+    json_data['acEndHour'] = ac_et
+    json_data['enabled'] = ac_ena
+
+    with open("acControl.json",'w') as f:
+      json.dump(json_data,f)
+      f.close()
+    
+    if ac_ena:
+      with open("acControl-watchdog-crontab",'w') as f:
+        f.write("* * * * * pi /home/pi/aws_iot/acControl-watchdog.sh\n")
+        f.close()
+
+    if not ac_ena:
+      with open("acControl-watchdog-crontab",'w') as f:
+        f.write("#* * * * * pi /home/pi/aws_iot/acControl-watchdog.sh\n")
+        f.close()
+        subprocess.run(["sh", "acControl-disable.sh"])
+
+    subprocess.run(["sudo", "cp", "acControl-watchdog-crontab", "/etc/cron.d/"]) 
+
+  except Exception as e:
+      print("**** Exception writing json file: "+repr(e))
 
 while 1:
     x = ser.readline()
@@ -448,37 +487,7 @@ while 1:
               ser.write(b'ac_max.txt=\"'+str.encode(repr(ac_max))+b'\"\xff\xff\xff')
           
           if (x[2:3] == b'\x10'):
-            print("save ac control button")
-            try:
-              with open("acControl.json",'r') as f:
-                json_data = json.load(f)
-                f.close()
-              json_data['minT'] = ac_min
-              json_data['maxT'] = ac_max
-              json_data['acStartHour'] = ac_st
-              json_data['acEndHour'] = ac_et
-              json_data['enabled'] = ac_ena
-
-              with open("acControl.json",'w') as f:
-                json.dump(json_data,f)
-                f.close()
-              
-              if ac_ena:
-                with open("acControl-watchdog-crontab",'w') as f:
-                  f.write("* * * * * pi /home/pi/aws_iot/acControl-watchdog.sh\n")
-                  f.close()
-
-              if not ac_ena:
-                with open("acControl-watchdog-crontab",'w') as f:
-                  f.write("#* * * * * pi /home/pi/aws_iot/acControl-watchdog.sh\n")
-                  f.close()
-                  subprocess.run(["sh", "acControl-disable.sh"])
-
-              subprocess.run(["sudo", "cp", "acControl-watchdog-crontab", "/etc/cron.d/"]) 
-
-            except Exception as e:
-                print("**** Exception writing json file: "+repr(e))
-                
+            save_acControl(ac_min=ac_min, ac_max=ac_max, ac_st=ac_st, ac_et=ac_et, ac_ena=ac_ena)
 
           if (x[2:3] == b'\x11'):
             print("enable/disable ac control")

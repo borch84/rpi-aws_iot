@@ -114,6 +114,7 @@ class shadowCallbackContainer:
                             '\"maxT\":' + repr(maxT) + ','
                             '\"acStartHour\":' + repr(acStartHour) + ','
                             '\"acEndHour\":' + repr(acEndHour) +
+                            # TODO: incluir los campos: ac_status y enabled
                             '}')
             print(acControlJSON)
             f.write(acControlJSON)
