@@ -108,7 +108,7 @@ class shadowCallbackContainer:
             acEndHour = payloadDict["state"]["reported"]["acControl"]["acEndHour"]
             minT = payloadDict["state"]["reported"]["acControl"]["minT"]
             maxT = payloadDict["state"]["reported"]["acControl"]["maxT"]
-            f = open("/home/pi/aws_iot/acControl.json","w")
+            #f = open("/home/pi/aws_iot/acControl.json","w")
             acControlJSON = ('{'+ 
                             '\"minT\":' + repr(minT) + ','
                             '\"maxT\":' + repr(maxT) + ','
@@ -118,7 +118,7 @@ class shadowCallbackContainer:
                             '}')
             print(acControlJSON)
             # f.write(acControlJSON) # Cada vez que se inicia el programa, el archivo se sobreescribe con la informacion del shadow. Cada vez que se actualice el archivo acControl.json, se tiene que actualizar el shadow
-            f.close() 
+            #f.close() 
 
         except Exception as e:
             print("**** shadowGet_Callback Exception:",e)
