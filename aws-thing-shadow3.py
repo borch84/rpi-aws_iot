@@ -117,7 +117,7 @@ class shadowCallbackContainer:
                             # TODO: incluir los campos: ac_status y enabled
                             '}')
             print(acControlJSON)
-            f.write(acControlJSON)
+            # f.write(acControlJSON) # Cada vez que se inicia el programa, el archivo se sobreescribe con la informacion del shadow. Cada vez que se actualice el archivo acControl.json, se tiene que actualizar el shadow
             f.close() 
 
         except Exception as e:

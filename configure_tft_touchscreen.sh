@@ -60,6 +60,8 @@ EndSection
 
 sudo apt-get install xinput-calibrator
 
+sudo reboot
+
 xinput_calibrator
 
 pi@aws-rpi02:~ $ cat /usr/share/X11/xorg.conf.d/99-calibration.conf
