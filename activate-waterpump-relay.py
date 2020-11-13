@@ -19,7 +19,7 @@ args = parser.parse_args()
 pin = int(args.pin)
 json = args.json
 if (json != None):
-    seconds = (time_purge_handler_file.read_purge_time_json(json, 'min')) * 60
+    seconds = (time_purge_handler_file.read_purge_time_json(json, 'min')) * 1
 else:
     seconds = args.seconds
 

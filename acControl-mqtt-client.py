@@ -43,6 +43,9 @@ def on_message_acControlTopic_Callback(client, userdata, message):
       json_payload = f.read()
       f.close()
     client.publish("getConfigTopic",payload=json_payload,qos=0, retain=False)
+    sht31dT = json_handler.read_field("sht31d.json","t")
+    j ="{\"sht31dT\":" + str(sht31dT) + "}"
+    client.publish("getConfigTopic",payload=j,qos=0, retain=False)
   
   if "newConfig" in payload:
     save_acControl('/home/pi/aws_iot/acControl.json',payload['newConfig'])

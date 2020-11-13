@@ -1,0 +1,6 @@
+{
+    "broker": "192.168.4.203", 
+    "broker_port": 1883, 
+    "topic": "relayControlTopic", 
+    "refresh_interval": 5
+}
