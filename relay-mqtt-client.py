@@ -4,21 +4,34 @@ import time
 import argparse
 import RPi.GPIO as GPIO
 from utils import getJSONValues
+from threading import Timer
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
+def stop_timer(relay_pin):
+    GPIO.output(relay_pin,1) 
 
 def on_message_relayControlTopic_Callback(client, userdata, message):
     print("\n~~~~ on_message_mqtt_acControlTopic_Callback ~~~~")
     payload = json.loads(message.payload.decode())
-    pin = int(payload['relay_pin'])
-    print(pin)
-    minute = int(payload['minute'])
-    GPIO.setup(pin,GPIO.OUT)
-    GPIO.output(pin,0) #0 activa el pin Normally open
-    time.sleep(minute)
-    GPIO.output(pin,1)
+    state = payload['state']
+    if state == "on":
+      pin = int(payload['relay_pin'])
+      print(pin)
+      minute = int(payload['minute'])
+      GPIO.setup(pin,GPIO.OUT)
+      GPIO.output(pin,0) #0 activa el pin Normally open
+      timer1 = Timer(minute*1,stop_timer,args=(pin,))
+      timer1.start()
+
+      #time.sleep(minute)
+      #GPIO.output(pin,1)
+    if state == "off":
+      pin = int(payload['relay_pin'])
+      print(pin)
+      GPIO.setup(pin,GPIO.OUT)
+      GPIO.output(pin,1)
     
 
 ## Read in command-line parameters
