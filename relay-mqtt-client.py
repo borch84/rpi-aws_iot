@@ -25,8 +25,6 @@ def on_message_relayControlTopic_Callback(client, userdata, message):
       timer1 = Timer(minute*1,stop_timer,args=(pin,))
       timer1.start()
 
-      #time.sleep(minute)
-      #GPIO.output(pin,1)
     if state == "off":
       pin = int(payload['relay_pin'])
       print(pin)
