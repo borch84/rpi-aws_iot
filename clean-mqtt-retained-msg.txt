@@ -1,0 +1,12 @@
+docker exec -it mosquitto /bin/sh
+/ $ mo
+modinfo           mosquitto         mosquitto_rr      mountpoint
+modprobe          mosquitto_passwd  mosquitto_sub
+more              mosquitto_pub     mount
+/ $ mosquitto_pub -h localhost -t acControlTopic -n 
+-r -d
+Client mosq-v9bZMDBfrweRgWtT2D sending CONNECT
+Client mosq-v9bZMDBfrweRgWtT2D received CONNACK (0)
+Client mosq-v9bZMDBfrweRgWtT2D sending PUBLISH (d0, q0, r1, m1, 'acControlTopic', ... (0 bytes))
+Client mosq-v9bZMDBfrweRgWtT2D sending DISCONNECT
+/ $ 

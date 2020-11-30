@@ -14,22 +14,25 @@ def stop_timer(relay_pin):
 
 def on_message_relayControlTopic_Callback(client, userdata, message):
     print("\n~~~~ on_message_mqtt_acControlTopic_Callback ~~~~")
-    payload = json.loads(message.payload.decode())
-    state = payload['state']
-    if state == "on":
-      pin = int(payload['relay_pin'])
-      print(pin)
-      minute = int(payload['minute'])
-      GPIO.setup(pin,GPIO.OUT)
-      GPIO.output(pin,0) #0 activa el pin Normally open
-      timer1 = Timer(minute*1,stop_timer,args=(pin,))
-      timer1.start()
+    try:
+      payload = json.loads(message.payload.decode())
+      state = payload['state']
+      if state == "on":
+        pin = int(payload['relay_pin'])
+        print(pin)
+        minute = int(payload['minute'])
+        GPIO.setup(pin,GPIO.OUT)
+        GPIO.output(pin,0) #0 activa el pin Normally open
+        timer1 = Timer(minute*1,stop_timer,args=(pin,))
+        timer1.start()
 
-    if state == "off":
-      pin = int(payload['relay_pin'])
-      print(pin)
-      GPIO.setup(pin,GPIO.OUT)
-      GPIO.output(pin,1)
+      if state == "off":
+        pin = int(payload['relay_pin'])
+        print(pin)
+        GPIO.setup(pin,GPIO.OUT)
+        GPIO.output(pin,1)
+    except Exception as e:
+      print(repr(e))
     
 
 ## Read in command-line parameters
@@ -59,6 +62,7 @@ mqttClient = mqtt.Client()
 mqttClient.connect(broker, broker_port)
 mqttClient.subscribe(topic,qos=1)
 mqttClient.message_callback_add(topic,on_message_relayControlTopic_Callback)
+mqttClient.reconnect_delay_set(min_delay=1, max_delay=120)
 
 mqttClient.loop_start()
 
