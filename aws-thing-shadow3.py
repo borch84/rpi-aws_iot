@@ -50,20 +50,20 @@ GPIO.output(waterpumpPin,1) #1=apaga la bomba
 
 
 ##reedswitch
-from gpiozero import DigitalInputDevice
-reedswitch_state = False
-old_reedswitch_state = False
-def reedswitch_closed():
-    print("reed switch i.s closed!")
-    global reedswitch_state
-    reedswitch_state = True
-def reedswitch_opened():
-    print("reed switch is opened!")
-    global reedswitch_state
-    reedswitch_state = False
-reedswitch = DigitalInputDevice(17,pull_up=True, bounce_time=1)
-reedswitch.when_activated = reedswitch_closed
-reedswitch.when_deactivated = reedswitch_opened
+# from gpiozero import DigitalInputDevice
+# reedswitch_state = False
+# old_reedswitch_state = False
+# def reedswitch_closed():
+#     print("reed switch i.s closed!")
+#     global reedswitch_state
+#     reedswitch_state = True
+# def reedswitch_opened():
+#     print("reed switch is opened!")
+#     global reedswitch_state
+#     reedswitch_state = False
+# reedswitch = DigitalInputDevice(17,pull_up=True, bounce_time=1) # Reedswitch conectado al GPIO17 (11), pero actualmente GPIO17 esta siendo usado por la pantalla tft lcd. 
+# reedswitch.when_activated = reedswitch_closed
+# reedswitch.when_deactivated = reedswitch_opened
 
 
 ##ds18b20

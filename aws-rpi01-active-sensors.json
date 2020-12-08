@@ -4,5 +4,5 @@
     "sps30": false,
     "esp32levelswitch": false,
     "ec": false,
-    "ph": false
+    "ph": true 
 }
