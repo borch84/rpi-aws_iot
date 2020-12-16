@@ -85,7 +85,7 @@ $ cat .config/lxsession/LXDE/autostart
 # Cuando se tiene el archivo .config/lxsession/LXDE/autostar asi:
 # @lxpanel --profile LXDE
 # @pcmanfm --desktop --profile LXDE
-# @lxterminal --command "/etc/xdg/lxsession/LXDE/touchscreen.sh"
+# @lxterminal --command "/etc/xdg/lxsession/LXDE/touchscreen.sh" <== Remove this line after installation
 # @xscreensaver -no-splash
 
 # La sincronizacion del touchscreen no se ejecuta. 
