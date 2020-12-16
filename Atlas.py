@@ -4,12 +4,13 @@ import fcntl  # used to access I2C parameters like addresses
 import time  # used for sleep delay and timestamps
 import string  # helps parse strings
 import sys
+import json_handler
 
 # Borch - Codigo adaptado para python3
 
 class atlas_i2c:
-    long_timeout = 5  # the timeout needed to query readings and calibrations
-    short_timeout = 5  # timeout for regular commands
+    long_timeout = 2  # the timeout needed to query readings and calibrations
+    short_timeout = 1  # timeout for regular commands
     default_bus = 1  # the default bus for I2C on the newer Raspberry Pis,
                      #certain older boards use bus 0
     default_address = 100  # the default address for the EC sensor
@@ -63,12 +64,15 @@ class atlas_i2c:
             # NOTE: having to change the MSB to 0 is a glitch in the raspberry
             #pi, and you shouldn't have to do this!
             # convert the char list to a string and returns it
-            device_file = open(self.device_file_path, "w")
             str_value = ''.join(char_list)
-            #print(str_ec)
-            device_file.write('{\"status\":\"OK\",\"'+ self.sensor_type +'\":'+str_value+'}') 
-            device_file.close()
-            return float(str_value)
+            #print(str_value)
+            json_handler.write_field(self.device_file_path,"OK","status")
+            if len(str_value) > 1:
+                if str_value[0] == '?':
+                    json_handler.write_field(self.device_file_path,str_value,"info")
+                elif str_value.isdigit:
+                    json_handler.write_field(self.device_file_path,str_value,"ph")
+            return str_value
         else:
             #print("{\"status\":\"ER\",\"code\":" + str(ord(response[0]))+"}",file=sys.stderr)
             device_file = open(self.device_file_path, "w")
@@ -77,20 +81,22 @@ class atlas_i2c:
             #sys.exit(ord(response[0]))
             return None
 
-    def query(self, string):
+    def query(self, command):
         # write a command to the board, wait the correct timeout,
         #and read the response
-        self.write(string)
+        self.write(command)
 
         # the read and calibration commands require a longer timeout
-        if((string.upper().startswith("R")) or (string.upper().startswith("CAL"))):
+        if((command.upper().startswith("R")) or (command.upper().startswith("CAL"))):
             time.sleep(self.long_timeout)
-        elif((string.upper().startswith("SLEEP"))):
+        elif((command.upper().startswith("SLEEP"))):
             return "sleep mode"
         else:
             time.sleep(self.short_timeout)
-
-        return self.read()
+        if command.upper().startswith("R"):
+            return float(self.read())
+        else:
+            return self.read()
 
     def close(self):
         self.file_read.close()
