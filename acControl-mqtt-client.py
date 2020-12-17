@@ -15,7 +15,7 @@ def getHour():
   
 def on_message_acStatusTopic_Callback(client, userdata, message):
   payload = json.loads(message.payload.decode())
-  print("\n~~~~ on_message_mqtt_acStatusTopic_Callback ~~~~")
+  print("\n~~~~ on_message_acStatusTopic_Callback ~~~~")
 
   ac_status = json_handler.read_field('/home/pi/aws_iot/acControl.json','ac_status')
   if ac_status == 0:
@@ -32,7 +32,7 @@ def on_message_acStatusTopic_Callback(client, userdata, message):
   print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n")
 
 def on_message_acControlTopic_Callback(client, userdata, message):
-  print("\n~~~~ on_message_mqtt_acControlTopic_Callback ~~~~")
+  print("\n~~~~ on_message_acControlTopic_Callback ~~~~")
   print("Message Recieved: "+message.payload.decode())
   payload = json.loads(message.payload.decode())
   
