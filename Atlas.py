@@ -71,13 +71,11 @@ class atlas_i2c:
                 if str_value[0] == '?':
                     json_handler.write_field(self.device_file_path,str_value,"info")
                 elif str_value.isdigit:
-                    json_handler.write_field(self.device_file_path,float(str_value),"ph")
+                    json_handler.write_field(self.device_file_path,float(str_value),self.sensor_type)
             return str_value
         else:
             #print("{\"status\":\"ER\",\"code\":" + str(ord(response[0]))+"}",file=sys.stderr)
-            device_file = open(self.device_file_path, "w")
-            device_file.write("{\"status\":\"ER\",\"code\":" + str(ord(response[0]))+"}")
-            device_file.close()
+            json_handler.write_field(self.device_file_path,"ER",str(ord(response[0])))
             #sys.exit(ord(response[0]))
             return None
 
