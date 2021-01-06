@@ -1,5 +1,5 @@
 {
-    "broker": "172.18.0.2", 
+    "broker": "localhost", 
     "broker_port": 1883, 
     "topic": "relayControlTopic", 
     "refresh_interval": 5
