@@ -23,7 +23,7 @@ def on_message_relayControlTopic_Callback(client, userdata, message):
         minute = int(payload['minute'])
         GPIO.setup(pin,GPIO.OUT)
         GPIO.output(pin,0) #0 activa el pin Normally open
-        timer1 = Timer(minute*1,stop_timer,args=(pin,))
+        timer1 = Timer(minute*60,stop_timer,args=(pin,))
         timer1.start()
 
       if state == "off":
