@@ -33,6 +33,7 @@
 #include <stdlib.h> //exit()
 #include "sensirion_uart.h"
 #include "sps30.h"
+#include <string.h>
 
 /**
  * TO USE CONSOLE OUTPUT (PRINTF) AND WAIT (SLEEP) PLEASE ADAPT THEM TO YOUR
@@ -40,9 +41,14 @@
  */
 //#define printf(...)
 
-int main(void) {
+int main(int argc, char  *argv [ ]) {
     FILE *fp;
-    fp = fopen("/home/pi/aws_iot/Sensirion/sps30-uart-3.0.0/sps30.json","w");
+    char json_output_file[] = "/home/pi/aws_iot/sps30-uart-3.1.0/sps30.json"; //Default Value
+    if (argc == 2) {
+        strcpy(json_output_file, argv[1]);
+    }
+
+    fp = fopen(json_output_file,"w");
     if (fp == NULL) {
        printf("file can't be opened\n");
        exit(1);
@@ -102,7 +108,7 @@ int main(void) {
 
     //do {
         //fp=freopen(NULL,"w",fp); //reopen el file limpia el contenido
-        fp = fopen("/home/pi/aws_iot/Sensirion/sps30-uart-3.0.0/sps30.json","w");
+        fp = fopen(json_output_file,"w");
         if (fp == NULL) {
        	 printf("file can't be opened\n");
        	 exit(1);
