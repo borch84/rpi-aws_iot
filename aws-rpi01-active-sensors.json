@@ -3,6 +3,6 @@
     "ds18b20": false,
     "sps30": false,
     "esp32levelswitch": false,
-    "ec": false,
+    "ec": true,
     "ph": true 
 }
