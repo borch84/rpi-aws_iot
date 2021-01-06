@@ -328,7 +328,7 @@ while True:
     #ec
     if active_sensors['ec']:
         try:
-            with open("/home/pi/rpi-aws_iot/ec100.json","r") as ec_file:
+            with open("/home/pi/aws_iot/ec100.json","r") as ec_file:
                 ec_data = ec_file.read()
             ec_file.close()
             ec_json = json.loads(ec_data)
