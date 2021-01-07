@@ -10,7 +10,6 @@ def jsonpayload():
     return sps30_JSONPayload
   except json.decoder.JSONDecodeError as error:
     print("**** SPS30 Error Log **** JSON Not defined json.decoder.JSONDecodeError: ", error)
-    f.close()
     return None
   except Exception as e:
     print("**** sps30.py Exception: ",e)
